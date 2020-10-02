@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FrontEnd-FreshBuy';
+
+  user: string;
+  password: string;
+
+  logInData(htmlUser,htmlPassword) {
+    this.user = htmlUser;
+    this.password = htmlPassword;
+    alert("Usuario: " + this.user + "\n" + "Contraseña: " + this.password)
+  } 
 }
