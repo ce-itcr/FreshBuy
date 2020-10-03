@@ -36,11 +36,11 @@ export class LogInComponent implements OnInit {
     }else{
       alert(this.errorMessage);
     }
-    
+
   };
 
   public comunication(){
-    this.userType = "P";
+    this.userType = "A";
     this.keyPass = true;
     this.errorMessage = "Error en los datos";
   }
