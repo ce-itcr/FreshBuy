@@ -40,7 +40,7 @@ export class LogInComponent implements OnInit {
   };
 
   public comunication(){
-    this.userType = "A";
+    this.userType = "P";
     this.keyPass = true;
     this.errorMessage = "Error en los datos";
   }
