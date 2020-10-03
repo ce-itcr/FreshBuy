@@ -7,7 +7,7 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-  
+
     h1,
     h2,
     h3,
@@ -16,15 +16,15 @@
     h6 {
       margin: 8px 0;
     }
-  
+
     p {
       margin: 0;
     }
-  
+
     .spacer {
       flex: 1;
     }
-  
+
     .toolbar {
       position: absolute;
       top: 0;
@@ -37,7 +37,7 @@
       color: rgb(0, 0, 0);
       font-weight: 600;
     }
-  
+
     .content {
       display: flex;
       margin: 82px auto 50px;
@@ -46,13 +46,13 @@
       flex-direction: column;
       align-items: center;
     }
-  
-    
+
+
   </style>
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  
+
 
     <!-- Logo -->
     <img
@@ -62,22 +62,25 @@
     />
     <span>FreshBuy</span>
     <div class="spacer"></div>
-  
+
     <li class="nav-item" [routerLinkActive]="['link-active']">
       <a class="nav-link text-dark" [routerLink]='["/logIn"]'
         >Iniciar Sesión</a>
     </li>
-  
+
   </div>
 
   <div class="content" role="main">
 
     <!-- Message -->
     <h1>¿Cómo desea registrarse?</h1>
-  
+
     <!-- Choose -->
     <br><button type = "button" routerLink = "/client">Cliente</button><br/>
     <br><button type = "button" routerLink = "/producer">Productor</button><br/>
+    <br><button type = "button" routerLink = "/adminView">Vista de Administración</button><br/>
+    <br><button type = "button" routerLink = "/adminView">Vista de Productor</button><br/>
+    <br><button type = "button" routerLink = "/adminView">Vista Web Público General</button><br/>
     <br/>
-  
+
 </div>
