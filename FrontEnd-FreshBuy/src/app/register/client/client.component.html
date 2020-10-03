@@ -50,41 +50,19 @@
     
   </style>
 
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
-  
+<div class="content" role="main">
 
-    <!-- Logo -->
-    <img
-      width="40"
-      alt="Angular Logo"
-      src="./assets/favicon.png"
-    />
-    <span>FreshBuy</span>
-    <div class="spacer"></div>
-  
-    <li class="nav-item" [routerLinkActive]="['link-active']">
-      <a class="nav-link text-dark" [routerLink]='["/logIn"]'
-        >Iniciar Sesión</a>
-    </li>
-  
-  </div>
-
-  <div class="content" role="main">
-
-    <!-- Message -->
-    <h1>¿Cómo desea registrarse?</h1>
-  
-    <!-- Choose -->
-    <li class="nav-item" [routerLinkActive]="['link-active']">
-        <a class="nav-link text-dark" [routerLink]='["/client"]'
-          >Cliente</a>
-      </li>
-      <li class="nav-item" [routerLinkActive]="['link-active']">
-        <a class="nav-link text-dark" [routerLink]='["/productor"]'
-          >Productor</a>
-      </li>
-    <br/>
-  
+    <!-- ID label -->
+    <label> <h4>ID</h4> <input type="text" #ID id="ID" /></label>
+    <!-- Name label -->
+    <label> <h4>Nombre Completo</h4> <input type="text" #Name id="Name" /></label>
+    <!-- Adress label -->
+    <label> <h4>Dirección</h4> <input type="text" #Adress id="Adress" /></label>
+    <!-- Birthday label -->
+    <label> <h4>Fecha de Nacimiento</h4> <input type="text" #Birthday id="Birthday" /></label>
+    <!-- Telephone label -->
+    <label> <h4>Número Telefónico</h4> <input type="text" #Telephone id="Telephone" /></label>
+    <!-- SINPE label -->
+    <label> <h4>SINPE</h4> <input type="text" #SINPE id="SINPE" /></label>
   
 </div>
