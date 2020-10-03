@@ -195,7 +195,7 @@ namespace Backend_FreshBuy.DBMS
         /// <param name="new_txt_value"></param>
         /// <param name="new_num_value"></param>
         /// <returns></returns>
-        public bool UPDATE(String entity_set_path, int key_attribute, String attribute_to_modify, String new_txt_value, String new_num_value) {
+        public bool UPDATE(String entity_set_path, int key_attribute, String attribute_to_modify, String new_txt_value, int new_num_value) {
             Console.WriteLine("A UPDATE process has been started on the entity set" + entity_set_path);
             String entity_to_modify = SELECT(entity_set_path, key_attribute);
 
@@ -233,7 +233,7 @@ namespace Backend_FreshBuy.DBMS
         /// <param name="required_txt_value"></param>
         /// <param name="required_num_value"></param>
         /// <returns></returns>
-        private String[] FILTER(String entity_set_path, String attribute_to_search, String attribute_required, String required_txt_value, int required_num_value) {
+        public String[] FILTER(String entity_set_path, String attribute_to_search, String required_txt_value, int required_num_value) {
             Console.WriteLine("A FILTER process has been started on the entity set" + entity_set_path);
             String[] current_entity_set = File.ReadAllLines(entity_set_path);
             String[] filter_entity_set = { };
@@ -268,7 +268,7 @@ namespace Backend_FreshBuy.DBMS
         /// <param name="entity_set_path"></param>
         /// <param name="attribute_to_sort"></param>
         /// <returns></returns>
-        private String[] SORT(String entity_set_path, String attribute_to_sort) {
+        public String[] SORT(String entity_set_path, String attribute_to_sort) {
             Console.WriteLine("A SORT process has been started on the entity set" + entity_set_path);
             String[] current_entity_set = File.ReadAllLines(entity_set_path);
             String temporal_entity;

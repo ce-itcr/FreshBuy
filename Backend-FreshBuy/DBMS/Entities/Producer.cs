@@ -7,7 +7,6 @@ namespace Backend_FreshBuy.DBMS.Entities
 {
     public class Producer
     {
-
         public int person_id;
         public String name;
         public String last_name;
