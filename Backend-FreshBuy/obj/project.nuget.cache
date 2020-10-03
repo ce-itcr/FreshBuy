@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IVzg9/pWJKdjLwA8DWJPaGAOtCeRahJPPm4etfU+szaywbqJMgExVN6IDSxpuPpDU1LGSKcPCQDogW8OBxi4fQ==",
+  "dgSpecHash": "Nj/nJ2vtjAS/mOO4iDiFWwk07jW91JTv2gG28dAX+rdL5gPHLfMns4lWSinFxGAFgcsPvgMHX4EVec4MflWNrQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\AdminCR\\Documents\\Projects\\FreshBuy\\Backend-FreshBuy\\Backend-FreshBuy.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\AdminCR\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

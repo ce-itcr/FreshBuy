@@ -10,28 +10,7 @@ namespace Backend_FreshBuy.DBMS
 {
     class DBMS
     {
-        public static String execution_path = AppDomain.CurrentDomain.BaseDirectory;
-        public static String data_path = execution_path + "DBMS\\Data";
-
-        public static String admins_path = data_path + "\\Admin.xml";
-        public static String affiliations_path = data_path + "\\Affiliations.xml";
-        public static String categories_path = data_path + "\\Categories.xml";
-        public static String consumer_path = data_path + "\\Consumer.xml";
-        public static String producer_path = data_path + "\\Producer.xml";
-        public static String products_path = data_path + "\\Products.xml";
-
-        /*-----------------------------------------------------------------------------Data Operations-----------------------------------------------------------------------------*/
-        public String SELECT(String entity_set_path, int key_atttribute) { return null; }
-        public bool UPDATE(String entity_set_path, int key_attribute, String modificable_attribute, String new_attribute) { return true; }
-        public void INSERT(String entity_set_path, int new_entity) { }
-        public bool DELETE(String entity_set_path, int key_attribute) { return true; }
-        public void WRITE(String entity_set_path, String[] entity_set) { }        
-        private String[] FILTER(String entity_set_path, String attribute_required, String value_required) { return null; }
-        private String[] SORT(String entity_set_path, String attribute_to_sort) { return null; }
-        private String[] READ(String entity_set_path) { return null; }
-
-
-        /*-----------------------------------------------------------------------------Administration View Module-----------------------------------------------------------------------------*/
+                /*-----------------------------------------------------------------------------Administration View Module-----------------------------------------------------------------------------*/
         //Producer Management
         public bool create_producer(int id, String name, String last_name, String province, String canton, String district, String birth, double phone_number, double sinpe_number, 
             String[] delivery_locations) { return true; }
