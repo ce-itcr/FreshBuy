@@ -1,58 +1,5 @@
-<style>
-    :host {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      font-size: 14px;
-      color: #333;
-      box-sizing: border-box;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-  
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin: 8px 0;
-    }
-  
-    p {
-      margin: 0;
-    }
-  
-    .spacer {
-      flex: 1;
-    }
-  
-    .toolbar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      background-color: #74ff3d;
-      color: rgb(0, 0, 0);
-      font-weight: 600;
-    }
-  
-    .content {
-      display: flex;
-      margin: 82px auto 50px;
-      padding: 0 35px;
-      max-width: 960px;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    
-</style>
+<!--<div class="toolbar" role="banner">
 
-<div class="toolbar" role="banner">
-
-    <!-- Logo -->
     <img
       width="40"
       alt="Angular Logo"
@@ -60,29 +7,81 @@
     />
     <span>FreshBuy</span>
     <div class="spacer"></div>
-    
+
     <li class="nav-item" [routerLinkActive]="['link-active']">
       <a class="nav-link text-dark" [routerLink]='["/register"]'
         >Registro</a>
     </li>
-  
+
   </div>
 
 <div class="content" role="main">
 
-    <!-- Start -->
+
     <h1>Acceder</h1>
-  
-    <!-- User label -->
+
+
     <label> <h4>Usuario</h4> <input type="text" #htmlUser id="htmlUser" /></label>
-    <!-- Password label -->
+
     <label> <h4>Contraseña</h4> <input type="text" #htmlPassword id="htmlPassword" /></label>
-  
-    <!-- Log in button -->
     <br>
     <button class="btn btn-primary" (click)="logInData(htmlUser.value, htmlPassword.value)">
     Iniciar Sesión</button>
     <br/>
-  
-  
+
+</div>-->
+
+
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <form class="login100-form validate-form">
+        <span class="login100-form-title p-b-34">
+          Inicia Sesión en tu cuenta para continuar
+        </span>
+
+        <div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type user name">
+          <input id="first-name" class="input100" #username_html type="text" name="username" placeholder="Nombre de Usuario">
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20" data-validate="Type password">
+          <input class="input100" #password_html type="password" name="pass" placeholder="Contraseña">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="container-login100-form-btn">
+          <button class="login100-form-btn" (click)="logInData(username_html, password_html)">
+            Iniciar Sesión
+          </button>
+        </div>
+
+        <div class="w-full text-center p-t-27 p-b-239">
+          <span class="txt1">
+            ¿Olvidó su
+          </span>
+
+          <a href="#" class="txt2">
+            Nombre de Usuario / Contraseña?
+          </a>
+        </div>
+
+        <div class="w-full text-center">
+          <span class="txt1">
+            ¿Aún no tiene cuenta?
+          </span>
+          <a href="#" class="txt3" [routerLink]='["/register"]'>
+            Registrarse
+          </a>
+        </div>
+      </form>
+
+      <div class="login100-more">
+        <img src="./../../assets/img/freshbuy_logo.png" width="50%" style="padding-left: 7%;padding-top: 10%;"/>
+        <h1 class="txt1_welcome" style="font-size: 40px;padding-top: 15%;padding-left: 12%;">Bienvenido a <b>Fresh Buy</b></h1>
+        <h3 class="txt1_welcome" style="padding-top: 0;padding-left: 12%;">Poductos frescos hasta la puerta de tu casa</h3>
+        <img class="center" src="./../../assets/img/module_login.png" style="padding-top: 55%;padding-left: 0.5%;width: 585px;"/>
+      </div>
+    </div>
+  </div>
 </div>
+
