@@ -1,3 +1,4 @@
+
 <style>
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -53,36 +54,25 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
 
+
   <!-- Logo -->
   <img
-    width="40"
-    alt="Angular Logo"
-    src="./assets/favicon.png"
-  />
-  <span>FreshBuy</span>
+  width="40"
+  alt="Angular Logo"
+  src="./assets/favicon.png"
+/>
+<span>FreshBuy</span>
   <div class="spacer"></div>
-  
-  <!-- Register button -->
-  <button name="register"> Registro </button>
+
+  <li class="nav-item" [routerLinkActive]="['link-active']">
+    <a class="nav-link text-dark" [routerLink]='["/logIn"]'
+      >Iniciar Sesión</a>
+  </li>
+
+  <li class="nav-item" [routerLinkActive]="['link-active']">
+    <a class="nav-link text-dark" [routerLink]='["/register"]'
+      >Registro</a>
+  </li>
 
 </div>
-
-<div class="content" role="main">
-
-  <!-- Start -->
-  <h1>Acceder</h1>
-
-  <!-- User label -->
-  <label> <h4>Usuario</h4> <input type="text" #htmlUser id="htmlUser" /></label>
-  <!-- Password label -->
-  <label> <h4>Contraseña</h4> <input type="text" #htmlPassword id="htmlPassword" /></label>
-
-  <!-- Log in button -->
-  <br>
-  <button class="btn btn-primary" (click)="logInData(htmlUser.value, htmlPassword.value)">Iniciar Sesión</button>
-  <br/>
-
-
-</div>
-
 <router-outlet></router-outlet>
