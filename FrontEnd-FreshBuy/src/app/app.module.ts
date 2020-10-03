@@ -9,6 +9,9 @@ import { LogInComponent } from './log-in/log-in.component';
 import { ProducerComponent } from './register/producer/producer.component';
 import { ClientComponent } from './register/client/client.component';
 import { RouterModule } from '@angular/router';
+import { ProducerViewComponent } from './producer-view/producer-view.component';
+import { AdministratorViewComponent } from './administrator-view/administrator-view.component';
+import { ClientViewComponent } from './client-view/client-view.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { RouterModule } from '@angular/router';
     LogInComponent,
     ProducerComponent,
     ClientComponent,
+    ProducerViewComponent,
+    AdministratorViewComponent,
+    ClientViewComponent,
   ],
   imports: [
     BrowserModule,
