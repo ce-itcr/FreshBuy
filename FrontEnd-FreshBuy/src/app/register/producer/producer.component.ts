@@ -2,16 +2,16 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-productor',
-  templateUrl: './productor.component.html',
-  styleUrls: ['./productor.component.css']
+  selector: 'app-producer',
+  templateUrl: './producer.component.html',
+  styleUrls: ['./producer.component.css']
 })
-export class ProductorComponent implements OnInit {
+export class ProducerComponent implements OnInit {
 
   ID;
   name;
   adress;
-  birthday
+  birthday;
   telephone;
   SINPE;
 
@@ -25,7 +25,7 @@ export class ProductorComponent implements OnInit {
     this.name = hName;
     this.adress = hAdress;
     this.birthday = hBirthday;
-    this.telephone = hTelephone
+    this.telephone = hTelephone;
     this.SINPE = hSINPE;
 
     alert("ID: " + this.ID + "\n" +

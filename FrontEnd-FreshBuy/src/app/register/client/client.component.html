@@ -53,16 +53,21 @@
 <div class="content" role="main">
 
     <!-- ID label -->
-    <label> <h4>ID</h4> <input type="text" #ID id="ID" /></label>
+    <label> <h4>ID</h4> <input type="text" #htmlID id="htmlID" /></label>
     <!-- Name label -->
-    <label> <h4>Nombre Completo</h4> <input type="text" #Name id="Name" /></label>
+    <label> <h4>Nombre Completo</h4> <input type="text" #htmlName id="htmlName" /></label>
     <!-- Adress label -->
-    <label> <h4>Dirección</h4> <input type="text" #Adress id="Adress" /></label>
-    <!-- Birthday label -->
-    <label> <h4>Fecha de Nacimiento</h4> <input type="text" #Birthday id="Birthday" /></label>
-    <!-- Telephone label -->
-    <label> <h4>Número Telefónico</h4> <input type="text" #Telephone id="Telephone" /></label>
-    <!-- SINPE label -->
-    <label> <h4>SINPE</h4> <input type="text" #SINPE id="SINPE" /></label>
+    <label> <h4>Dirección</h4> <input type="text" #htmlAdress id="htmlAdress" /></label>
+    <!-- Email label -->
+    <label> <h4>Correo Electrónico</h4> <input type="text" #htmlEMail id="htmlEMail" /></label>
+    <!-- Password label -->
+    <label> <h4>Contraseña</h4> <input type="text" #htmlPassword id="htmlPassword" /></label>
+
+    <br>
+    <button class="btn btn-primary" (click)="registerData(htmlID.value, htmlName.value,
+                                             htmlAdress.value, htmlEMail.value,
+                                             htmlPassword.value)">
+    Registrarse</button>
+    <br/>
   
 </div>
