@@ -17,6 +17,7 @@ export class LogInComponent implements OnInit {
   password: string;
   keyPass: boolean;
   userType: String;
+  errorMessage: String;
 
   btnClick(htmlUser,htmlPassword){
     this.user = htmlUser;
@@ -28,21 +29,20 @@ export class LogInComponent implements OnInit {
       }else if(this.userType == "C"){
         this.router.navigateByUrl('/clientView');
       }else if(this.userType == "A"){
-        //alert("Admin");
         this.router.navigateByUrl('/adminView');
       }
-      //alert("Usuario: " + this.user + "\n" +
-            //"Contraseña: " + this.password + "\n");
+      alert("Usuario: " + this.user + "\n" +
+            "Contraseña: " + this.password + "\n");
     }else{
-      //alert(messageError)
+      alert(this.errorMessage);
     }
     
   };
 
   public comunication(){
-    //AQUÍ SE COMUNICA LA VARA
-    this.userType = "A";
+    this.userType = "P";
     this.keyPass = true;
+    this.errorMessage = "Error en los datos";
   }
 
 }
