@@ -1,10 +1,12 @@
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
+import { UserandPass } from '../../register/register.component';
 
 @Component({
   selector: 'app-producer',
   templateUrl: './producer.component.html',
-  styleUrls: ['./producer.component.css']
+  styleUrls: ['./producer.component.css',
+              './../../app.component.css']
 })
 export class ProducerComponent implements OnInit {
 
@@ -33,8 +35,12 @@ export class ProducerComponent implements OnInit {
           "Adress: " + this.adress + "\n" +
           "Birthday: " + this.birthday + "\n" +
           "Telephone: " + this.telephone + "\n" +
-          "SIMPE: " + this.SINPE + "\n");
+          "SINPE: " + this.SINPE + "\n");
+
+    UserandPass.push([this.ID + "P","hola"]);
 
   }
+
+
 
 }

@@ -16,7 +16,7 @@
         </div>
 
         <div class="container-login100-form-btn">
-          <button class="login100-form-btn" (click)="logInData(username_html, password_html)">
+          <button class="login100-form-btn" (click)="btnClick(username_html.value, password_html.value)">
             Iniciar Sesión
           </button>
         </div>
@@ -36,7 +36,7 @@
             ¿Aún no tiene cuenta?
           </span>
           <a href="#" class="txt3" [routerLink]='["/register"]'>
-            Registrarse
+            Registrese.
           </a>
         </div>
       </form>

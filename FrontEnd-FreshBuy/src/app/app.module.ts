@@ -9,10 +9,9 @@ import { LogInComponent } from './log-in/log-in.component';
 import { ProducerComponent } from './register/producer/producer.component';
 import { ClientComponent } from './register/client/client.component';
 import { RouterModule } from '@angular/router';
-import { AdministrationViewComponent } from './administration-view/administration-view.component';
-import { ProducerManagementComponent } from './administration-view/producer-management/producer-management.component';
-import { AffiliationManagementComponent } from './administration-view/affiliation-management/affiliation-management.component';
-import { CategoryManagementComponent } from './administration-view/category-management/category-management.component';
+import { ProducerViewComponent } from './producer-view/producer-view.component';
+import { AdministratorViewComponent } from './administrator-view/administrator-view.component';
+import { ClientViewComponent } from './client-view/client-view.component';
 
 @NgModule({
   declarations: [
@@ -21,10 +20,9 @@ import { CategoryManagementComponent } from './administration-view/category-mana
     LogInComponent,
     ProducerComponent,
     ClientComponent,
-    AdministrationViewComponent,
-    ProducerManagementComponent,
-    AffiliationManagementComponent,
-    CategoryManagementComponent,
+    ProducerViewComponent,
+    AdministratorViewComponent,
+    ClientViewComponent,
   ],
   imports: [
     BrowserModule,

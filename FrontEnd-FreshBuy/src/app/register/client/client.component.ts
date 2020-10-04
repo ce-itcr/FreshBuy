@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { UserandPass } from '../../register/register.component';
 
 @Component({
   selector: 'app-client',
   templateUrl: './client.component.html',
-  styleUrls: ['./client.component.css']
+  styleUrls: ['./client.component.css',
+  './../../app.component.css']
 })
 export class ClientComponent implements OnInit {
 
@@ -25,11 +27,10 @@ export class ClientComponent implements OnInit {
     this.eMail = hEMail;
     this.password = hPassword;
 
-    alert("ID: " + this.ID + "\n" +
-          "Name: " + this.name + "\n" +
-          "Adress: " + this.adress + "\n" +
-          "Telephone: " + this.eMail + "\n" +
-          "SIMPE: " + this.password + "\n");
+
+
+    UserandPass.push([this.ID + "C",this.password]);
+    alert(UserandPass);
 
   }
 }
