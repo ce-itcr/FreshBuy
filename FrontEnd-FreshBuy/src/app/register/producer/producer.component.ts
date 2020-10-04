@@ -5,7 +5,8 @@ import { UserandPass } from '../../register/register.component';
 @Component({
   selector: 'app-producer',
   templateUrl: './producer.component.html',
-  styleUrls: ['./producer.component.css']
+  styleUrls: ['./producer.component.css',
+              './../../app.component.css']
 })
 export class ProducerComponent implements OnInit {
 
@@ -40,6 +41,6 @@ export class ProducerComponent implements OnInit {
 
   }
 
-  
+
 
 }
