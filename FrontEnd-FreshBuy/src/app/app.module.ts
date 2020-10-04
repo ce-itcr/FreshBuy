@@ -10,8 +10,9 @@ import { ProducerComponent } from './register/producer/producer.component';
 import { ClientComponent } from './register/client/client.component';
 import { RouterModule } from '@angular/router';
 import { ProducerViewComponent } from './producer-view/producer-view.component';
-import { AdministratorViewComponent } from './administrator-view/administrator-view.component';
+import { AdministrationViewComponent } from './administration-view/administration-view.component';
 import { ClientViewComponent } from './client-view/client-view.component';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -21,13 +22,14 @@ import { ClientViewComponent } from './client-view/client-view.component';
     ProducerComponent,
     ClientComponent,
     ProducerViewComponent,
-    AdministratorViewComponent,
+    AdministrationViewComponent,
     ClientViewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatSliderModule,
     RouterModule.forRoot([
       {path: '', component: LogInComponent}
     ])

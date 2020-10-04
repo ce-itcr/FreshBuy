@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AdministrationViewComponent } from './administration-view.component';
+
+declare const test: any;
 
 describe('AdministrationViewComponent', () => {
   let component: AdministrationViewComponent;
@@ -22,4 +23,8 @@ describe('AdministrationViewComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });
+
+
+
