@@ -55,20 +55,19 @@
     <h2>Solicite la afiliación de su tramo a FreshBuy</h2>
 
     <!-- ID label -->
-    <label> <h4>ID</h4> <input type="text" class = "from-control" required minlength = "9" maxlength="9" #htmlID id="htmlID" /></label>
-    <div *ngIf = "htmlID.invalid">
-      ID is requierd.
-    </div>
+    <label> <h4>ID</h4> <input type="text" required minlength = "9" maxlength="9" #htmlID id="htmlID" /></label>
     <!-- Name label -->
-    <label> <h4>Nombre Completo</h4> <input type="text" #htmlName id="htmlName" /></label>
+    <label> <h4>Nombre</h4> <input type="text" required #htmlName id="htmlName" /></label>
+    <!-- Last Name label -->
+    <label> <h4>Apellido</h4> <input type="text" required #htmlName id="htmlName" /></label>
     <!-- Adress label -->
-    <label> <h4>Dirección</h4> <input type="text" #htmlAdress id="htmlAdress" /></label>
+    <label> <h4>Dirección</h4> <input type="text" required #htmlAdress id="htmlAdress" /></label>
     <!-- Birthday label -->
-    <label> <h4>Fecha de Nacimiento</h4> <input type="text" #htmlBirthday id="htmlBirthday" /></label>
+    <label> <h4>Fecha de Nacimiento</h4> <input type="date" required #htmlBirthday id="htmlBirthday" /></label>
     <!-- Telephone label -->
-    <label> <h4>Número Telefónico</h4> <input type="text" #htmlTelephone id="htmlTelephone" /></label>
+    <label> <h4>Número Telefónico</h4> <input type="text" required minlength = "8" maxlength="8" #htmlTelephone id="htmlTelephone" /></label>
     <!-- SINPE label -->
-    <label> <h4>SINPE</h4> <input type="text" #htmlSINPE id="htmlSINPE" /></label>
+    <label> <h4>SINPE</h4> <input type="text" required minlength = "8" maxlength="8" #htmlSINPE id="htmlSINPE" /></label>
 
     <br>
     <button class="btn btn-primary" (click)="registerData(htmlID.value, htmlName.value,

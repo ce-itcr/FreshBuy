@@ -1,6 +1,5 @@
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
-import { UserandPass } from '../../register/register.component';
+import { UserandPass, isNumber} from '../../register/register.component';
 
 @Component({
   selector: 'app-producer',
@@ -22,12 +21,12 @@ export class ProducerComponent implements OnInit {
   }
 
   public registerData(hID, hName, hAdress, hBirthday, hTelephone, hSINPE){
-    this.ID = hID;
-    this.name = hName;
-    this.adress = hAdress;
-    this.birthday = hBirthday;
-    this.telephone = hTelephone;
-    this.SINPE = hSINPE;
+    this.ID = isNumber(hID,9);
+    this.name = new String(hName);
+    this.adress = new String(hAdress);
+    this.birthday = new String(hBirthday);
+    this.telephone = isNumber(hTelephone,8);
+    this.SINPE = isNumber(hSINPE,8);
 
     alert("ID: " + this.ID + "\n" +
           "Name: " + this.name + "\n" +
@@ -39,7 +38,5 @@ export class ProducerComponent implements OnInit {
     UserandPass.push([this.ID + "P","hola"]);
 
   }
-
-  
 
 }

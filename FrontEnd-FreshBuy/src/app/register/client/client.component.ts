@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserandPass } from '../../register/register.component';
+import { UserandPass,  } from '../../register/register.component';
 
 @Component({
   selector: 'app-client',

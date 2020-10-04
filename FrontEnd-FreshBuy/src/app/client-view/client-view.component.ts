@@ -17,7 +17,7 @@ constructor( private location: LocationStrategy){
   history.pushState(null, null, window.location.href);  
   this.location.onPopState(() => {
   history.pushState(null, null, window.location.href);
-});  
+  });  
 }
   ngOnInit(): void {
   }
