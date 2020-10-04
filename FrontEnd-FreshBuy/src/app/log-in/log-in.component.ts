@@ -5,7 +5,8 @@ import { UserandPass } from '../register/register.component';
 @Component({
   selector: 'app-log-in',
   templateUrl: './log-in.component.html',
-  styleUrls: ['./log-in.component.css']
+  styleUrls: ['./log-in.component.css',
+              './../app.component.css']
 })
 export class LogInComponent implements OnInit {
 
