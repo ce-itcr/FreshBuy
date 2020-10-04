@@ -13,3 +13,5 @@ export class RegisterComponent implements OnInit {
   }
 
 }
+
+export const UserandPass = [["1234C","abc"],["1234P","abc"],["1234A","abc"]];

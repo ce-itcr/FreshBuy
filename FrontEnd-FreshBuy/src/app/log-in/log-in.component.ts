@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+import { UserandPass } from '../register/register.component';
 
 @Component({
   selector: 'app-log-in',
@@ -18,31 +19,45 @@ export class LogInComponent implements OnInit {
   keyPass: boolean;
   userType: String;
   errorMessage: String;
+  userPass: String;
 
   btnClick(htmlUser,htmlPassword){
     this.user = htmlUser;
     this.password = htmlPassword;
     this.comunication();
-    if(this.keyPass){
-      if(this.userType == "P"){
+    this.userPass = this.findUser(htmlUser);
+    this.userType = htmlUser.charAt(htmlUser.length - 1);
+    if(this.keyPass && this.userPass != ""){
+      if(this.userType == "P" && this.password === this.userPass){
         this.router.navigateByUrl('/producerView');
-      }else if(this.userType == "C"){
+        this.userPass = "";
+      }else if(this.userType == "C" && this.password === this.userPass){
         this.router.navigateByUrl('/clientView');
-      }else if(this.userType == "A"){
+        this.userPass = "";
+      }else if(this.userType == "A" && this.password === this.userPass){
         this.router.navigateByUrl('/adminView');
+        this.userPass = "";
       }
       alert("Usuario: " + this.user + "\n" +
             "Contraseña: " + this.password + "\n");
     }else{
       alert(this.errorMessage);
     }
-
   };
 
   public comunication(){
     this.userType = "P";
     this.keyPass = true;
     this.errorMessage = "Error en los datos";
+  }
+
+  private findUser(user){
+    for(var i = 0; i < UserandPass.length; i++){
+      if(UserandPass[i][0] = user){
+          return UserandPass[i][1];
+      }
+    }
+    return "";
   }
 
 }

@@ -55,7 +55,10 @@
     <h2>Solicite la afiliación de su tramo a FreshBuy</h2>
 
     <!-- ID label -->
-    <label> <h4>ID</h4> <input type="text" #htmlID id="htmlID" /></label>
+    <label> <h4>ID</h4> <input type="text" class = "from-control" required minlength = "9" maxlength="9" #htmlID id="htmlID" /></label>
+    <div *ngIf = "htmlID.invalid">
+      ID is requierd.
+    </div>
     <!-- Name label -->
     <label> <h4>Nombre Completo</h4> <input type="text" #htmlName id="htmlName" /></label>
     <!-- Adress label -->
