@@ -10,9 +10,10 @@ import { ProducerComponent } from './register/producer/producer.component';
 import { ClientComponent } from './register/client/client.component';
 import { RouterModule } from '@angular/router';
 import { ProducerViewComponent } from './producer-view/producer-view.component';
-import { AdministrationViewComponent } from './administration-view/administration-view.component';
+import { ProducerManagementComponent } from './administration-view/producer-management/producer-management.component';
 import { ClientViewComponent } from './client-view/client-view.component';
 import { MatSliderModule } from '@angular/material/slider';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,6 @@ import { MatSliderModule } from '@angular/material/slider';
     ProducerComponent,
     ClientComponent,
     ProducerViewComponent,
-    AdministrationViewComponent,
     ClientViewComponent,
   ],
   imports: [
@@ -32,7 +32,8 @@ import { MatSliderModule } from '@angular/material/slider';
     MatSliderModule,
     RouterModule.forRoot([
       {path: '', component: LogInComponent}
-    ])
+    ]),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
