@@ -36,7 +36,7 @@ export class LogInComponent implements OnInit {
         this.router.navigateByUrl('/clientView');
         this.userPass = "";
       }else if(this.userType == "A" && this.password === this.userPass){
-        this.router.navigateByUrl('/adminView');
+        this.router.navigateByUrl('/producerManagement');
         this.userPass = "";
       }
       alert("Usuario: " + this.user + "\n" +
