@@ -8,7 +8,8 @@ import { ProducerComponent } from './register/producer/producer.component';
 import { RegisterComponent } from './register/register.component';
 import { ProducerManagementComponent } from './administration-view/producer-management/producer-management.component';
 import { AffiliationManagementComponent } from './administration-view/affiliation-management/affiliation-management.component';
-import { CategoryManagementComponent } from './administration-view/category-management/category-management.component'
+import { CategoryManagementComponent } from './administration-view/category-management/category-management.component';
+import { ReportViewComponent } from './administration-view/report-view/report-view.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [ { path: 'register', component: RegisterComponent},
@@ -17,9 +18,10 @@ const routes: Routes = [ { path: 'register', component: RegisterComponent},
                          { path: 'producer', component: ProducerComponent},
                          { path: "producerView", component: ProducerViewComponent},
                          { path: "clientView", component: ClientViewComponent},
-                         {path: "producerManagement", component: ProducerManagementComponent},
-                         {path: "affiliationManagement", component: AffiliationManagementComponent},
-                         {path: "categoryManagement", component: CategoryManagementComponent}];
+                         { path: "producerManagement", component: ProducerManagementComponent},
+                         { path: "affiliationManagement", component: AffiliationManagementComponent},
+                         { path: "categoryManagement", component: CategoryManagementComponent},
+                         { path: "reportView", component: ReportViewComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

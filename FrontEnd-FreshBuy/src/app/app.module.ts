@@ -10,6 +10,9 @@ import { ProducerComponent } from './register/producer/producer.component';
 import { ClientComponent } from './register/client/client.component';
 import { RouterModule } from '@angular/router';
 import { ProducerViewComponent } from './producer-view/producer-view.component';
+import { ProducerManagementComponent} from './administration-view/producer-management/producer-management.component';
+import { AffiliationManagementComponent } from './administration-view/affiliation-management/affiliation-management.component';
+import { CategoryManagementComponent } from  './administration-view/category-management/category-management.component';
 import { ClientViewComponent } from './client-view/client-view.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { DataTableComponent } from './administration-view/data-table/data-table.component';
@@ -17,6 +20,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReportViewComponent } from './administration-view/report-view/report-view.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +30,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ProducerComponent,
     ClientComponent,
     ProducerViewComponent,
+    ProducerManagementComponent,
+    AffiliationManagementComponent,
+    CategoryManagementComponent,
     ClientViewComponent,
     DataTableComponent,
+    ReportViewComponent,
   ],
   imports: [
     BrowserModule,

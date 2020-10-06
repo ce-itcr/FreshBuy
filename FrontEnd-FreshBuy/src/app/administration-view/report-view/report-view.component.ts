@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
-  selector: 'app-producer-management',
-  templateUrl: './producer-management.component.html',
-  styleUrls: ['./producer-management.component.css']
+  selector: 'app-report-view',
+  templateUrl: './report-view.component.html',
+  styleUrls: ['./report-view.component.css']
 })
-
-export class ProducerManagementComponent implements OnInit {
+export class ReportViewComponent implements OnInit {
 
   constructor() {
   }
@@ -18,5 +17,4 @@ export class ProducerManagementComponent implements OnInit {
       $("#wrapper").toggleClass("toggled");
     });
   }
-
 }
