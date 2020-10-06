@@ -13,6 +13,10 @@ import { ProducerViewComponent } from './producer-view/producer-view.component';
 import { AdministrationViewComponent } from './administration-view/administration-view.component';
 import { ClientViewComponent } from './client-view/client-view.component';
 import { MatSliderModule } from '@angular/material/slider';
+import { DataTableComponent } from './administration-view/data-table/data-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,7 @@ import { MatSliderModule } from '@angular/material/slider';
     ProducerViewComponent,
     AdministrationViewComponent,
     ClientViewComponent,
+    DataTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,10 @@ import { MatSliderModule } from '@angular/material/slider';
     MatSliderModule,
     RouterModule.forRoot([
       {path: '', component: LogInComponent}
-    ])
+    ]),
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
