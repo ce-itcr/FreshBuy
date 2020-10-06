@@ -35,4 +35,23 @@ export function isNumber(hID, max){
   return hID;
 }
 
+export function isEmail(hEmail){
+
+  var flag = 0;
+  var count = 0;
+  var atPosition;
+  var length = hEmail.length;
+
+  while(count<length){
+    if(hEmail.charAt(count) == "@" && count>0){
+      atPosition = count;
+      flag = 1;
+    }else if(hEmail.charAt(count) == "." && flag == 1 && (count+1)<length && (atPosition + 1) < count){
+      return hEmail;
+    }
+    count++;
+  }
+  return "Error"
+}
+
 export const UserandPass = [["1234C","abc"],["1234P","abc"],["1234A","abc"]];

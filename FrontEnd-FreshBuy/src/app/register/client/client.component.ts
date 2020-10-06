@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserandPass,  } from '../../register/register.component';
+import { UserandPass, isNumber, isEmail} from '../../register/register.component';
 
 @Component({
   selector: 'app-client',
@@ -10,9 +10,12 @@ import { UserandPass,  } from '../../register/register.component';
 export class ClientComponent implements OnInit {
 
   ID;
-  name;
-  adress;
-  eMail;
+  fName;
+  lName;
+  province;
+  canton;
+  district;
+  email;
   password;
 
   constructor() { }
@@ -20,17 +23,29 @@ export class ClientComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public registerData(hID, hName, hAdress, hEMail, hPassword){
-    this.ID = hID;
-    this.name = hName;
-    this.adress = hAdress;
-    this.eMail = hEMail;
-    this.password = hPassword;
+  public registerData(hID, hFirstName, hLastName, hProvince, hCanton,
+                      hDistrict, hEmail, hPassword){
+
+  this.ID = isNumber(hID,9);
+  this.fName = hFirstName;
+  this.lName = hLastName;
+  this.province = hProvince;
+  this.canton = hCanton;
+  this.district = hDistrict;
+  this.email = isEmail(hEmail);
+  this.password = hPassword;
 
 
-
-    UserandPass.push([this.ID + "C",this.password]);
-    alert(UserandPass);
+  alert("ID: " + this.ID + "\n" +
+          "Nombre: " + this.fName + "\n" +
+          "Apellido: " + this.lName + "\n" +
+          "Provincia: " + this.province + "\n" +
+          "Canton: " + this.canton + "\n" +
+          "Distrito: " + this.district + "\n" +
+          "email: " + this.email + "\n" +
+          "Contraseña: " + this.password + "\n");
+    //UserandPass.push([this.ID + "C",this.password]);
+    //alert(UserandPass);
 
   }
 }

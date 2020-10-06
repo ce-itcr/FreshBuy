@@ -30,42 +30,45 @@
         </span>
 
         <div class="wrap-input100 " >
-          <input id="person-id" class="input100" #person_id type="text" name="person-id" placeholder="Número de Cédula">
+          <input id="person-id" class="input100" #personId type="text" required maxlength="9" name="person-id" placeholder="Número de Cédula">
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100 ">
-          <input id="first-name" class="input100" #first_name type="text" name="first-name" placeholder="Nombre">
+          <input id="first-name" class="input100" #firstName type="text" required name="first-name" placeholder="Nombre">
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100">
-          <input id="last-name" class="input100" #last_name type="text" name="last-name" placeholder="Apellido">
+          <input id="last-name" class="input100" #lastName type="text" required name="last-name" placeholder="Apellido">
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100">
-          <input id="province" class="input100" #province type="text" name="province" placeholder="Provincia">
+          <input id="province" class="input100" #province type="text" required name="province" placeholder="Provincia">
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100" >
-          <input id="canton" class="input100" #canton type="text" name="canton" placeholder="Cantón">
+          <input id="canton" class="input100" #canton type="text" required name="canton" placeholder="Cantón">
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100" >
-          <input id="district" class="input100" #district type="text" name="district" placeholder="Distrito">
+          <input id="district" class="input100" #district type="text" required name="district" placeholder="Distrito">
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100">
-          <input id="email" class="input100" #email type="text" name="birth-date" placeholder="Correo Electrónico">
+          <input id="email" class="input100" #email type="text" required name="birth-date" placeholder="Correo Electrónico">
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100">
-          <input id="password" class="input100" #password type="password" name="phone-number" placeholder="Contraseña">
+          <input id="password" class="input100" #password type="password" required maxlength="8" name="phone-number" placeholder="Contraseña">
           <span class="focus-input100"></span>
         </div>
 
         <span class="login100-form-title p-b-34">
         </span>
         <div class="container-login100-form-btn">
-          <button class="login100-form-btn" >
+          <button class="login100-form-btn" (click)="registerData(personId.value, firstName.value,
+                                                    lastName.value, province.value,
+                                                    canton.value, district.value,
+                                                    email.value, password.value)">>
             Registrarse
           </button>
         </div>
