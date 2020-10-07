@@ -17,6 +17,7 @@ namespace Backend_FreshBuy.DBMS.Entities
         public double phone_number;
         public double sinpe_number;
         public String[] delivery_locations;
+        public String password;
 
         public Producer() { }
       

@@ -14,7 +14,7 @@ namespace Backend_FreshBuy.DBMS
         public static String execution_path = AppDomain.CurrentDomain.BaseDirectory;
         public static String data_path = execution_path + "DBMS\\Data";
 
-        public static String admins_path = data_path + "\\Admin.xml";
+        public static String admins_path = data_path + "\\Admin.json";
         public static String affiliations_path = data_path + "\\Affiliations.xml";
         public static String categories_path = data_path + "\\Categories.xml";
         public static String consumer_path = data_path + "\\Consumer.xml";

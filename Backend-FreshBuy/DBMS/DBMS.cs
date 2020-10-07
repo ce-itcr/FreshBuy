@@ -30,7 +30,7 @@ namespace Backend_FreshBuy.DBMS
         /// <param name="sinpe_number"></param>
         /// <param name="delivery_locations"></param>
         /// <returns></returns>
-        public bool create_producer(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String[] delivery_locations) { 
+        public bool create_producer(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String[] delivery_locations, String password) { 
             if(SELECT(producer_path, person_id) == null)
             {
                 Producer producer = new Producer();
@@ -45,6 +45,7 @@ namespace Backend_FreshBuy.DBMS
                 producer.phone_number = phone_number;
                 producer.sinpe_number = sinpe_number;
                 producer.delivery_locations = delivery_locations;
+                producer.password = password;
 
                 INSERT(producer_path, JsonConvert.SerializeObject(producer));
 
@@ -67,10 +68,10 @@ namespace Backend_FreshBuy.DBMS
         /// <param name="sinpe_number"></param>
         /// <param name="delivery_locations"></param>
         /// <returns></returns>
-        public bool update_producer(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String[] delivery_locations) {
+        public bool update_producer(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String[] delivery_locations, String password) {
             if(DELETE(producer_path, person_id))
             {
-                return create_producer(person_id, name, last_name, province, canton, district, birth_date, phone_number, sinpe_number, delivery_locations);
+                return create_producer(person_id, name, last_name, province, canton, district, birth_date, phone_number, sinpe_number, delivery_locations, password);
             }
             return false; 
         }
