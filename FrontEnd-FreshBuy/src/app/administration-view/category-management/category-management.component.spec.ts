@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProducerViewComponent } from './producer-view.component';
+import { CategoryManagementComponent } from './category-management.component';
 
-describe('ProducerViewComponent', () => {
-  let component: ProducerViewComponent;
-  let fixture: ComponentFixture<ProducerViewComponent>;
+describe('CategoryManagementComponent', () => {
+  let component: CategoryManagementComponent;
+  let fixture: ComponentFixture<CategoryManagementComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProducerViewComponent ]
+      declarations: [ CategoryManagementComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProducerViewComponent);
+    fixture = TestBed.createComponent(CategoryManagementComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

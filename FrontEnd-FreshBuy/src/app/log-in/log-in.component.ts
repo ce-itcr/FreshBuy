@@ -30,13 +30,13 @@ export class LogInComponent implements OnInit {
     this.userType = htmlUser.charAt(htmlUser.length - 1);
     if(this.keyPass && this.userPass != ""){
       if(this.userType == "P" && this.password === this.userPass){
-        this.router.navigateByUrl('/producerView');
+        this.router.navigateByUrl('/productsManagement');
         this.userPass = "";
       }else if(this.userType == "C" && this.password === this.userPass){
         this.router.navigateByUrl('/clientView');
         this.userPass = "";
       }else if(this.userType == "A" && this.password === this.userPass){
-        this.router.navigateByUrl('/adminView');
+        this.router.navigateByUrl('/producerManagement');
         this.userPass = "";
       }
       alert("Usuario: " + this.user + "\n" +
