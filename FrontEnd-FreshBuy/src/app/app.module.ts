@@ -15,12 +15,13 @@ import { AffiliationManagementComponent } from './administration-view/affiliatio
 import { CategoryManagementComponent } from  './administration-view/category-management/category-management.component';
 import { ClientViewComponent } from './client-view/client-view.component';
 import { MatSliderModule } from '@angular/material/slider';
-import { DataTableComponent } from './administration-view/data-table/data-table.component';
+import { DataTableComponent } from './data-tables/data-table/data-table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReportViewComponent } from './administration-view/report-view/report-view.component';
+import { ProductsDataTableComponent } from './data-tables/products-data-table/products-data-table.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ReportViewComponent } from './administration-view/report-view/report-vi
     ClientViewComponent,
     DataTableComponent,
     ReportViewComponent,
+    ProductsDataTableComponent,
   ],
   imports: [
     BrowserModule,
