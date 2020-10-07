@@ -30,7 +30,7 @@ export class LogInComponent implements OnInit {
     this.userType = htmlUser.charAt(htmlUser.length - 1);
     if(this.keyPass && this.userPass != ""){
       if(this.userType == "P" && this.password === this.userPass){
-        this.router.navigateByUrl('/producerView');
+        this.router.navigateByUrl('/productsManagement');
         this.userPass = "";
       }else if(this.userType == "C" && this.password === this.userPass){
         this.router.navigateByUrl('/clientView');

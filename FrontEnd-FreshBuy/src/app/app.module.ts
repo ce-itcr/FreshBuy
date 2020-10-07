@@ -9,7 +9,6 @@ import { LogInComponent } from './log-in/log-in.component';
 import { ProducerComponent } from './register/producer/producer.component';
 import { ClientComponent } from './register/client/client.component';
 import { RouterModule } from '@angular/router';
-import { ProducerViewComponent } from './producer-view/producer-view.component';
 import { ProducerManagementComponent} from './administration-view/producer-management/producer-management.component';
 import { AffiliationManagementComponent } from './administration-view/affiliation-management/affiliation-management.component';
 import { CategoryManagementComponent } from  './administration-view/category-management/category-management.component';
@@ -22,6 +21,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReportViewComponent } from './administration-view/report-view/report-view.component';
 import { ProductsDataTableComponent } from './data-tables/products-data-table/products-data-table.component';
+import { ProductsManagementComponent } from './producer-view/products-management/products-management.component';
+import { OrdersManagementComponent } from './producer-view/orders-management/orders-management.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,6 @@ import { ProductsDataTableComponent } from './data-tables/products-data-table/pr
     LogInComponent,
     ProducerComponent,
     ClientComponent,
-    ProducerViewComponent,
     ProducerManagementComponent,
     AffiliationManagementComponent,
     CategoryManagementComponent,
@@ -38,6 +38,8 @@ import { ProductsDataTableComponent } from './data-tables/products-data-table/pr
     DataTableComponent,
     ReportViewComponent,
     ProductsDataTableComponent,
+    ProductsManagementComponent,
+    OrdersManagementComponent,
   ],
   imports: [
     BrowserModule,
