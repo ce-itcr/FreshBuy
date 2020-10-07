@@ -4,6 +4,7 @@ body {
 
 #sidebar-wrapper {
   min-height: 100vh;
+  max-width: 30vh;
   margin-left: -15rem;
   -webkit-transition: margin .25s ease-out;
   -moz-transition: margin .25s ease-out;
@@ -12,7 +13,6 @@ body {
 }
 
 #sidebar-wrapper .sidebar-heading {
-  padding: 0.875rem 1.25rem;
   font-size: 1.2rem;
 }
 
@@ -89,4 +89,17 @@ body {
 .btn1001:hover {
   background: #509e2f;
   color: #fff;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #509e2f;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
 }
