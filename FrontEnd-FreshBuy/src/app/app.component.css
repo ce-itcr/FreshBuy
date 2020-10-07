@@ -195,6 +195,16 @@ iframe {
   background: #f2f2f2;
 }
 
+.container-login1001 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .wrap-login100 {
   width: 1170px;
   background: #fff;
@@ -207,7 +217,6 @@ iframe {
   flex-wrap: wrap;
   align-items: stretch;
   flex-direction: row-reverse;
-
 }
 
 /*==================================================================
