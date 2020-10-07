@@ -5,33 +5,24 @@ import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
-export interface DataTableItem {
+export interface CategoriesDataTableItem {
+  name: string;
   id: number;
-  firstName: string;
-  lastName: string;
-  province: string;
-  canton: string;
-  district: string;
-  birthDate: string;
-  phoneNumber: number;
-  sinpeNumber: number;
-  deliveryLocations: string;
-
 }
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: DataTableItem[] = [
-  {id:4, firstName:'Angelo', lastName:'Esquivel', province:"Puntarenas", canton:"central", district:"El Roble", birthDate:"1/1/2000", phoneNumber:88888888, sinpeNumber:99999999, deliveryLocations:"Puntarenas"},
-  {id:4, firstName:'Jonathan', lastName:'Ortiz', province:"Puntarenas", canton:"central", district:"El Roble", birthDate:"1/1/2000", phoneNumber:88888888, sinpeNumber:99999999, deliveryLocations:"Puntarenas"}
+const EXAMPLE_DATA: CategoriesDataTableItem[] = [
+  {id: 1, name: 'legumbres'},
+  {id: 2, name: 'verduras'},
 ];
 
 /**
- * Data source for the DataTable view. This class should
+ * Data source for the CategoriesDataTable view. This class should
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class DataTableDataSource extends DataSource<DataTableItem> {
-  data: DataTableItem[] = EXAMPLE_DATA;
+export class CategoriesDataTableDataSource extends DataSource<CategoriesDataTableItem> {
+  data: CategoriesDataTableItem[] = EXAMPLE_DATA;
   paginator: MatPaginator;
   sort: MatSort;
 
@@ -44,7 +35,7 @@ export class DataTableDataSource extends DataSource<DataTableItem> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): Observable<DataTableItem[]> {
+  connect(): Observable<CategoriesDataTableItem[]> {
     // Combine everything that affects the rendered data into one update
     // stream for the data-table to consume.
     const dataMutations = [
@@ -68,7 +59,7 @@ export class DataTableDataSource extends DataSource<DataTableItem> {
    * Paginate the data (client-side). If you're using server-side pagination,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getPagedData(data: DataTableItem[]) {
+  private getPagedData(data: CategoriesDataTableItem[]) {
     const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
     return data.splice(startIndex, this.paginator.pageSize);
   }
@@ -77,7 +68,7 @@ export class DataTableDataSource extends DataSource<DataTableItem> {
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getSortedData(data: DataTableItem[]) {
+  private getSortedData(data: CategoriesDataTableItem[]) {
     if (!this.sort.active || this.sort.direction === '') {
       return data;
     }
@@ -85,6 +76,7 @@ export class DataTableDataSource extends DataSource<DataTableItem> {
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
+        case 'name': return compare(a.name, b.name, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
         default: return 0;
       }
