@@ -14,15 +14,17 @@ import { AffiliationManagementComponent } from './administration-view/affiliatio
 import { CategoryManagementComponent } from  './administration-view/category-management/category-management.component';
 import { ClientViewComponent } from './client-view/client-view.component';
 import { MatSliderModule } from '@angular/material/slider';
-import { DataTableComponent } from './data-tables/data-table/data-table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReportViewComponent } from './administration-view/report-view/report-view.component';
+import { ClientsDataTableComponent } from './data-tables/clients-data-table/clients-data-table.component';
 import { ProductsDataTableComponent } from './data-tables/products-data-table/products-data-table.component';
 import { ProductsManagementComponent } from './producer-view/products-management/products-management.component';
 import { OrdersManagementComponent } from './producer-view/orders-management/orders-management.component';
+import { CategoriesDataTableComponent } from './data-tables/categories-data-table/categories-data-table.component';
+import { ProducersDataTableComponent } from './data-tables/producers-data-table/producers-data-table.component';
 
 @NgModule({
   declarations: [
@@ -35,9 +37,11 @@ import { OrdersManagementComponent } from './producer-view/orders-management/ord
     AffiliationManagementComponent,
     CategoryManagementComponent,
     ClientViewComponent,
-    DataTableComponent,
     ReportViewComponent,
+    ClientsDataTableComponent,
     ProductsDataTableComponent,
+    CategoriesDataTableComponent,
+    ProducersDataTableComponent,
     ProductsManagementComponent,
     OrdersManagementComponent,
   ],
