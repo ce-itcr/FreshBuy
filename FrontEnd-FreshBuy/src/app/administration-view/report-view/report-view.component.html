@@ -23,27 +23,33 @@
     <div class="container-fluid">
       <h1 class="mt-4">Vista de Reportes </h1>
 
-      <br>
-      <h3>Top 10 productos más vendidos</h3>
-      <app-categories-data-table></app-categories-data-table>
+      <mat-tab-group>
+        <mat-tab label="Top 10 Productos más vendidos">
+          <ng-template mat-tab-label>
+            <span (click)="refreshData()">Top 10 Productos más vendidos</span>
+            </ng-template>
+            <br><app-categories-data-table></app-categories-data-table>
+        </mat-tab>
+        <mat-tab label="Top 10 Productos que generan más ganancias">
+          <ng-template mat-tab-label>
+          <span (click)="refreshData()">Top 10 Productos que generan más ganancias</span>
+          </ng-template>
+          <br><app-categories-data-table></app-categories-data-table> </mat-tab>
+        <mat-tab label="Top 10 Productos más vendidos por productor">
+          <ng-template mat-tab-label>
+            <span (click)="refreshData()">Top 10 Productos más vendidos por productor</span>
+            </ng-template>
+            <br><app-categories-data-table></app-categories-data-table> </mat-tab>
+        <mat-tab label="Top 10 Clientes con más compras">
+          <ng-template mat-tab-label>
+            <span (click)="refreshData()">Top 10 Clientes con más compras</span>
+            </ng-template>
+             <br><app-categories-data-table></app-categories-data-table> </mat-tab>
+      </mat-tab-group>
 
-      <br>
-      <h3>Top 10 productos que generan más ganancias</h3>
-      <app-categories-data-table></app-categories-data-table>
-
-      <br>
-      <h3>Top 10 productos más vendidos por productor</h3>
-      <app-categories-data-table></app-categories-data-table>
-
-      <br>
-      <h3>Top 10 clientes con más compras</h3>
-      <app-categories-data-table></app-categories-data-table>
-
-      <br><br>
 
     </div>
   </div>
   <!-- /#page-content-wrapper -->
 </div>
 <!-- /#wrapper -->
-

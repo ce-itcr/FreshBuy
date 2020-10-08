@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import {MatTabsModule} from '@angular/material/tabs';
+import { exit } from 'process';
 
 @Component({
   selector: 'app-report-view',
@@ -16,5 +18,10 @@ export class ReportViewComponent implements OnInit {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
+  }
+
+  public refreshData(){
+    console.log("Sí´entra");
+    window.location.reload();
   }
 }
