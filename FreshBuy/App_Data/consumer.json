@@ -1,1 +1,3 @@
-﻿
+{"person_id":123123,"name":"john","last_name":"doe","province":"Cartago","canton":"Central","district":"Dulce Nombre","email":"johndow@gmail.com","username":"johndoe","password":"ASD213"}
+{"person_id":555555,"name":"prueba","last_name":"prueba","province":"Cartago","canton":"Central","district":"Dulce Nombre","email":"prueba@gmail.com","username":"prueba","password":"prueba123"}
+{"person_id":123412345,"name":"usuario_consumidor","last_name":"prueba","province":"Cartago","canton":"Central","district":"Dulce Nombre","email":"prueba@gmail.com","username":"consumidor1234","password":"consumidor1234"}

@@ -13,9 +13,8 @@ namespace FreshBuy.src.Entities
         public String province;
         public String canton;
         public String district;
-        public String birth_date;
-        public int phone_number;
-        public int sinpe_number;
+        public String email;
+        public String username;
         public String password;
 
         public Consumer() { }
