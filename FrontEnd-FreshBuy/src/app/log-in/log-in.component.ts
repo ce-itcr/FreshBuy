@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { UserandPass } from '../register/register.component';
 
 @Component({
@@ -10,7 +12,7 @@ import { UserandPass } from '../register/register.component';
 })
 export class LogInComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
   }
@@ -21,14 +23,21 @@ export class LogInComponent implements OnInit {
   userType: String;
   errorMessage: String;
   userPass: String;
+  error: String;
 
   btnClick(htmlUser,htmlPassword){
+
     this.user = htmlUser;
     this.password = htmlPassword;
-    this.comunication();
-    this.userPass = this.findUser(htmlUser);
-    this.userType = htmlUser.charAt(htmlUser.length - 1);
-    if(this.keyPass && this.userPass != ""){
+
+    this.sendData();
+    this.getResponse();
+
+    if(this.error == "TRUE"){
+      alert("Usuario: " + this.user + "\n" +
+          "Contraseña: " + this.password + "\n");
+      this.userPass = this.findUser(htmlUser);
+      this.userType = htmlUser.charAt(htmlUser.length - 1);
       if(this.userType == "P" && this.password === this.userPass){
         this.router.navigateByUrl('/productsManagement');
         this.userPass = "";
@@ -39,17 +48,21 @@ export class LogInComponent implements OnInit {
         this.router.navigateByUrl('/producerManagement');
         this.userPass = "";
       }
-      alert("Usuario: " + this.user + "\n" +
-            "Contraseña: " + this.password + "\n");
     }else{
-      alert(this.errorMessage);
+      alert("Error");
     }
   };
 
-  public comunication(){
-    this.userType = "P";
-    this.keyPass = true;
-    this.errorMessage = "Error en los datos";
+  //SEND USER DATA TO API
+  public sendData(){
+    return this.http.post<JSON>("/api/Admin/logInData",
+     {"user": this.user, "password": this.password}).subscribe(res => console.log("RES", res));
+  }
+
+  //GET RESPONSE FROM API
+  public getResponse(){
+    this.http.get<any>("/api/Admin/response").subscribe(res => alert(res[0]));
+    alert(this.error);
   }
 
   private findUser(user){
@@ -60,5 +73,4 @@ export class LogInComponent implements OnInit {
     }
     return "";
   }
-
 }

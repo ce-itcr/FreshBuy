@@ -15,7 +15,7 @@ export class AppComponent {
 
   ngOnInit(): void {
     //this.data_Service.getAll().subscribe(res => console.log("RES", res));
-    this.data_Service.postTest().subscribe(res => console.log("RES", res));
+    //this.data_Service.postTest().subscribe(res => console.log("RES", res));
   }
 
 }
