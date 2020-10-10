@@ -40,7 +40,9 @@ export class ClientComponent implements OnInit {
   this.username = username;
   this.password = hPassword;
 
-  this.post_new_consumer();
+  if(this.ID !== "Error" && this.email !== "Error"){
+    this.post_new_consumer();
+  }
 
 
   alert("ID: " + this.ID + "\n" +

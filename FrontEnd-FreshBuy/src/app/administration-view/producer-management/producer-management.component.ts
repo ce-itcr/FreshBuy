@@ -22,10 +22,12 @@ export class ProducerManagementComponent implements OnInit {
       $("#wrapper").toggleClass("toggled");
     });
 
-    this.http.post<JSON>("api/Login/Consumer/consult", "").subscribe(res => {
+    this.http.get<JSON>("api/Login/Consumer/consult").subscribe(res => {
       let parsing:any = JSON.parse(res[0]);
       for(let i = 0; i < parsing.length; i++){
         this.producers[i] = JSON.parse(parsing[i]);
+        this.producers[i].delete("username");
+        this.producers[i].delete("password");
       }
      });
 
