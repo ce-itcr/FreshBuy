@@ -17,27 +17,31 @@
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100">
-          <input id="last-name" class="input100" #lastName type="text" required name="last-name" placeholder="Apellido">
+          <input class="input100" #lastName type="text" required placeholder="Apellido">
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100">
-          <input id="province" class="input100" #province type="text" required name="province" placeholder="Provincia">
+          <input  class="input100" #province type="text" required  placeholder="Provincia">
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100" >
-          <input id="canton" class="input100" #canton type="text" required name="canton" placeholder="Cantón">
+          <input  class="input100" #canton type="text" required  placeholder="Cantón">
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100" >
-          <input id="district" class="input100" #district type="text" required name="district" placeholder="Distrito">
+          <input class="input100" #district type="text" required  placeholder="Distrito">
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100">
-          <input id="email" class="input100" #email type="text" required name="birth-date" placeholder="Correo Electrónico">
+          <input class="input100" #email type="text" required  placeholder="Correo Electrónico">
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100">
-          <input id="password" class="input100" #password type="password" required maxlength="8" name="phone-number" placeholder="Contraseña">
+          <input class="input100" #username type="text" placeholder="Nombre de Usuario">
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100">
+          <input class="input100" #password type="password" placeholder="Contraseña">
           <span class="focus-input100"></span>
         </div>
 
@@ -47,7 +51,7 @@
           <button class="login100-form-btn" (click)="registerData(personId.value, firstName.value,
                                                     lastName.value, province.value,
                                                     canton.value, district.value,
-                                                    email.value, password.value)">
+                                                    email.value, username.value, password.value)" type="button">
             Registrarse
           </button>
         </div>

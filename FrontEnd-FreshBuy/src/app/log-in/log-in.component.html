@@ -15,8 +15,17 @@
           <input class="input100" #password_html type="password" placeholder="Contraseña">
           <span class="focus-input100"></span>
         </div>
+        <div class="wrap-input100 " data-validate="Type user name">
+          <input class="input100" #user_type type="text" placeholder="Usuario (Admin, Consumidor, Productor)">
+          <span class="focus-input100"></span>
+        </div>
         <div class="container-login100-form-btn">
-          <button class="login100-form-btn" (click)="loginAction(username_html.value, password_html.value)" type="button">
+          .
+        </div>
+
+        <div class="container-login100-form-btn">
+          <!--<button class="login100-form-btn" (click)="loginAction(username_html.value, password_html.value)" type="button">-->
+          <button class="login100-form-btn" (click)="verify_user_type(username_html.value, password_html.value, user_type.value)" type="button">
             Iniciar Sesión
           </button>
         </div>

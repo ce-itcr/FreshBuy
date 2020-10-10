@@ -22,6 +22,7 @@ export class ProducerComponent implements OnInit {
   phoneNum;
   SINPE;
   deliveryLoc;
+  username;
   password;
   flag: boolean = true;
 
@@ -31,7 +32,7 @@ export class ProducerComponent implements OnInit {
   }
 
   public registerData(person_id, name, last_name, province, canton, district,
-     birth_date, phone_number, sinpe_number, delivery_locations, password){
+     birth_date, phone_number, sinpe_number, delivery_locations,username, password){
     this.ID = isNumber(person_id,9);
     this.fName = name;
     this.lName = last_name;
@@ -42,6 +43,7 @@ export class ProducerComponent implements OnInit {
     this.phoneNum = isNumber(phone_number,8);
     this.SINPE = isNumber(sinpe_number,8);
     this.deliveryLoc = ["Correos Esparza","Juanilama"];
+    this.username = username;
     this.password = password;
 
     this.postTest();
@@ -56,6 +58,7 @@ export class ProducerComponent implements OnInit {
           "Número Tel: " + this.phoneNum + "\n" +
           "SINPE: " + this.SINPE + "\n" +
           "Entrega: " + this.deliveryLoc + "\n" +
+          "Nombre de Usuario " + this.username + "\n" +
           "Contraseña" + this.password);
 
     //UserandPass.push([this.ID + "P","hola"]);
@@ -66,7 +69,7 @@ export class ProducerComponent implements OnInit {
   postTest()//:Observable<JSON>
   {
     this.CS.sendProducerData(this.ID,this.fName,this.lName,this.province,this.canton,this.district,
-      this.birthdate,this.phoneNum,this.SINPE,this.deliveryLoc,this.password).subscribe(res => {
+      this.birthdate,this.phoneNum,this.SINPE,this.deliveryLoc,this.username, this.password).subscribe(res => {
         console.log("Resp: ", res);
         this.router.navigateByUrl('/logIn');
       }, error => {

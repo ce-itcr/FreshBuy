@@ -48,21 +48,25 @@
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100">
+          <input class="input100" #username type="text" placeholder="Nombre de Usuario">
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100">
           <input class="input100" #password type="password" placeholder="Contraseña">
           <span class="focus-input100"></span>
         </div>
 
         <div class="container-login100-form-btn">
-          <button class="login100-form-btn" 
+          <button class="login100-form-btn"
           (click)="registerData(personId.value, firstName.value,
           lastName.value, province.value,
           canton.value, district.value,
           birthdate.value, phoneNumber.value,
           sinpeNumber.value, deliveryLocations.value,
-          password.value)" type="button">
+          username.value, password.value)" type="button">
             Solicitar Afiliación
           </button>
-        </div>  
+        </div>
       </form>
 
       <div class="login100-more">
