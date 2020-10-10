@@ -5,7 +5,6 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace FreshBuy.Models
 {
@@ -52,7 +51,8 @@ namespace FreshBuy.Models
             }
             return false;
         }
-        public bool update_producer(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String[] delivery_locations, String username, String password)
+
+            public bool update_producer(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String[] delivery_locations, String username, String password)
         {
             return false;
         }
@@ -69,5 +69,10 @@ namespace FreshBuy.Models
         public String[] bestprofitable_products(String[] products) { return null; }
         public String[] bestselling_products_by_producer(String[] products, int id) { return null; }
         public String[] customers_withmost_purchases(int id) { return null; }
+
+        public string[] find_producers()
+        {
+            return READALL(producer_path);
+        }
     }
 }

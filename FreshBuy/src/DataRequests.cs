@@ -241,6 +241,11 @@ namespace FreshBuy.src
         /// <param name="required_txt_value"></param>
         /// <param name="required_num_value"></param>
         /// <returns></returns>
+        
+        public String[] READALL(String entity_set_path)
+        {
+            return File.ReadAllLines(entity_set_path);
+        }
         public String[] FILTER(String entity_set_path, String attribute_to_search, String required_txt_value, int required_num_value)
         {
             Console.WriteLine("A FILTER process has been started on the entity set" + entity_set_path);
