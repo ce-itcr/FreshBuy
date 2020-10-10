@@ -8,16 +8,16 @@
         </span>
 
         <div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type user name">
-          <input id="first-name" class="input100" #username_html type="text" name="username" placeholder="Nombre de Usuario">
+          <input class="input100" #username_html type="text"  placeholder="Nombre de Usuario">
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20" data-validate="Type password">
-          <input class="input100" #password_html type="password" name="pass" placeholder="Contraseña">
+          <input class="input100" #password_html type="password" placeholder="Contraseña">
           <span class="focus-input100"></span>
         </div>
 
         <div class="container-login100-form-btn">
-          <button class="login100-form-btn" (click)="btnClick(username_html.value, password_html.value)">
+          <button class="login100-form-btn" (click)="loginAction(username_html.value, password_html.value)">
             Iniciar Sesión
           </button>
         </div>
@@ -40,6 +40,7 @@
             Registrese.
           </a>
         </div>
+        <button (click)="sayHello()">asdsadadsasdas</button>
       </form>
 
       <div class="login100-more">

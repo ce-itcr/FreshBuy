@@ -31,11 +31,10 @@ export class LogInComponent implements OnInit {
     this.password = htmlPassword;
 
     this.sendData();
-    this.getResponse();
 
     if(this.error == "TRUE"){
-      alert("Usuario: " + this.user + "\n" +
-          "Contraseña: " + this.password + "\n");
+      alert("username: " + this.user + "\n" +
+          "password: " + this.password + "\n");
       this.userPass = this.findUser(htmlUser);
       this.userType = htmlUser.charAt(htmlUser.length - 1);
       if(this.userType == "P" && this.password === this.userPass){
@@ -53,17 +52,25 @@ export class LogInComponent implements OnInit {
     }
   };
 
-  //SEND USER DATA TO API
-  public sendData(){
-    return this.http.post<JSON>("/api/Admin/logInData",
-     {"user": this.user, "password": this.password}).subscribe(res => console.log("RES", res));
+  loginAction(username, password){
+    this.user = username;
+    this.password = password;
+    this.sendData();
+
+    //this.router.navigateByUrl('/producerManagement');
+
   }
 
-  //GET RESPONSE FROM API
-  public getResponse(){
-    this.http.get<any>("/api/Admin/response").subscribe(res => alert(res[0]));
-    alert(this.error);
+  sayHello(){
+    console.debug("HELLO");
   }
+
+  //SEND USER DATA TO API
+  public sendData(){
+    return this.http.post<JSON>("api/Login/Admin/consult",
+     {"username": this.user.toString(), "password": this.password.toString()}).subscribe(res => console.log("RES", res));
+  }
+
 
   private findUser(user){
     for(var i = 0; i < UserandPass.length; i++){
