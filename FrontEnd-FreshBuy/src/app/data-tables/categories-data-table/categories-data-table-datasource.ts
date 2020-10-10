@@ -7,13 +7,13 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 // TODO: Replace this with your own data model type
 export interface CategoriesDataTableItem {
   name: string;
-  id: number;
+  category_id: number;
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: CategoriesDataTableItem[] = [
-  {id: 1, name: 'legumbres'},
-  {id: 2, name: 'verduras'},
+  {category_id: 1, name: 'legumbres'},
+  {category_id: 2, name: 'verduras'},
 ];
 
 /**
@@ -77,7 +77,7 @@ export class CategoriesDataTableDataSource extends DataSource<CategoriesDataTabl
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
         case 'name': return compare(a.name, b.name, isAsc);
-        case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'category_id': return compare(+a.category_id, +b.category_id, isAsc);
         default: return 0;
       }
     });

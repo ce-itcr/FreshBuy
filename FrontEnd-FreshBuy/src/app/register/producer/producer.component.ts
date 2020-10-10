@@ -32,7 +32,9 @@ export class ProducerComponent implements OnInit {
   }
 
   public registerData(person_id, name, last_name, province, canton, district,
-     birth_date, phone_number, sinpe_number, delivery_locations,username, password){
+     birth_date, phone_number, sinpe_number, delivery_locations,username, password){ 
+
+    let isValid:boolean = true;
     this.ID = isNumber(person_id,9);
     this.fName = name;
     this.lName = last_name;
@@ -46,7 +48,12 @@ export class ProducerComponent implements OnInit {
     this.username = username;
     this.password = password;
 
-    this.postTest();
+    if(this.ID === "Error" || this.phoneNum === "Error" || this.SINPE === "Error"){
+      isValid = false;
+    } 
+  	if(isValid){
+      this.postTest();
+    }
 
     alert("ID: " + this.ID + "\n" +
           "Nombre: " + this.fName + "\n" +
@@ -62,7 +69,6 @@ export class ProducerComponent implements OnInit {
           "Contraseña" + this.password);
 
     //UserandPass.push([this.ID + "P","hola"]);
-
 
   }
 
