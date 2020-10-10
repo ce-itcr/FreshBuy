@@ -3,6 +3,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
+import { ProducersDataTableComponent } from '../producers-data-table/producers-data-table.component';
+
 
 // TODO: Replace this with your own data model type
 export interface ClientsDataTableItem {
@@ -19,10 +21,8 @@ export interface ClientsDataTableItem {
 }
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: ClientsDataTableItem[] = [
-  {person_id:4, name:'Angelo', last_name:'Esquivel', province:"Puntarenas", canton:"central", district:"El Roble", birth_date:"1/1/2000", phone_number:88888888, sinpe_number:99999999, delivery_locations:"Puntarenas"},
-  {person_id:4, name:'Jonathan', last_name:'Ortiz', province:"Puntarenas", canton:"central", district:"El Roble", birth_date:"1/1/2000", phone_number:88888888, sinpe_number:99999999, delivery_locations:"Puntarenas"}
-];
+const DATA: ClientsDataTableItem[] = [];
+
 
 /**
  * Data source for the ClientsDataTable view. This class should
@@ -30,13 +30,22 @@ const EXAMPLE_DATA: ClientsDataTableItem[] = [
  * (including sorting, pagination, and filtering).
  */
 export class ClientsDataTableDataSource extends DataSource<ClientsDataTableItem> {
-  data: ClientsDataTableItem[] = EXAMPLE_DATA;
+  data: ClientsDataTableItem[] = [];
   paginator: MatPaginator;
   sort: MatSort;
 
   constructor() {
     super();
+    this.refresh(globalThis.producers)
   }
+
+
+  public refresh(producersList:any[]) {
+      this.data = producersList;
+      alert("name:")
+      alert(producersList[0]["name"])
+
+    };
 
   /**
    * Connect this data source to the table. The table will only update when
@@ -51,6 +60,7 @@ export class ClientsDataTableDataSource extends DataSource<ClientsDataTableItem>
       this.paginator.page,
       this.sort.sortChange
     ];
+    
 
     return merge(...dataMutations).pipe(map(() => {
       return this.getPagedData(this.getSortedData([...this.data]));
@@ -90,6 +100,7 @@ export class ClientsDataTableDataSource extends DataSource<ClientsDataTableItem>
     });
   }
 }
+
 
 /** Simple sort comparator for example ID/Name columns (for client-side sorting). */
 function compare(a: string | number, b: string | number, isAsc: boolean) {
