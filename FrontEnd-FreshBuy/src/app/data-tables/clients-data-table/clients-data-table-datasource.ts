@@ -6,22 +6,22 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
 export interface ClientsDataTableItem {
-  id: number;
-  firstName: string;
-  lastName: string;
+  person_id: number;
+  name: string;
+  last_name: string;
   province: string;
   canton: string;
   district: string;
-  birthDate: string;
-  phoneNumber: number;
-  sinpeNumber: number;
-  deliveryLocations: string;
+  birth_date: string;
+  phone_number: number;
+  sinpe_number: number;
+  delivery_locations: string;
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: ClientsDataTableItem[] = [
-  {id:4, firstName:'Angelo', lastName:'Esquivel', province:"Puntarenas", canton:"central", district:"El Roble", birthDate:"1/1/2000", phoneNumber:88888888, sinpeNumber:99999999, deliveryLocations:"Puntarenas"},
-  {id:4, firstName:'Jonathan', lastName:'Ortiz', province:"Puntarenas", canton:"central", district:"El Roble", birthDate:"1/1/2000", phoneNumber:88888888, sinpeNumber:99999999, deliveryLocations:"Puntarenas"}
+  {person_id:4, name:'Angelo', last_name:'Esquivel', province:"Puntarenas", canton:"central", district:"El Roble", birth_date:"1/1/2000", phone_number:88888888, sinpe_number:99999999, delivery_locations:"Puntarenas"},
+  {person_id:4, name:'Jonathan', last_name:'Ortiz', province:"Puntarenas", canton:"central", district:"El Roble", birth_date:"1/1/2000", phone_number:88888888, sinpe_number:99999999, delivery_locations:"Puntarenas"}
 ];
 
 /**
@@ -84,7 +84,7 @@ export class ClientsDataTableDataSource extends DataSource<ClientsDataTableItem>
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'person_id': return compare(+a.person_id, +b.person_id, isAsc);
         default: return 0;
       }
     });

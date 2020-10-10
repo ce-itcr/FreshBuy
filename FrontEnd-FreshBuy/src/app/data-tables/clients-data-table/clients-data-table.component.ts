@@ -16,7 +16,7 @@ export class ClientsDataTableComponent implements AfterViewInit, OnInit {
   dataSource: ClientsDataTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'firstName', 'lastName', 'province', 'canton', 'district', 'birthDate', 'phoneNumber', 'sinpeNumber', 'deliveryLocations'];
+  displayedColumns = ['person_id', 'name', 'last_name', 'province', 'canton', 'district', 'birth_date', 'phone_number', 'sinpe_number', 'delivery_locations'];
 
   ngOnInit() {
     this.dataSource = new ClientsDataTableDataSource();
