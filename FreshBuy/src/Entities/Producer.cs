@@ -17,6 +17,7 @@ namespace FreshBuy.src.Entities
         public double phone_number;
         public double sinpe_number;
         public String[] delivery_locations;
+        public String username;
         public String password;
 
         public Producer() { }

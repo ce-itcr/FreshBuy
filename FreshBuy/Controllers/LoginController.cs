@@ -24,7 +24,7 @@ namespace FreshBuy.Controllers
         public IHttpActionResult ConsultProducerLogin([FromBody] JObject login_producer_data)
         {
             bool result = login_model.producer_login_approval(
-                (int)login_producer_data["person_id"],
+                (string)login_producer_data["username"],
                 (string)login_producer_data["password"]);
 
             if (result)
@@ -81,6 +81,7 @@ namespace FreshBuy.Controllers
                     (double)new_producer["phone_number"],
                     (double)new_producer["sinpe_number"],
                     new_producer.SelectToken("delivery_locations")?.ToObject<string[]>(),
+                    (string)new_producer["username"],
                     (string)new_producer["password"]);
 
                 if (result)

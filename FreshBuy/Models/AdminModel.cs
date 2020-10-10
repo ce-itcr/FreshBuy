@@ -27,7 +27,7 @@ namespace FreshBuy.Models
         /// <param name="sinpe_number"></param>
         /// <param name="delivery_locations"></param>
         /// <returns></returns>
-        public bool create_producer(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String[] delivery_locations, String password)
+        public bool create_producer(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String[] delivery_locations, String username, String password)
         {
             if (SELECT(producer_path, person_id) == null)
             {
@@ -43,6 +43,7 @@ namespace FreshBuy.Models
                 producer.phone_number = phone_number;
                 producer.sinpe_number = sinpe_number;
                 producer.delivery_locations = delivery_locations;
+                producer.username = username;
                 producer.password = password;
 
                 INSERT(producer_path, JsonConvert.SerializeObject(producer));
@@ -51,7 +52,7 @@ namespace FreshBuy.Models
             }
             return false;
         }
-        public bool update_producer(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String[] delivery_locations, String password)
+        public bool update_producer(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String[] delivery_locations, String username, String password)
         {
             return false;
         }
