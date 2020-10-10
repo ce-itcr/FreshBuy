@@ -27,6 +27,7 @@ import { ProductsManagementComponent } from './producer-view/products-management
 import { OrdersManagementComponent } from './producer-view/orders-management/orders-management.component';
 import { CategoriesDataTableComponent } from './data-tables/categories-data-table/categories-data-table.component';
 import { ProducersDataTableComponent } from './data-tables/producers-data-table/producers-data-table.component';
+import { ComunicationService } from './comunication.service';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,7 @@ import { ProducersDataTableComponent } from './data-tables/producers-data-table/
     MatSortModule,
     NgbModule
   ],
-  providers: [],
+  providers: [ComunicationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

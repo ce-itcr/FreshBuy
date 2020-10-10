@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
-import { DataService } from './data.service';
+import { ComunicationService } from './comunication.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [DataService]
+  providers: [ComunicationService]
 })
 export class AppComponent {
   title = 'FrontEnd-FreshBuy';
-  constructor(private data_Service: DataService) { }
+  constructor(private data_Service: ComunicationService) { }
 
   ngOnInit(): void {
     //this.data_Service.getAll().subscribe(res => console.log("RES", res));

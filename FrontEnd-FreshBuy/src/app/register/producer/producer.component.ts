@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserandPass, isNumber} from '../../register/register.component';
 import { HttpClient } from '@angular/common/http'
+import { ComunicationService } from 'src/app/comunication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-producer',
@@ -21,25 +23,28 @@ export class ProducerComponent implements OnInit {
   SINPE;
   deliveryLoc;
   password;
+  flag: boolean = true;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private CS: ComunicationService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  public registerData(hID, hFirstName, hLastName, hProvince, hCanton,
-                      hDistrict, hBirthdate, hPhone, hSINPE, hDelivery, password){
-    this.ID = isNumber(hID,9);
-    this.fName = hFirstName;
-    this.lName = hLastName;
-    this.province = hProvince;
-    this.canton = hCanton;
-    this.district = hDistrict;
-    this.birthdate = hBirthdate;
-    this.phoneNum = isNumber(hPhone,8);
-    this.SINPE = isNumber(hSINPE,8);
-    this.deliveryLoc = hDelivery;
+  public registerData(person_id, name, last_name, province, canton, district,
+     birth_date, phone_number, sinpe_number, delivery_locations, password){
+    this.ID = isNumber(person_id,9);
+    this.fName = name;
+    this.lName = last_name;
+    this.province = province;
+    this.canton = canton;
+    this.district = district;
+    this.birthdate = birth_date;
+    this.phoneNum = isNumber(phone_number,8);
+    this.SINPE = isNumber(sinpe_number,8);
+    this.deliveryLoc = ["Correos Esparza","Juanilama"];
     this.password = password;
+
+    this.postTest();
 
     alert("ID: " + this.ID + "\n" +
           "Nombre: " + this.fName + "\n" +
@@ -50,30 +55,23 @@ export class ProducerComponent implements OnInit {
           "Nacimiento: " + this.birthdate + "\n" +
           "Número Tel: " + this.phoneNum + "\n" +
           "SINPE: " + this.SINPE + "\n" +
-          "Entrega: " + this.deliveryLoc + "\n");
+          "Entrega: " + this.deliveryLoc + "\n" +
+          "Contraseña" + this.password);
 
     //UserandPass.push([this.ID + "P","hola"]);
 
 
   }
 
-  postTest(person_id, name, last_name, province, canton, district, birth_date, phone_number, sinpe_number, delivery_locations, password)//:Observable<JSON>
+  postTest()//:Observable<JSON>
   {
-    console.log("si está entranfo");
-
-    return this.http.post<JSON>("api/Login/Producer/add",
-    {"person_id": person_id ,
-    "name" : name,
-    "last_name": last_name,
-    "province": province,
-    "canton": canton,
-    "district": district,
-    "birth_date":birth_date,
-    "phone_number": phone_number,
-    "sinpe_number": sinpe_number,
-    "delivery_locations": delivery_locations,
-    "password": password}
-    ).subscribe(res => console.log("RES", res));
+    this.CS.sendProducerData(this.ID,this.fName,this.lName,this.province,this.canton,this.district,
+      this.birthdate,this.phoneNum,this.SINPE,this.deliveryLoc,this.password).subscribe(res => {
+        console.log("Resp: ", res);
+        this.router.navigateByUrl('/logIn');
+      }, error => {
+        alert("ERROR");
+      });
 
     //return this.http.post<JSON>("api/Login/Producer/add",
     //{
