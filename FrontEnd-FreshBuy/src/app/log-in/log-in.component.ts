@@ -61,14 +61,14 @@ export class LogInComponent implements OnInit {
 
   }
 
-  sayHello(){
-    console.debug("HELLO");
-  }
 
   //SEND USER DATA TO API
   public sendData(){
-    return this.http.post<JSON>("api/Login/Admin/consult",
-     {"username": this.user.toString(), "password": this.password.toString()}).subscribe(res => console.log("RES", res));
+    return this.http.post<JSON>("api/Login/Consumer/consult",
+     {"username": this.user.toString(), "password": this.password.toString()}).subscribe(res => {
+       console.log("RES", res);
+       this.router.navigateByUrl('/producerManagement');
+      });
   }
 
 
