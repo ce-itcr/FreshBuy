@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 
@@ -8,7 +9,7 @@ import * as $ from 'jquery';
 })
 export class CategoryManagementComponent implements OnInit {
 
-  constructor() {
+  constructor(private http: HttpClient) {
   }
 
   ngOnInit(): void {

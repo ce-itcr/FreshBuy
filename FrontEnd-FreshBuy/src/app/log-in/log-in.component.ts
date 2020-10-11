@@ -15,7 +15,8 @@ export class LogInComponent implements OnInit {
 
   constructor(private router: Router, private http: HttpClient, private CS: ComunicationService) { }
   producerList: any[] = [];
-
+  categoryList: any[] = [];
+  
   ngOnInit(): void {
   }
 
@@ -95,7 +96,7 @@ export class LogInComponent implements OnInit {
       for (let i=0;i<res.length;i++){
         this.producerList.push(JSON.parse(res[i]))
       }
-      globalThis.producers = this.producerList;
+      globalThis.categories = this.categoryList;
       this.router.navigateByUrl('/categoryManagement');
   });
   
