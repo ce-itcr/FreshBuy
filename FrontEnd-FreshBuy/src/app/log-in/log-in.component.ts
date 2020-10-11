@@ -111,5 +111,3 @@ export class LogInComponent implements OnInit {
      });
   }
 }
-
-}
