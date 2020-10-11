@@ -4,8 +4,6 @@ import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 import { ProducersDataTableComponent } from '../producers-data-table/producers-data-table.component';
-import { HttpClient } from '@angular/common/http';
-
 
 // TODO: Replace this with your own data model type
 export interface ClientsDataTableItem {
@@ -21,11 +19,12 @@ export interface ClientsDataTableItem {
   delivery_locations: string;
 }
 
-// TODO: replace this with real data from your application
-const DATA: ClientsDataTableItem[] = [
-  {person_id:1, name:"ad", last_name:"asd", province:"adf", canton:"adf", district:"adf", birth_date:"asf", phone_number:23455, sinpe_number:134134, delivery_locations:"adf"}
-];
+declare global {
+  var producers: any[];
+}
 
+// TODO: replace this with real data from your application
+const DATA: ClientsDataTableItem[] = []
 
 /**
  * Data source for the ClientsDataTable view. This class should

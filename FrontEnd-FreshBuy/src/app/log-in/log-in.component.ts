@@ -88,6 +88,16 @@ export class LogInComponent implements OnInit {
       globalThis.producers = this.producerList;
       this.router.navigateByUrl('/producerManagement');
   });
+}
+
+  update_categories(){
+    this.CS.getProducers().subscribe(res => {
+      for (let i=0;i<res.length;i++){
+        this.producerList.push(JSON.parse(res[i]))
+      }
+      globalThis.producers = this.producerList;
+      this.router.navigateByUrl('/categoryManagement');
+  });
   
 }
 
@@ -100,5 +110,6 @@ export class LogInComponent implements OnInit {
        alert("ERROR");
      });
   }
+}
 
 }
