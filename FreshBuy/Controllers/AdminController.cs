@@ -30,6 +30,16 @@ namespace FreshBuy.Controllers
             return result;
         }
 
+        [HttpGet]
+        [Route("api/admin/categories/getCategories")]
+        public string[] getCategories()
+        {
+            AdminModel adminModel = new AdminModel();
+            string[] result = adminModel.find_categories();
+
+            return result;
+        }
+
         [HttpPost]
         [Route("api/admin/categories/add")]
         public IHttpActionResult CreateCategory([FromBody] JObject new_category)
