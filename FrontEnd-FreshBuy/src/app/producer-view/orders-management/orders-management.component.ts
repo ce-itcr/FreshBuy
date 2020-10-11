@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import * as $ from 'jquery';
 
 @Component({
@@ -8,8 +9,7 @@ import * as $ from 'jquery';
 })
 export class OrdersManagementComponent implements OnInit {
 
-  constructor() {
-  }
+  constructor(private modal:NgbModal) {  }
 
   ngOnInit(): void {
     $("#menu-toggle").click(function(e) {
@@ -18,4 +18,7 @@ export class OrdersManagementComponent implements OnInit {
     });
   }
 
+  openModal(content){ this.modal.open(content,{size:'lg', centered:true});}
+
 }
+
