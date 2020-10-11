@@ -177,9 +177,11 @@
     <Compile Include="Models\ProducerModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\DataRequests.cs" />
+    <Compile Include="src\Entities\Category.cs" />
     <Compile Include="src\Entities\Consumer.cs" />
     <Compile Include="src\Entities\Member_Affiliation.cs" />
     <Compile Include="src\Entities\Producer.cs" />
+    <Compile Include="src\Entities\Product.cs" />
     <Compile Include="src\Entities\Purchase.cs" />
   </ItemGroup>
   <ItemGroup>
