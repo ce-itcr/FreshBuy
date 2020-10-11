@@ -64,6 +64,14 @@ namespace FreshBuy.src
                         return current_entity_set[i];
                     }
                 }
+                else if (entity_set_path == categories_path)
+                {
+                    if ((int)entity_to_analyze["category_id"] == key_attribute)
+                    {
+                        Console.WriteLine("The request entity has been found: " + current_entity_set[i]);
+                        return current_entity_set[i];
+                    }
+                }
                 else
                 {
                     if ((int)entity_to_analyze["id"] == key_attribute)
@@ -157,6 +165,13 @@ namespace FreshBuy.src
                     if (!((int)entity_to_analyze["affiliation _id"] == key_attribute))
                     {
                         Console.WriteLine("The request entity has been removed: " + current_entity_set[i]);
+                    }
+                }
+                else if (entity_set_path == categories_path)
+                {
+                    if (!((int)entity_to_analyze["category_id"] == key_attribute))
+                    {
+                        Console.WriteLine("The request entity has been found: " + current_entity_set[i]);
                     }
                 }
                 else

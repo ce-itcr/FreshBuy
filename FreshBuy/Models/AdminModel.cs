@@ -104,9 +104,67 @@ namespace FreshBuy.Models
         }
 
         //Category Management
-        public bool create_category(int id, String name) { return false; } 
-        public bool update_category(int id, String name) { return false; }
-        public bool delete_category(int id) { return false; }
+
+        /// <summary>
+        /// Method that creates a category entity
+        /// </summary>
+        /// <param name="category_id"></param>
+        /// <param name="category_name"></param>
+        /// <returns></returns>
+        public bool create_category(int category_id, String category_name) 
+        {
+            if (SELECT(categories_path, category_id) == null)
+            {
+                Category new_category = new Category();
+
+                new_category.category_id = category_id;
+                new_category.category_name = category_name;
+
+                INSERT(categories_path, JsonConvert.SerializeObject(new_category));
+
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Method that updates a category entity
+        /// </summary>
+        /// <param name="category_id"></param>
+        /// <param name="category_name"></param>
+        /// <returns></returns>
+        public bool update_category(int category_id, String category_name) 
+        { 
+            if(SELECT(categories_path, category_id) != null)
+            {
+                UPDATE(categories_path, category_id, "category_name", category_name, 0);
+                return true;
+            }
+            return false; 
+        }
+
+        /// <summary>
+        /// Method that creates a category entity
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool delete_category(int category_id) 
+        { 
+            if(SELECT(categories_path, category_id) != null)
+            {
+                DELETE(categories_path, category_id);
+                String[] products_to_modify = FILTER(products_path, "category_id", null, category_id);
+                JObject product_to_analyze;
+
+                foreach (String product in products_to_modify)
+                {
+                    product_to_analyze = JObject.Parse(product);
+                    UPDATE(products_path, (int)product_to_analyze["product_id"], "category_id", null, 0);
+                }
+                return true;
+            }   
+            return false; 
+        }
 
         //Report View
         public String[] bestselling_products(String[] products) { return null; }
