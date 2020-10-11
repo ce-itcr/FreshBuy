@@ -34,6 +34,7 @@ export class ComunicationService {
     "password": password}
     );
   }
+
   public sendConsumerData(person_id, name, last_name, province, canton, district,
      email, username, password){
     return this.http.post<JSON>("api/Login/Consumer/add",
@@ -49,5 +50,9 @@ export class ComunicationService {
     );
   }
 
+  public sendItemsToBuy(itemsToBuy:any[]){
+    alert(JSON.stringify(itemsToBuy));
+    return this.http.post<JSON[]>("api/Consumer/Buy", itemsToBuy);
+  }
 
 }

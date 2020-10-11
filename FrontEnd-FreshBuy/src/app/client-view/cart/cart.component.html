@@ -1,0 +1,22 @@
+<div>
+    <app-cart-data-table></app-cart-data-table>
+</div>
+<div class="container-login1001">
+    <div class="wrap-login100">
+      <div class="wrap-input100">
+        <input class="input100" #product_id type="number"  placeholder="product_id">
+        <span class="focus-input100"></span>
+    <div class="wrap-input100">
+        <input class="input100" #amount type="number" placeholder="amount ">
+        <span class="focus-input100"></span>
+        </div>
+    <form class="login100-form validate-form">
+      <div class="container-login100-form-btn">
+        <button class="login100-form-btn" (click) = "addToJson(product_id.value, amount.value)" type="button">
+          Actualizar cantidad
+        </button>
+      </div>
+    </form>
+  </div>
+ </div>
+</div>

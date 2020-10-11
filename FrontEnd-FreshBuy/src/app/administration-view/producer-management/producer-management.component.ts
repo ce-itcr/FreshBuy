@@ -1,12 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import { Observable } from 'rxjs';
-import { ClientsDataTableDataSource } from 'src/app/data-tables/clients-data-table/clients-data-table-datasource';
-
-declare global {
-  var producers: any[];
-}
 
 @Component({
   selector: 'app-producer-management',
@@ -16,10 +10,11 @@ declare global {
 
 export class ProducerManagementComponent implements OnInit {
 
-  producerList: any[] = [];
-
   constructor(private http: HttpClient) {
   }
+  
+  producers:any[];
+  
 
   ngOnInit(): void {
     $("#menu-toggle").click(function(e) {
@@ -27,21 +22,14 @@ export class ProducerManagementComponent implements OnInit {
       $("#wrapper").toggleClass("toggled");
     });
 
-    this.http.get<string[]>("api/Admin/Producers/getProducers").subscribe(res => {
-      //var parsedRes = JSON.parse(res.toString());
-      //alert(res[0]);
-      //alert(res.toString())
-      for (let i=0;i<res.length;i++){
-        this.producerList.push(JSON.parse(res[i]))
-        delete this.producerList[i]["username"]
-        delete this.producerList[i]["password"]
+    this.http.get<JSON>("api/Login/Consumer/consult").subscribe(res => {
+      let parsing:any = JSON.parse(res[0]);
+      for(let i = 0; i < parsing.length; i++){
+        this.producers.push(JSON.parse(parsing[i]));
+        this.producers[i].delete("username");
+        this.producers[i].delete("password");
       }
-      //globalThis.producers = JSON.parse(res)
-      //this.producerList.push(JSON.parse(res.toString()))
-      globalThis.producers = this.producerList;
-      alert
-      new ClientsDataTableDataSource();
-      //globalThis.producers = JSON.parse(res.toString());
+      alert(this.producers);
      });
 
   }

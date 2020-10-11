@@ -28,6 +28,8 @@ import { OrdersManagementComponent } from './producer-view/orders-management/ord
 import { CategoriesDataTableComponent } from './data-tables/categories-data-table/categories-data-table.component';
 import { ProducersDataTableComponent } from './data-tables/producers-data-table/producers-data-table.component';
 import { ComunicationService } from './comunication.service';
+import { CartComponent } from './client-view/cart/cart.component';
+import { CartDataTableComponent } from './data-tables/cart-data-table/cart-data-table.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { ComunicationService } from './comunication.service';
     ProducersDataTableComponent,
     ProductsManagementComponent,
     OrdersManagementComponent,
+    CartComponent,
+    CartDataTableComponent,
   ],
   imports: [
     BrowserModule,

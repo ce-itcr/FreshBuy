@@ -11,6 +11,7 @@ import { CategoryManagementComponent } from './administration-view/category-mana
 import { ReportViewComponent } from './administration-view/report-view/report-view.component';
 import { OrdersManagementComponent } from './producer-view/orders-management/orders-management.component';
 import { ProductsManagementComponent } from './producer-view/products-management/products-management.component';
+import { CartComponent } from './client-view/cart/cart.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [ { path: 'register', component: RegisterComponent},
@@ -23,7 +24,8 @@ const routes: Routes = [ { path: 'register', component: RegisterComponent},
                          { path: "categoryManagement", component: CategoryManagementComponent},
                          { path: "reportView", component: ReportViewComponent},
                          { path: "productsManagement", component: ProductsManagementComponent},
-                         { path: "ordersManagement", component: OrdersManagementComponent}];
+                         { path: "ordersManagement", component: OrdersManagementComponent},
+                         { path: "cart", component: CartComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

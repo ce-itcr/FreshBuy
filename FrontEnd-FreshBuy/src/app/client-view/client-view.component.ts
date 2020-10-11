@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationStrategy } from '@angular/common';
 
+
 @Component({
   selector: 'app-client-view',
   templateUrl: './client-view.component.html',
