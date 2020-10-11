@@ -14,6 +14,10 @@ export class ComunicationService {
      {"username": user, "password": password});
   }
 
+  public getProducers(){
+    return this.http.get<string[]>("api/Admin/Producers/getProducers");
+  }
+
 
 
   //SEND REGISTER PRODUCER DATA TO API

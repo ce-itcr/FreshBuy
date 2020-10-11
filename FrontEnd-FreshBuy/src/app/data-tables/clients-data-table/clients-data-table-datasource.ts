@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 import { ProducersDataTableComponent } from '../producers-data-table/producers-data-table.component';
+import { HttpClient } from '@angular/common/http';
 
 
 // TODO: Replace this with your own data model type
@@ -21,7 +22,9 @@ export interface ClientsDataTableItem {
 }
 
 // TODO: replace this with real data from your application
-const DATA: ClientsDataTableItem[] = [];
+const DATA: ClientsDataTableItem[] = [
+  {person_id:1, name:"ad", last_name:"asd", province:"adf", canton:"adf", district:"adf", birth_date:"asf", phone_number:23455, sinpe_number:134134, delivery_locations:"adf"}
+];
 
 
 /**
@@ -30,21 +33,17 @@ const DATA: ClientsDataTableItem[] = [];
  * (including sorting, pagination, and filtering).
  */
 export class ClientsDataTableDataSource extends DataSource<ClientsDataTableItem> {
-  data: ClientsDataTableItem[] = [];
+  data: ClientsDataTableItem[] = globalThis.producers;
   paginator: MatPaginator;
   sort: MatSort;
 
   constructor() {
     super();
-    this.refresh(globalThis.producers)
   }
 
 
-  public refresh(producersList:any[]) {
-      this.data = producersList;
-      alert("name:")
-      alert(producersList[0]["name"])
-
+  public refresh() {
+      this.data = globalThis.producers;
     };
 
   /**

@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { ClientsDataTableDataSource, ClientsDataTableItem } from './clients-data-table-datasource';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-clients-data-table',
@@ -14,6 +15,7 @@ export class ClientsDataTableComponent implements AfterViewInit, OnInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatTable) table: MatTable<ClientsDataTableItem>;
   dataSource: ClientsDataTableDataSource;
+  private http:HttpClient
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['person_id', 'name', 'last_name', 'province', 'canton', 'district', 'birth_date', 'phone_number', 'sinpe_number', 'delivery_locations'];
@@ -24,6 +26,7 @@ export class ClientsDataTableComponent implements AfterViewInit, OnInit {
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
+    //this.dataSource.refresh();
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
   }

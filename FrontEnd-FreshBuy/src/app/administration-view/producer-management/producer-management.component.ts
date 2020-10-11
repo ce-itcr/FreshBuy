@@ -18,7 +18,7 @@ export class ProducerManagementComponent implements OnInit {
 
   producerList: any[] = [];
 
-  constructor(private http: HttpClient) {
+  constructor() {
   }
 
   ngOnInit(): void {
@@ -26,23 +26,6 @@ export class ProducerManagementComponent implements OnInit {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
-
-    this.http.get<string[]>("api/Admin/Producers/getProducers").subscribe(res => {
-      //var parsedRes = JSON.parse(res.toString());
-      //alert(res[0]);
-      //alert(res.toString())
-      for (let i=0;i<res.length;i++){
-        this.producerList.push(JSON.parse(res[i]))
-        delete this.producerList[i]["username"]
-        delete this.producerList[i]["password"]
-      }
-      //globalThis.producers = JSON.parse(res)
-      //this.producerList.push(JSON.parse(res.toString()))
-      globalThis.producers = this.producerList;
-      alert
-      new ClientsDataTableDataSource();
-      //globalThis.producers = JSON.parse(res.toString());
-     });
 
   }
 
