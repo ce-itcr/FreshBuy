@@ -32,7 +32,6 @@ export class CartComponent implements OnInit {
     },error =>{
       alert(error);
     });
-    alert("listo");
   }
 
 }

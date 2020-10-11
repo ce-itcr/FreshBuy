@@ -14,6 +14,10 @@ export class ComunicationService {
      {"username": user, "password": password});
   }
 
+  public getProducers(){
+    return this.http.get<string[]>("api/Admin/Producers/getProducers");
+  }
+
 
 
   //SEND REGISTER PRODUCER DATA TO API
@@ -51,7 +55,6 @@ export class ComunicationService {
   }
 
   public sendItemsToBuy(itemsToBuy:any[]){
-    alert(JSON.stringify(itemsToBuy));
     return this.http.post<JSON[]>("api/Consumer/Buy", itemsToBuy);
   }
 

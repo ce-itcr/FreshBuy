@@ -5,7 +5,6 @@ import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 import { ProducersDataTableComponent } from '../producers-data-table/producers-data-table.component';
 
-
 // TODO: Replace this with your own data model type
 export interface ClientsDataTableItem {
   person_id: number;
@@ -20,9 +19,12 @@ export interface ClientsDataTableItem {
   delivery_locations: string;
 }
 
-// TODO: replace this with real data from your application
-const DATA: ClientsDataTableItem[] = [];
+declare global {
+  var producers: any[];
+}
 
+// TODO: replace this with real data from your application
+const DATA: ClientsDataTableItem[] = []
 
 /**
  * Data source for the ClientsDataTable view. This class should
@@ -30,21 +32,17 @@ const DATA: ClientsDataTableItem[] = [];
  * (including sorting, pagination, and filtering).
  */
 export class ClientsDataTableDataSource extends DataSource<ClientsDataTableItem> {
-  data: ClientsDataTableItem[] = [];
+  data: ClientsDataTableItem[] = globalThis.producers;
   paginator: MatPaginator;
   sort: MatSort;
 
   constructor() {
     super();
-    this.refresh(globalThis.producers)
   }
 
 
-  public refresh(producersList:any[]) {
-      this.data = producersList;
-      alert("name:")
-      alert(producersList[0]["name"])
-
+  public refresh() {
+      this.data = globalThis.producers;
     };
 
   /**

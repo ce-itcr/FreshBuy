@@ -14,6 +14,7 @@ import { UserandPass } from '../register/register.component';
 export class LogInComponent implements OnInit {
 
   constructor(private router: Router, private http: HttpClient, private CS: ComunicationService) { }
+  producerList: any[] = [];
 
   ngOnInit(): void {
   }
@@ -57,7 +58,7 @@ export class LogInComponent implements OnInit {
     return this.http.post<JSON>("api/Login/Admin/consult",
     {"username": this.user.toString(), "password": this.password.toString()}).subscribe(res => {
       console.log("RES", res);
-      this.router.navigateByUrl('/producerManagement');
+      this.update_producers();
      });
   }
 
@@ -77,7 +78,28 @@ export class LogInComponent implements OnInit {
      });
   }
 
+  update_producers(){
+    this.CS.getProducers().subscribe(res => {
+      for (let i=0;i<res.length;i++){
+        this.producerList.push(JSON.parse(res[i]))
+        delete this.producerList[i]["username"]
+        delete this.producerList[i]["password"]
+      }
+      globalThis.producers = this.producerList;
+      this.router.navigateByUrl('/producerManagement');
+  });
+}
 
+  update_categories(){
+    this.CS.getProducers().subscribe(res => {
+      for (let i=0;i<res.length;i++){
+        this.producerList.push(JSON.parse(res[i]))
+      }
+      globalThis.producers = this.producerList;
+      this.router.navigateByUrl('/categoryManagement');
+  });
+  
+}
 
   //SEND DATA
   sendData(){
@@ -86,7 +108,6 @@ export class LogInComponent implements OnInit {
       this.router.navigateByUrl('/producerManagement');
      }, error => {
        alert("ERROR");
-     })
+     });
   }
-
 }
