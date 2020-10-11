@@ -1,1 +1,4 @@
-﻿
+{"product_id":1,"product_name":"fresas","category":"frutas","category_id":1,"sale_mode":"por kilo","availability":50,"price":2500,"photo":"direcci�n foto","producer_id":305120373}
+{"product_id":2,"product_name":"bananos","category":"frutas","category_id":1,"sale_mode":"mano","availability":50,"price":1000,"photo":"direcci�n foto","producer_id":305120373}
+{"product_id":3,"product_name":"papaya","category":"frutas","category_id":1,"sale_mode":"por kilo","availability":10000,"price":2500,"photo":"direccion","producer_id":305120373}
+{"product_id":4,"product_name":"melon","category":"frutas","category_id":1,"sale_mode":"unidad","availability":50000,"price":960,"photo":"direccion","producer_id":305120373}

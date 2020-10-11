@@ -20,7 +20,7 @@ namespace FreshBuy.Controllers
 
 
         [HttpPost]
-        [Route("api/Login/Producer/consult")]
+        [Route("api/login/producer/consult")]
         public IHttpActionResult ConsultProducerLogin([FromBody] JObject login_producer_data)
         {
             bool result = login_model.producer_login_approval(
@@ -35,7 +35,7 @@ namespace FreshBuy.Controllers
         }
 
         [HttpPost]
-        [Route("api/Login/Consumer/consult")]
+        [Route("api/login/consumer/consult")]
         public IHttpActionResult ConsultConsumerLogin([FromBody] JObject login_consumer_data)
         {
             bool result = login_model.consumer_login_approval(
@@ -51,7 +51,7 @@ namespace FreshBuy.Controllers
 
 
         [HttpPost]
-        [Route("api/Login/Admin/consult")]
+        [Route("api/login/admin/consult")]
         public IHttpActionResult ConsultAdminLogin([FromBody] JObject login_admin_data)
         {
             bool result = login_model.admin_login_approval(
@@ -66,7 +66,7 @@ namespace FreshBuy.Controllers
         }
 
         [HttpPost]
-        [Route("api/Login/Producer/add")]
+        [Route("api/login/producer/add")]
         public IHttpActionResult CreateProducer([FromBody] JObject new_producer)
         {
             {
@@ -94,7 +94,7 @@ namespace FreshBuy.Controllers
 
 
         [HttpPost]
-        [Route("api/Login/Consumer/add")]
+        [Route("api/login/consumer/add")]
         public IHttpActionResult CreateConsumer([FromBody] JObject new_consumer)
         {
             {

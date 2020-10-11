@@ -179,6 +179,7 @@
     <Compile Include="src\Entities\Consumer.cs" />
     <Compile Include="src\Entities\Member_Affiliation.cs" />
     <Compile Include="src\Entities\Producer.cs" />
+    <Compile Include="src\Entities\Product.cs" />
     <Compile Include="src\Entities\Purchase.cs" />
   </ItemGroup>
   <ItemGroup>

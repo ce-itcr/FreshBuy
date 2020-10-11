@@ -40,7 +40,7 @@ namespace FreshBuy.src
             for (int i = 0; i < current_entity_set.Length; i++)
             {
                 entity_to_analyze = JObject.Parse(current_entity_set[i]);
-                if (entity_set_path == consumer_path || entity_set_path == producer_path)
+                if (entity_set_path == consumer_path || entity_set_path == producer_path || entity_set_path == admins_path)
                 {
                     if ((int)entity_to_analyze["person_id"] == key_attribute)
                     {
@@ -48,9 +48,9 @@ namespace FreshBuy.src
                         return current_entity_set[i];
                     }
                 }
-                else if (entity_set_path == products_path || entity_set_path == admins_path)
+                else if (entity_set_path == products_path )
                 {
-                    if ((int)entity_to_analyze["prduct_id"] == key_attribute)
+                    if ((int)entity_to_analyze["product_id"] == key_attribute)
                     {
                         Console.WriteLine("The request entity has been found: " + current_entity_set[i]);
                         return current_entity_set[i];
@@ -59,14 +59,6 @@ namespace FreshBuy.src
                 else if (entity_set_path == purchases_path)
                 {
                     if ((int)entity_to_analyze["purchase_id"] == key_attribute)
-                    {
-                        Console.WriteLine("The request entity has been found: " + current_entity_set[i]);
-                        return current_entity_set[i];
-                    }
-                }
-                else if (entity_set_path == affiliations_path)
-                {
-                    if ((int)entity_to_analyze["affiliation _id"] == key_attribute)
                     {
                         Console.WriteLine("The request entity has been found: " + current_entity_set[i]);
                         return current_entity_set[i];
@@ -148,7 +140,7 @@ namespace FreshBuy.src
                 }
                 else if (entity_set_path == products_path || entity_set_path == admins_path)
                 {
-                    if (!((int)entity_to_analyze["prduct_id"] == key_attribute))
+                    if (!((int)entity_to_analyze["product_id"] == key_attribute))
                     {
                         Console.WriteLine("The request entity has been removed: " + current_entity_set[i]);
                     }

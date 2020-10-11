@@ -20,17 +20,6 @@ namespace FreshBuy.Models
         /// <returns></returns>
         public bool producer_login_approval(String username, String password)
         {
-            /*if (SELECT(producer_path, username) != null)
-            {
-                JObject current_producer = JObject.Parse(SELECT(producer_path, username));
-                if ((String)current_producer["password"] == password)
-                {
-                    return true;
-                }
-                return false;
-            }
-            return false;*/
-
             String[] producers_list = FILTER(producer_path, "username", username, 0);
 
             if (producers_list.Length == 1)
@@ -62,13 +51,20 @@ namespace FreshBuy.Models
             }
             return false;
         }
+
+        /// <summary>
+        /// Accept or deny a user's login: ADMIN
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public bool admin_login_approval(String username, String password)
         {
-            String[] consumers_list = FILTER(admins_path, "username", username, 0);
+            String[] admins_list = FILTER(admins_path, "username", username, 0);
 
-            if (consumers_list.Length == 1)
+            if (admins_list.Length == 1)
             {
-                if ((String)JObject.Parse(consumers_list[0])["password"] == password)
+                if ((String)JObject.Parse(admins_list[0])["password"] == password)
                 {
                     return true;
                 }
