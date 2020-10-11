@@ -1,8 +1,10 @@
 ﻿using FreshBuy.src;
 using FreshBuy.src.Entities;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 
@@ -54,5 +56,19 @@ namespace FreshBuy.Models
 
         //Purchase
         public bool create_purchase(int id, String[] products, String delivery_location) { return true; }
+
+        public bool purchase(JObject[] cart_client_data)
+        {
+
+            for (int i = 0; i < cart_client_data.Length; i++)
+            {
+                //Debug.Print((string)cart_client_data[i]["product_id"]);
+                int current = (int)(JObject.Parse(SELECT(products_path, (int)cart_client_data[i]["product_id"]))["availability"]);
+                int amount = (int)cart_client_data[i]["amount"];
+                UPDATE(products_path, (int)cart_client_data[i]["product_id"], "availability", null, current - amount);
+            }
+
+            return true;
+        }
     }
 }
