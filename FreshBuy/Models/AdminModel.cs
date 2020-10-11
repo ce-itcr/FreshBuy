@@ -12,6 +12,11 @@ namespace FreshBuy.Models
     {
         //Producer Management
 
+        public string[] find_producers()
+        {
+            return READALL(producer_path);
+        }
+
         /// <summary>
         /// Method that creates a producer entity
         /// </summary>
@@ -102,6 +107,12 @@ namespace FreshBuy.Models
 
         //Category Management
 
+
+        public string[] find_categories()
+        {
+            return READALL(categories_path);
+        }
+
         /// <summary>
         /// Method that creates a category entity
         /// </summary>
@@ -169,9 +180,5 @@ namespace FreshBuy.Models
         public String[] bestselling_products_by_producer(String[] products, int id) { return null; }
         public String[] customers_withmost_purchases(int id) { return null; }
 
-        public string[] find_producers()
-        {
-            return READALL(producer_path);
-        }
     }
 }
