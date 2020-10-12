@@ -13,7 +13,7 @@ import { back_disable, update_producers, update_categories } from '../../logic'
 export class AffiliationManagementComponent implements OnInit {
 
   constructor(private location: LocationStrategy, private CS: ComunicationService, private router: Router) {
-    back_disable(this.location); 
+    back_disable(this.location);
   }
 
   updateProducers(){

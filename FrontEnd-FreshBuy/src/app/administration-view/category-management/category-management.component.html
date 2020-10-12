@@ -7,7 +7,7 @@
       <a href="./affiliationManagement" class="list-group-item list-group-item-action bg-light">Administración de Afiliaciones</a>
       <a class="list-group-item list-group-item-action bg-light">Gestión de Categorías</a>
       <a href="./reportView" class="list-group-item list-group-item-action bg-light">Vista de Reportes</a>
-      <a href="./" class="list-group-item list-group-item-action bg-light">Cerrar Sesión</a>
+      <a class="list-group-item list-group-item-action bg-light" (click)="openModal(close_this)">Cerrar Sesión</a>
     </div>
     <div class="sidebar-footer" style="padding-bottom: 0%; padding-top: 30%; padding-left: 1%; position: fixed;">
       <h5>FreshBuy - Vista de Administración <br>github.com/ce-itcr/FreshBuy<br><b>Versión 1.0.0</b></h5>
@@ -23,9 +23,9 @@
     <div class="container-fluid">
       <h1 class="mt-4">Gestión de Categorías </h1>
 
-      <button mat-raised-button> Crear Categoría </button>
-      <button mat-raised-button> Eliminar Categoría </button>
-      <button mat-raised-button> Actualizar Categoría </button>
+      <button mat-raised-button (click)="openModal(create_category_modal)"> Crear Categoría </button>
+      <button mat-raised-button (click)="openModal(delete_category_modal)"> Eliminar Categoría </button>
+      <button mat-raised-button (click)="openModal(update_category_modal)"> Actualizar Categoría </button>
 
       <br><br>
 
@@ -36,4 +36,71 @@
   <!-- /#page-content-wrapper -->
 </div>
 <!-- /#wrapper -->
+
+
+<ng-template #close_this let-modal>
+  <div class="modal-header">
+      <h4 class="modal-title">¿Seguro que desea salir?</h4>
+  </div>
+  <div class="modal-body">
+    Somos una Feria Virtual que conecta los agricultores con consumidores, llevando productos frescos del campo hasta tu casa.
+</div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="modal.close()" [routerLink]='["/"]'>Si</button>
+      <button type="button" class="btn btn-outline-danger" (click)="modal.close()">No</button>
+  </div>
+</ng-template>
+
+
+<ng-template #create_category_modal let-modal>
+  <div class="modal-header">
+      <h4 class="modal-title">Añadir una nueva categoria .</h4>
+  </div>
+  <div class="modal-body" style="justify-content: center;align-items: center;display: inline-block;vertical-align: middle;padding-left: 25%;">
+    <form>
+      <input #category_id type="number" placeholder="Id de Categoria">
+      <input #category_name type="text" placeholder="Nombre de Categoria">
+
+    </form>
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="create_category(category_id.value, category_name.value)" (click)="modal.close()">Añadir</button>
+      <button type="button" class="btn btn-outline-danger" (click)="modal.close()">Cancelar</button>
+  </div>
+</ng-template>
+
+
+
+<ng-template #delete_category_modal let-modal>
+  <div class="modal-header">
+      <h4 class="modal-title">Eliminar una categoria de su bodega digital.</h4>
+  </div>
+  <div class="modal-body" style="justify-content: center;align-items: center;display: inline-block;vertical-align: middle;padding-left: 25%;">
+    <form>
+      <input #product_id type="number" placeholder="Id de Categoria">
+    </form>
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="delete_category(product_id.value)" (click)="modal.close()">Eliminar</button>
+      <button type="button" class="btn btn-outline-danger" (click)="modal.close()">Cancelar</button>
+  </div>
+</ng-template>
+
+
+<ng-template #update_category_modal let-modal>
+  <div class="modal-header">
+      <h4 class="modal-title">Actualizar una categoria.</h4>
+  </div>
+  <div class="modal-body" style="justify-content: center;align-items: center;display: inline-block;vertical-align: middle;padding-left: 25%;">
+    <form>
+      <input #category_id type="number" placeholder="Id de Categoria">
+      <input #category_name type="text" placeholder="Nombre de Categoria">
+
+    </form>
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="update_category(category_id.value, category_name.value)" (click)="modal.close()">Actualizar</button>
+      <button type="button" class="btn btn-outline-danger" (click)="modal.close()">Cancelar</button>
+  </div>
+</ng-template>
 

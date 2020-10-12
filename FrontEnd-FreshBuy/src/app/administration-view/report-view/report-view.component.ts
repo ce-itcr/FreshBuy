@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class ReportViewComponent implements OnInit {
 
   constructor(private location: LocationStrategy, private CS: ComunicationService, private router: Router) {
-    back_disable(this.location); 
+    back_disable(this.location);
   }
 
   updateProducers(){
