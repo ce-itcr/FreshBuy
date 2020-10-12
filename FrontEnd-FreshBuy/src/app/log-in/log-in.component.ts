@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { ComunicationService } from '../comunication.service';
-import { UserandPass } from '../register/register.component';
+import { update_producers } from '../logic';
 
 @Component({
   selector: 'app-log-in',
@@ -58,7 +57,7 @@ export class LogInComponent implements OnInit {
     return this.http.post<JSON>("api/Login/Admin/consult",
     {"username": this.user.toString(), "password": this.password.toString()}).subscribe(res => {
       console.log("RES", res);
-      this.update_producers();
+      update_producers(this.router,this.CS);
      });
   }
 
@@ -87,8 +86,8 @@ export class LogInComponent implements OnInit {
       }
       globalThis.producers = this.producerList;
       this.router.navigateByUrl('/producerManagement');
-  });
-}
+    });
+  }
 
   update_categories(){
     this.CS.getProducers().subscribe(res => {
@@ -97,9 +96,9 @@ export class LogInComponent implements OnInit {
       }
       globalThis.producers = this.producerList;
       this.router.navigateByUrl('/categoryManagement');
-  });
+    });
   
-}
+  }
 
   //SEND DATA
   sendData(){

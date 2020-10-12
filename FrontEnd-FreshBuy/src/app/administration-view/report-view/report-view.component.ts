@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import {MatTabsModule} from '@angular/material/tabs';
-import { exit } from 'process';
+import { LocationStrategy } from '@angular/common';
+import { back_disable, update_producers } from '../../logic'
+import { ComunicationService } from 'src/app/comunication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-report-view',
@@ -10,7 +12,12 @@ import { exit } from 'process';
 })
 export class ReportViewComponent implements OnInit {
 
-  constructor() {
+  constructor(private location: LocationStrategy, private CS: ComunicationService, private router: Router) {
+    back_disable(this.location); 
+  }
+
+  updateProducers(){
+    update_producers(this.router, this.CS);
   }
 
   ngOnInit(): void {

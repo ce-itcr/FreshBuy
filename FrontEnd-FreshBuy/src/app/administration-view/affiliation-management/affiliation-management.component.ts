@@ -1,5 +1,9 @@
+import { LocationStrategy } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import * as $ from 'jquery';
+import { ComunicationService } from 'src/app/comunication.service';
+import { back_disable, update_producers } from '../../logic'
 
 @Component({
   selector: 'app-affiliation-management',
@@ -8,7 +12,12 @@ import * as $ from 'jquery';
 })
 export class AffiliationManagementComponent implements OnInit {
 
-  constructor() {
+  constructor(private location: LocationStrategy, private CS: ComunicationService, private router: Router) {
+    back_disable(this.location); 
+  }
+
+  updateProducers(){
+    update_producers(this.router, this.CS);
   }
 
   ngOnInit(): void {

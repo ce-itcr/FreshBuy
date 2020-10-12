@@ -1,6 +1,9 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { back_disable, update_producers } from '../../logic';
 import * as $ from 'jquery';
+import { Router } from '@angular/router';
+import { ComunicationService } from 'src/app/comunication.service';
+import { LocationStrategy } from '@angular/common';
 
 @Component({
   selector: 'app-producer-management',
@@ -10,11 +13,13 @@ import * as $ from 'jquery';
 
 export class ProducerManagementComponent implements OnInit {
 
-  constructor(private http: HttpClient) {
+  constructor(private location: LocationStrategy, private router: Router, private CS: ComunicationService) {
+    back_disable(this.location); 
   }
   
-  producers:any[];
-  
+  selfUpdate(){
+    update_producers(this.router,this.CS);
+  }
 
   ngOnInit(): void {
     $("#menu-toggle").click(function(e) {
@@ -22,16 +27,5 @@ export class ProducerManagementComponent implements OnInit {
       $("#wrapper").toggleClass("toggled");
     });
 
-    this.http.get<JSON>("api/Login/Consumer/consult").subscribe(res => {
-      let parsing:any = JSON.parse(res[0]);
-      for(let i = 0; i < parsing.length; i++){
-        this.producers.push(JSON.parse(parsing[i]));
-        this.producers[i].delete("username");
-        this.producers[i].delete("password");
-      }
-      alert(this.producers);
-     });
-
   }
-
 }

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { back_disable, update_producers } from '../../logic';
 import * as $ from 'jquery';
+import { ComunicationService } from 'src/app/comunication.service';
+import { Router } from '@angular/router';
+import { LocationStrategy } from '@angular/common';
 
 @Component({
   selector: 'app-category-management',
@@ -8,7 +12,12 @@ import * as $ from 'jquery';
 })
 export class CategoryManagementComponent implements OnInit {
 
-  constructor() {
+  constructor(private location: LocationStrategy, private CS: ComunicationService, private router: Router) {
+    back_disable(this.location); 
+  }
+
+  updateProducers(){
+    update_producers(this.router,this.CS);
   }
 
   ngOnInit(): void {

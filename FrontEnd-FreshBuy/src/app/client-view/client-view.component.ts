@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationStrategy } from '@angular/common';
+import { back_disable } from '../logic'
 
 
 @Component({
@@ -14,11 +15,7 @@ export class ClientViewComponent implements OnInit {
 
   
 constructor( private location: LocationStrategy){  
-  // preventing back button in browser implemented by "Samba Siva"  
-  history.pushState(null, null, window.location.href);  
-  this.location.onPopState(() => {
-  history.pushState(null, null, window.location.href);
-  });  
+  back_disable(this.location); 
 }
   ngOnInit(): void {
   }
