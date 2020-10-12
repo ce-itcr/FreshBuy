@@ -33,21 +33,29 @@ export class ProducerManagementComponent implements OnInit {
   create_producer(person_id, name, last_name, province, canton, district, birth_date, phone_number, sinpe_number,delivery_locations,username, password){
     return this.http.post<JSON>("api/login/producer/add",{"person_id":person_id,"name":name,"last_name":last_name,"province":province,"canton":canton,"district":district,"bith_date":birth_date,
                                                             "phone_number":phone_number,"sinpe_number":sinpe_number,"delivery_locations": ["Cartago","Dulce Nombre"], "username": username, "password": password}).subscribe(res => {
-                                  console.log("RES", res);
-                                })
+                                                              alert("Productor creado exitosamente. Actualice la página para poder observar los cambios.");
+                                                            }, error => {
+                                                              alert("Se produjo un error al crear el productor de la base de datos. Intente más tarde.");
+                                                            })
 
   }
 
   delete_producer(producer_id){
     return this.http.post<JSON>("api/admin/producer/delete",{"producer_id": producer_id}).subscribe(res => {
       console.log("RES", res);
+      alert("Productor eliminado exitosamente. Actualice la página para poder observar los cambios.");
+    }, error => {
+      alert("Se produjo un error al eliminar el productor de la base de datos. Intente más tarde.");
     })
   }
 
   update_producer(person_id, name, last_name, province, canton, district, birth_date, phone_number, sinpe_number,delivery_locations, username, password){
      return this.http.post<JSON>("api/login/producer/update",{"person_id":person_id,"name":name,"last_name":last_name,"province":province,"canton":canton,"district":district,"bith_date":birth_date,
                                                             "phone_number":phone_number,"sinpe_number":sinpe_number,"delivery_locations": ["Cartago","Dulce Nombre"], "username": username, "password": password}).subscribe(res => {
-                                  console.log("RES", res);
+                                  console.log("RES", res);                                                              alert("Productor creado exitosamente. Actualice la página para poder observar los cambios.");
+                                  alert("Productor actualizado exitosamente. Actualice la página para poder observar los cambios.");
+                                }, error => {
+                                  alert("Se produjo un error al actualizar el productor de la base de datos. Intente más tarde.");
                                 })
   }
 

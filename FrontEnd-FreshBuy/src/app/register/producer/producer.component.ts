@@ -32,7 +32,7 @@ export class ProducerComponent implements OnInit {
   }
 
   public registerData(person_id, name, last_name, province, canton, district,
-     birth_date, phone_number, sinpe_number, delivery_locations,username, password){ 
+     birth_date, phone_number, sinpe_number,username, password){
 
     this.ID = isNumber(person_id,9);
     this.fName = name;
