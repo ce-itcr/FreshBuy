@@ -10,7 +10,7 @@ export interface ProductsDataTableItem {
   product_name: string;
   category: string;
   category_id: string;
-  saleMode: string;
+  sale_mode: string;
   availability: number;
   price: number;
   photo: string;
