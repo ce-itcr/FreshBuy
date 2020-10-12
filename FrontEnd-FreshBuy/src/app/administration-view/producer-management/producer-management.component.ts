@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { back_disable, update_producers } from '../../logic';
+import { back_disable, update_producers, update_categories } from '../../logic';
 import * as $ from 'jquery';
 import { Router } from '@angular/router';
 import { ComunicationService } from 'src/app/comunication.service';
@@ -19,6 +19,10 @@ export class ProducerManagementComponent implements OnInit {
   
   selfUpdate(){
     update_producers(this.router,this.CS);
+  }
+
+  updateCategories(){
+    update_categories(this.router, this.CS);
   }
 
   ngOnInit(): void {

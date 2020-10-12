@@ -90,17 +90,6 @@ export class LogInComponent implements OnInit {
     });
   }
 
-  update_categories(){
-    this.CS.getProducers().subscribe(res => {
-      for (let i=0;i<res.length;i++){
-        this.producerList.push(JSON.parse(res[i]))
-      }
-      globalThis.categories = this.categoryList;
-      this.router.navigateByUrl('/categoryManagement');
-    });
-  
-  }
-
   //SEND DATA
   sendData(){
     this.CS.sendData(this.user,this.password).subscribe(res => {

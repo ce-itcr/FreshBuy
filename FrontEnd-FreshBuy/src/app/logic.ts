@@ -15,6 +15,21 @@ export function update_producers(router: Router,CS: ComunicationService){
     });
   }
 
+export function update_categories(router: Router, CS: ComunicationService){
+    CS.getCategories().subscribe(res => {
+        var categoryList: any[] = [];
+        for (let i=0;i<res.length;i++){
+            categoryList.push(JSON.parse(res[i]))
+            delete categoryList[i]["username"]
+            delete categoryList[i]["password"]
+        }
+        globalThis.categories = categoryList;
+        router.navigateByUrl('/categoryManagement');
+    },error => {
+        alert("NEL");
+    });
+}
+
 export function back_disable(location: LocationStrategy){
     history.pushState(null, null, window.location.href);  
     location.onPopState(() => {

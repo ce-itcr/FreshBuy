@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { LocationStrategy } from '@angular/common';
-import { back_disable, update_producers } from '../../logic'
+import { back_disable, update_producers, update_categories } from '../../logic'
 import { ComunicationService } from 'src/app/comunication.service';
 import { Router } from '@angular/router';
 
@@ -18,6 +18,10 @@ export class ReportViewComponent implements OnInit {
 
   updateProducers(){
     update_producers(this.router, this.CS);
+  }
+
+  updateCategories(){
+    update_categories(this.router, this.CS);
   }
 
   ngOnInit(): void {

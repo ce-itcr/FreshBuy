@@ -15,10 +15,7 @@ declare global {
 }
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: CategoriesDataTableItem[] = [
-  {category_id: 1, category_name: 'legumbres'},
-  {category_id: 2, category_name: 'verduras'},
-];
+const EXAMPLE_DATA: CategoriesDataTableItem[] = globalThis.categories;
 
 /**
  * Data source for the CategoriesDataTable view. This class should
