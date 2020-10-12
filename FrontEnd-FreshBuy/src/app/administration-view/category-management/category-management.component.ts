@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { back_disable, update_producers } from '../../logic';
 import * as $ from 'jquery';

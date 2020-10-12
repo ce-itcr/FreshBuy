@@ -10,6 +10,10 @@ export interface CategoriesDataTableItem {
   category_id: number;
 }
 
+declare global {
+  var categories: any[];
+}
+
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: CategoriesDataTableItem[] = [
   {category_id: 1, category_name: 'legumbres'},
@@ -22,7 +26,7 @@ const EXAMPLE_DATA: CategoriesDataTableItem[] = [
  * (including sorting, pagination, and filtering).
  */
 export class CategoriesDataTableDataSource extends DataSource<CategoriesDataTableItem> {
-  data: CategoriesDataTableItem[] = EXAMPLE_DATA;
+  data: CategoriesDataTableItem[] = globalThis.categories;
   paginator: MatPaginator;
   sort: MatSort;
 

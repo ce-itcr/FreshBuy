@@ -17,6 +17,10 @@ export class ComunicationService {
   public getProducers(){
     return this.http.get<string[]>("api/Admin/Producers/getProducers");
   }
+  
+  public getCategories(){
+    return this.http.get<string[]>("api/Admin/Categories/getCategories");
+  }
 
 
 
