@@ -37,5 +37,47 @@ namespace FreshBuy.Controllers
 
             return result;
         }
+
+
+
+        [HttpPost]
+        [Route("api/consumer/consumer/update")]
+        public IHttpActionResult UpdateProducer([FromBody] JObject consumer)
+        {
+            {
+                bool result = consumer_model.update_consumer(
+                                    (int)consumer["person_id"],
+                                    (string)consumer["name"],
+                                    (string)consumer["last_name"],
+                                    (string)consumer["province"],
+                                    (string)consumer["canton"],
+                                    (string)consumer["district"],
+                                    (string)consumer["email"],
+                                    (string)consumer["username"],
+                                    (string)consumer["password"]);
+
+                if (result)
+                {
+                    return Ok(consumer);
+                }
+                return NotFound();
+            }
+        }
+
+        [HttpPost]
+        [Route("api/consumer/consumer/delete")]
+        public IHttpActionResult DeleteProducer([FromBody] JObject consumer)
+        {
+            {
+                bool result = consumer_model.delete_consumer(
+                    (int)consumer["person_id"]);
+
+                if (result)
+                {
+                    return Ok(consumer);
+                }
+                return NotFound();
+            }
+        }
     }
 }
