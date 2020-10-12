@@ -221,6 +221,7 @@
     <Content Include="App_Data\producer.json" />
     <Content Include="App_Data\products.json" />
     <Content Include="App_Data\consumer.json" />
+    <Content Include="App_Data\products_list.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

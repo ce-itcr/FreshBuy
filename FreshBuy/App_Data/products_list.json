@@ -1,0 +1,21 @@
+{"product_id":1,"product_name":"fresas","category_id":1,"category_name":"frutas"}
+{"product_id":2,"product_name":"bananos","category_id":1,"category_name":"frutas"}
+{"product_id":3,"product_name":"papaya","category_id":1,"category_name":"frutas"}
+{"product_id":4,"product_name":"melon","category_id":1,"category_name":"frutas"}
+{"product_id":5,"product_name":"kiwi","category_id":1,"category_name":"frutas"}
+{"product_id":6,"product_name":"manzana","category_id":1,"category_name":"frutas"}
+{"product_id":7,"product_name":"pera","category_id":1,"category_name":"frutas"}
+{"product_id":8,"product_name":"jocote","category_id":1,"category_name":"frutas"}
+{"product_id":9,"product_name":"nisperos","category_id":1,"category_name":"frutas"}
+{"product_id":10,"product_name":"guayaba","category_id":1,"category_name":"frutas"}
+{"product_id":20,"product_name":"ajo","category_id":2,"category_name":"verduras"}
+{"product_id":21,"product_name":"apio","category_id":2,"category_name":"verduras"}
+{"product_id":22,"product_name":"ayote","category_id":2,"category_name":"verduras"}
+{"product_id":23,"product_name":"brocoli","category_id":2,"category_name":"verduras"}
+{"product_id":24,"product_name":"cebolla","category_id":2,"category_name":"verduras"}
+{"product_id":25,"product_name":"chayote","category_id":2,"category_name":"verduras"}
+{"product_id":26,"product_name":"chile jalapeño","category_id":2,"category_name":"verduras"}
+{"product_id":27,"product_name":"elote","category_id":2,"category_name":"verduras"}
+{"product_id":28,"product_name":"lechuga","category_id":2,"category_name":"verduras"}
+{"product_id":29,"product_name":"zanahoria","category_id":2,"category_name":"verduras"}
+{"product_id":30,"product_name":"pepino","category_id":2,"category_name":"verduras"}
