@@ -12,6 +12,10 @@ namespace FreshBuy.Models
     {
         //Producer Management
 
+        /// <summary>
+        /// Find all producers in file
+        /// </summary>
+        /// <returns></returns>
         public string[] find_producers()
         {
             return READALL(producer_path);
@@ -91,15 +95,15 @@ namespace FreshBuy.Models
         {
             if (SELECT(producer_path, person_id) != null)
             {
+                DELETE(producer_path, person_id);
                 String[] associated_products = FILTER(producer_path, "person_id", null, person_id);
-                JObject product;
+                JObject product_to_analyze;
 
                 foreach (String products in associated_products)
                 {
-                    product = JObject.Parse(products);
-                    DELETE(products_path, (int)product["product_id"]);
+                    product_to_analyze = JObject.Parse(products);
+                    UPDATE(products_path, (int)product_to_analyze["product_id"], "category_id", null, 0);
                 }
-                DELETE(producer_path, person_id);
                 return true;
             }
             return false;
@@ -107,7 +111,10 @@ namespace FreshBuy.Models
 
         //Category Management
 
-
+        /// <summary>
+        /// Find all categories in file
+        /// </summary>
+        /// <returns></returns>
         public string[] find_categories()
         {
             return READALL(categories_path);
