@@ -29,6 +29,13 @@ namespace FreshBuy.Controllers
 
         }
 
+        [HttpGet]
+        [Route("api/Consumer/getProducts")]
+        public string[] getProducts()
+        {
+            string[] result = consumer_model.find_products();
 
+            return result;
+        }
     }
 }
