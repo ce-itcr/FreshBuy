@@ -1,5 +1,6 @@
 ﻿using FreshBuy.Models;
 using FreshBuy.src;
+using FreshBuy.src.Entities;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -59,6 +60,23 @@ namespace FreshBuy.Controllers
             }
             return NotFound();
 
+        }
+
+        [HttpPost]
+        [Route("api/producer/product/delete")]
+        public IHttpActionResult DeleteProducer([FromBody] JObject product)
+        {
+            {
+                bool result = producer_model.delete_product(
+                    (int)product["product_id"]);
+
+
+                if (result)
+                {
+                    return Ok(product);
+                }
+                return NotFound();
+            }
         }
 
 

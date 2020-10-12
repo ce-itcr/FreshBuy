@@ -30,6 +30,16 @@ namespace FreshBuy.Controllers
             return result;
         }
 
+        [HttpGet]
+        [Route("api/admin/categories/getCategories")]
+        public string[] getCategories()
+        {
+            AdminModel adminModel = new AdminModel();
+            string[] result = adminModel.find_categories();
+
+            return result;
+        }
+
         [HttpPost]
         [Route("api/admin/categories/add")]
         public IHttpActionResult CreateCategory([FromBody] JObject new_category)
@@ -75,6 +85,49 @@ namespace FreshBuy.Controllers
                 if (result)
                 {
                     return Ok(category);
+                }
+                return NotFound();
+            }
+        }
+
+        [HttpPost]
+        [Route("api/admin/producer/update")]
+        public IHttpActionResult UpdateProducer([FromBody] JObject producer)
+        {
+            {
+                bool result = admin_model.update_producer(
+                                    (int)producer["person_id"],
+                                    (string)producer["name"],
+                                    (string)producer["last_name"],
+                                    (string)producer["province"],
+                                    (string)producer["canton"],
+                                    (string)producer["district"],
+                                    (string)producer["birt_date"],
+                                    (double)producer["phone_number"],
+                                    (double)producer["sinpe_number"],
+                                    producer.SelectToken("delivery_locations")?.ToObject<string[]>(),
+                                    (string)producer["username"],
+                                    (string)producer["password"]);
+
+                if (result)
+                {
+                    return Ok(producer);
+                }
+                return NotFound();
+            }
+        }
+
+        [HttpPost]
+        [Route("api/admin/producer/delete")]
+        public IHttpActionResult DeleteProducer([FromBody] JObject producer)
+        {
+            {
+                bool result = admin_model.delete_producer(
+                    (int)producer["producer_id"]);
+
+                if (result)
+                {
+                    return Ok(producer);
                 }
                 return NotFound();
             }
