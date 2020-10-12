@@ -21,6 +21,7 @@ namespace FreshBuy.src
         public static String consumer_path = data_path + "\\consumer.json";
         public static String producer_path = data_path + "\\producer.json";
         public static String products_path = data_path + "\\products.json";
+        public static String products_list_path = data_path + "\\products_list.json";
         public static String purchases_path = data_path + "\\purchases.json";
 
         /*------------------------------------------------------------------------------------Data Operations------------------------------------------------------------------------------------*/
@@ -48,7 +49,7 @@ namespace FreshBuy.src
                         return current_entity_set[i];
                     }
                 }
-                else if (entity_set_path == products_path )
+                else if (entity_set_path == products_path || entity_set_path == products_list_path)
                 {
                     if ((int)entity_to_analyze["product_id"] == key_attribute)
                     {
@@ -149,7 +150,7 @@ namespace FreshBuy.src
                         Console.WriteLine("The request entity has been removed: " + current_entity_set[i]);
                     }
                 }
-                else if (entity_set_path == products_path)
+                else if (entity_set_path == products_path || entity_set_path == products_list_path)
                 {
                     if (!((int)entity_to_analyze["product_id"] == key_attribute))
                     {
