@@ -70,5 +70,9 @@ namespace FreshBuy.Models
 
             return true;
         }
+        public string[] find_products()
+        {
+            return READALL(products_path);
+        }
     }
 }
