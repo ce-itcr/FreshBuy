@@ -30,6 +30,7 @@ import { ProducersDataTableComponent } from './data-tables/producers-data-table/
 import { ComunicationService } from './comunication.service';
 import { CartComponent } from './client-view/cart/cart.component';
 import { CartDataTableComponent } from './data-tables/cart-data-table/cart-data-table.component';
+import { ProductsDisplayComponent } from './client-view/products-display/products-display.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { CartDataTableComponent } from './data-tables/cart-data-table/cart-data-
     OrdersManagementComponent,
     CartComponent,
     CartDataTableComponent,
+    ProductsDisplayComponent,
   ],
   imports: [
     BrowserModule,

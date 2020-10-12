@@ -22,7 +22,9 @@ export class ComunicationService {
     return this.http.get<string[]>("api/Admin/Categories/getCategories");
   }
 
-
+  public getProducts(){
+    return this.http.get<string[]>("api/Consumer/getProducts");
+  }
 
   //SEND REGISTER PRODUCER DATA TO API
   public sendProducerData(person_id, name, last_name, province, canton, district,
