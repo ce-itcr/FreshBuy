@@ -27,7 +27,7 @@ namespace FreshBuy.Models
         /// <param name="photo"></param>
         /// <param name="producer_id"></param>
         /// <returns></returns>
-        public bool create_product(int product_id, String product_name, String category, int category_id, String sale_mode, int availability, int price, String photo, int producer_id)
+        public bool create_product(int product_id, String product_name, String category, int category_id,String sale_mode, int availability, int price, String photo, int producer_id) 
         {
             if (SELECT(products_path, product_id) == null)
             {
@@ -65,20 +65,11 @@ namespace FreshBuy.Models
         /// <param name="photo"></param>
         /// <param name="producer_id"></param>
         /// <returns></returns>
-        public bool update_product(int product_id, String product_name, String category, int category_id, String sale_mode, int availability, int price, String photo, int producer_id)
+        public bool update_product(int product_id, String product_name, String category, int category_id, String sale_mode, int availability, int price, String photo, int producer_id) 
         {
-            if (SELECT(products_path, product_id) != null)
+            if (DELETE(products_path, product_id))
             {
-                if (SELECT(categories_path, product_id) != null)
-                {
-                    UPDATE(products_path, product_id, "product_name", product_name, 0);
-                    UPDATE(products_path, product_id, "sale_mode", sale_mode, 0);
-                    UPDATE(products_path, product_id, "availability", null, availability);
-                    UPDATE(products_path, product_id, "price", null, price);
-                    UPDATE(products_path, product_id, "photo", photo, 0);
-                    return true;
-                }
-                return false;
+                return create_product(product_id, product_name, category, category_id, sale_mode, availability, price, photo, producer_id);
             }
             return false;
         }
@@ -88,8 +79,7 @@ namespace FreshBuy.Models
         /// </summary>
         /// <param name="product_id"></param>
         /// <returns></returns>
-        public bool delete_product(int product_id)
-        {
+        public bool delete_product(int product_id) {
             return DELETE(products_path, product_id);
         }
 
