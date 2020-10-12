@@ -20,17 +20,6 @@ namespace FreshBuy.Models
         /// <returns></returns>
         public bool producer_login_approval(String username, String password)
         {
-            /*if (SELECT(producer_path, username) != null)
-            {
-                JObject current_producer = JObject.Parse(SELECT(producer_path, username));
-                if ((String)current_producer["password"] == password)
-                {
-                    return true;
-                }
-                return false;
-            }
-            return false;*/
-
             String[] producers_list = FILTER(producer_path, "username", username, 0);
 
             if (producers_list.Length == 1)
