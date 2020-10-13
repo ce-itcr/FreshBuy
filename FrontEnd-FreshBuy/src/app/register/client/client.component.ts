@@ -27,6 +27,7 @@ export class ClientComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //SE PREPARAN LOS DATOS DE UN NUEVO CONSUMIDOR, OBTENIDOS DESDE EL HTML
   public registerData(hID, hFirstName, hLastName, hProvince, hCanton,
                       hDistrict, hEmail, username, hPassword){
 
@@ -44,21 +45,9 @@ export class ClientComponent implements OnInit {
     this.post_new_consumer();
   }
 
-
-  alert("ID: " + this.ID + "\n" +
-          "Nombre: " + this.fName + "\n" +
-          "Apellido: " + this.lName + "\n" +
-          "Provincia: " + this.province + "\n" +
-          "Canton: " + this.canton + "\n" +
-          "Distrito: " + this.district + "\n" +
-          "email: " + this.email + "\n" +
-          "Nombre de Usuario" + "\n" +
-          "Contraseña: " + this.password + "\n");
-    //UserandPass.push([this.ID + "C",this.password]);
-    //alert(UserandPass);
-
   }
 
+  //SE ENVÍAN LOS DATOS AL API
   post_new_consumer(){
     this.CS.sendConsumerData(this.ID,this.fName,this.lName,this.province,this.canton,this.district,
       this.email,this.username, this.password).subscribe(res => {

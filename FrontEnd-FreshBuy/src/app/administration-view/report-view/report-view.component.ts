@@ -15,15 +15,17 @@ export class ReportViewComponent implements OnInit {
   constructor(private location: LocationStrategy, private CS: ComunicationService, private router: Router) {
     back_disable(this.location);
   }
-
+  //SE ACTUALIZAN LOS PRODUCTOS A LA HORA DE VIAJAR A DICHO COMPONENTE
   updateProducers(){
     update_producers(this.router, this.CS);
   }
 
+  //SE ACTUALIZAN LAS AFILIACIONES A LA HORA DE VIAJAR A DICHO COMPONENTE
   updateAffiliations(){
     update_affiliations(this.router, this.CS);
   }
 
+  //SE ACTUALIZAN LAS CATEGORÍAS A LA HORA DE VIAJAR A DICHO COMPONENTE
   updateCategories(){
     update_categories(this.router, this.CS);
   }
@@ -33,10 +35,5 @@ export class ReportViewComponent implements OnInit {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
-  }
-
-  public refreshData(){
-    console.log("Sí´entra");
-    window.location.reload();
   }
 }

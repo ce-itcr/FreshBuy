@@ -20,6 +20,7 @@ export class ProductsDisplayComponent implements OnInit {
     this.updateProducts();
   }
 
+  //SE ACTUALIZAN LOS PRODUCTOS A MOSTRAR
   updateProducts(){
     this.CS.getProducts().subscribe(res => {
       for (let i=0;i<res.length;i++){
@@ -27,7 +28,6 @@ export class ProductsDisplayComponent implements OnInit {
       }
       globalThis.products = this.productsList;
   });
-;
   }
 
 }

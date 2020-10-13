@@ -26,6 +26,7 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //SE ENVÍAN LOS ITEMS DEL CARRITO AL API
   addToJson(product_id:number, amount:number){
     this.itemsToBuy.push({"product_id": product_id, "amount": amount})
     this.CS.sendItemsToBuy(this.itemsToBuy).subscribe(res => { alert(res)

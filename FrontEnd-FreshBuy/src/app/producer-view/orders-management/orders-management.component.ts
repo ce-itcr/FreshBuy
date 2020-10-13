@@ -14,9 +14,10 @@ export class OrdersManagementComponent implements OnInit {
 
   constructor(private modal:NgbModal, private CS: ComunicationService, private router: Router) {  }
 
- updateProducts(){
-  update_products_for_producer(this.CS, this.router);
- }
+  //SE ACTUALIZAN LOS PRODUCTOS A LA HORA DE NAVEGAR HACIA EL COMPONENTE
+  updateProducts(){
+    update_products_for_producer(this.CS, this.router);
+  }
 
   ngOnInit(): void {
     $("#menu-toggle").click(function(e) {
@@ -25,6 +26,7 @@ export class OrdersManagementComponent implements OnInit {
     });
   }
 
+  //INICIALIZA LA VENTANA EMERGENTE (pop-up)
   openModal(content){ this.modal.open(content,{size:'lg', centered:true});}
 
 }

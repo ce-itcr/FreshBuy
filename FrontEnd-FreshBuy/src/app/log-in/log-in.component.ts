@@ -24,13 +24,6 @@ export class LogInComponent implements OnInit {
   producerList: any[] = [];
   categoryList: any[] = [];
 
-  update_products_for_producer(){
-    alert(JSON.stringify(globalThis.storedUsername))
-    this.CS.getProductsForProducer(globalThis.storedUsername).subscribe(res => {
-      alert(res)
-    })
-  }
-
   ngOnInit(): void {
   }
 
@@ -38,6 +31,7 @@ export class LogInComponent implements OnInit {
   password: string;
   userType: string;
 
+  //SE ENCARGA DE VERIFICAR EL TIPO DE USUARIO E INTENTAR UN LOG-IN DEL EN ESE TIPO DE USUARIO
   verify_user_type(username, password, user_type){
     this.user = username;
     this.password = password;
@@ -60,6 +54,7 @@ export class LogInComponent implements OnInit {
     }
   }
 
+  //INTENTA LOG-IN PARA ADMINISTRADOR
   verify_admin_login(){
     return this.http.post<JSON>("api/Login/Admin/consult",
     {"username": this.user.toString(), "password": this.password.toString()}).subscribe(res => {
@@ -70,6 +65,7 @@ export class LogInComponent implements OnInit {
     });
   }
 
+  //INTENTA LOG-IN PARA PRODUCTOR
   verify_producer_login(){
     return this.http.post<JSON>("api/Login/Producer/consult",
     {"username": this.user.toString(), "password": this.password.toString()}).subscribe(res => {
@@ -81,6 +77,7 @@ export class LogInComponent implements OnInit {
     });
   }
 
+  //INTENTA LOG-IN PARA CONSUMIDOR
   verify_consumer_login(){
     return this.http.post<JSON>("api/Login/Consumer/consult",
     {"username": this.user.toString(), "password": this.password.toString()}).subscribe(res => {
@@ -89,40 +86,6 @@ export class LogInComponent implements OnInit {
      }, error => {
       alert("Nombre de usuario o contraseña incorrectos.");
     });
-  }
-
-  update_producers(){
-    this.CS.getProducers().subscribe(res => {
-      for (let i=0;i<res.length;i++){
-        this.producerList.push(JSON.parse(res[i]))
-        delete this.producerList[i]["username"]
-        delete this.producerList[i]["password"]
-      }
-      globalThis.producers = this.producerList;
-      this.router.navigateByUrl('/producerManagement');
-    });
-  }
-
-  update_products(){
-    this.CS.getProducts().subscribe(res => {
-      for (let i=0;i<res.length;i++){
-        this.producerList.push(JSON.parse(res[i]))
-        delete this.producerList[i]["username"]
-        delete this.producerList[i]["password"]
-      }
-      globalThis.producers = this.producerList;
-      this.router.navigateByUrl('/producerManagement');
-    });
-  }
-
-  //SEND DATA
-  sendData(){
-    this.CS.sendData(this.user,this.password).subscribe(res => {
-      console.log("RES", res);
-      this.router.navigateByUrl('/producerManagement');
-     }, error => {
-       alert("ERROR");
-     });
   }
 }
 

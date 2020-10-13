@@ -14,23 +14,27 @@ export class ComunicationService {
      {"username": user, "password": password});
   }
 
+  //GET PRODUCERS DATA FROM API
   public getProducers(){
     return this.http.get<string[]>("api/Admin/Producers/getProducers");
   }
   
+  //GET AFFILIATIONS DATA FROM API
   public getAffiliations(){
     return this.http.get<string[]>("api/Admin/affiliations/getAffiliations");
   }
 
+  //GET CATEGORIES DATA FROM API
   public getCategories(){
     return this.http.get<string[]>("api/Admin/Categories/getCategories");
   }
 
+  //GET PRODUCTS DATA FROM API
   public getProducts(){
     return this.http.get<string[]>("api/Consumer/getProducts");
   }
 
-  //SEND REGISTER PRODUCER DATA TO API
+  //SEND PRODUCER REGISTER DATA TO API
   public sendProducerData(person_id, name, last_name, province, canton, district,
     birth_date, phone_number, sinpe_number, delivery_locations, username, password){
     
@@ -50,6 +54,7 @@ export class ComunicationService {
     );
   }
 
+  //SEND CONSUMER REGISTER DATA TO API
   public sendConsumerData(person_id, name, last_name, province, canton, district,
      email, username, password){
     return this.http.post<JSON>("api/Login/Consumer/add",
@@ -65,28 +70,30 @@ export class ComunicationService {
     );
   }
 
+  ////GET PRODUCTS DATA FOR PRODUCER-VIEW USAGE, FROM API
   public getProductsForProducer(name:string){
     return this.http.post<string[]>("api/Producer/getProducts", {"username":name});
   }
 
+  //SEND ITEMS FROM CART TO API
   public sendItemsToBuy(itemsToBuy:any[]){
     return this.http.post<JSON[]>("api/Consumer/Buy", itemsToBuy);
   }
 
-
+  //DENY AFFILIATION TO PRODUCER
   denyAffiliation(producer_id){
     return this.http.post<JSON>("api/Admin/affiliation/delete",{"producer_id": producer_id}).subscribe(res => {
-      alert(res);
+     
     })
   }
 
+  //ACCEPT AFFILIATION TO PRODUCER
   acceptAffiliation(producer_id){
     return this.http.post<JSON>("api/Admin/affiliation/accept",{"producer_id": producer_id}).subscribe(res => {
-      alert(res);
     })
   }
 
-
+  //SEND NEW CATEGORY JSON TO API
   createCategory(category_id,category_name){
     return this.http.post<JSON>("api/admin/categories/add",{"category_id": category_id,"category_name": category_name}).subscribe(res => {
       console.log("RES", res);
@@ -96,6 +103,7 @@ export class ComunicationService {
     })
   }
 
+  //SEND CATEGORY ID TO ELIMINATE
   deleteCategory(category_id){
     return this.http.post<JSON>("api/admin/categories/delete",{"category_id": category_id}).subscribe(res => {
       console.log("RES", res);
@@ -105,6 +113,7 @@ export class ComunicationService {
     })
   }
 
+  //SEND CATEGORY ID AND A NEW VALUE OF NAME TO UPDATE
   updateCategory(category_id, category_name){
     return this.http.post<JSON>("api/admin/categories/update",{"category_id": category_id,"category_name": category_name}).subscribe(res => {
       console.log("RES", res);
@@ -115,7 +124,7 @@ export class ComunicationService {
   }
 
 
-
+  //SEND PRODUCER ID FOR DELETE FROM API
   deleteProducer(producer_id){
     return this.http.post<JSON>("api/admin/producer/delete",{"producer_id": producer_id}).subscribe(res => {
       console.log("RES", res);
@@ -125,18 +134,20 @@ export class ComunicationService {
     })
   }
 
+  //SEND ALL DATA OF PRODUCER REGISTER TO API TO CREATE NEW PRODUCER (Admin-View)
   createProducer(person_id, name, last_name, province, canton, district, birth_date, phone_number, sinpe_number,delivery_locations,username, password){
     return this.http.post<JSON>("api/login/producer/add",{"person_id":person_id,"name":name,"last_name":last_name,"province":province,"canton":canton,"district":district,"bith_date":birth_date,
-                                                            "phone_number":phone_number,"sinpe_number":sinpe_number,"delivery_locations": ["Cartago","Dulce Nombre"], "username": username, "password": password}).subscribe(res => {
+                                                            "phone_number":phone_number,"sinpe_number":sinpe_number,"delivery_locations": delivery_locations, "username": username, "password": password}).subscribe(res => {
                                                               alert("Productor creado exitosamente. Actualice la página para poder observar los cambios.");
                                                             }, error => {
                                                               alert("Se produjo un error al crear el productor de la base de datos. Intente más tarde.");
                                                             })
   }
   
+  //SEND ALL DATA OF PRODUCERS, TO UPDATE SEVERAL VALUES
   updateProducer(person_id, name, last_name, province, canton, district, birth_date, phone_number, sinpe_number,delivery_locations, username, password){
     return this.http.post<JSON>("api/admin/producer/update",{"person_id":person_id,"name":name,"last_name":last_name,"province":province,"canton":canton,"district":district,"bith_date":birth_date,
-                                                            "phone_number":phone_number,"sinpe_number":sinpe_number,"delivery_locations": ["Cartago","Dulce Nombre"], "username": username, "password": password}).subscribe(res => {
+                                                            "phone_number":phone_number,"sinpe_number":sinpe_number,"delivery_locations": delivery_locations, "username": username, "password": password}).subscribe(res => {
                                   console.log("RES", res);                                                              alert("Productor creado exitosamente. Actualice la página para poder observar los cambios.");
                                   alert("Productor actualizado exitosamente. Actualice la página para poder observar los cambios.");
                                 }, error => {
@@ -145,7 +156,7 @@ export class ComunicationService {
   }
 
 
-
+  //SEND ALL DATA OF A NEW PRODUCTO FOR CREATE A NEW ONE
   createProduct(product_name, category, category_id, sale_mode, availability, price, photo, producer_id){
     return this.http.post<JSON>("api/producer/product/add",{"product_name":product_name,"category":category,"category_id": category_id,
                                 "sale_mode":sale_mode,"availability":availability,"price":price,"photo":photo,"producer_id":producer_id}).subscribe(res => {
@@ -153,6 +164,7 @@ export class ComunicationService {
                                 })
   }
 
+  //SEND PRODUCT ID TO DELETE A PRODUCT
   deleteProduct(product_id){
     return this.http.post<JSON>("api/producer/product/delete",{"product_id":parseInt(product_id)});
   }

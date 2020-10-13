@@ -31,6 +31,7 @@ export class ProducerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //SE PREPARAN LOS DATOS A ENVIAR, OBTENIDOS DESDE EL HTML
   public registerData(person_id, name, last_name, province, canton, district,
      birth_date, phone_number, sinpe_number, deliveryLoc,username, password){
 
@@ -51,24 +52,10 @@ export class ProducerComponent implements OnInit {
       this.sendProducer();
     }
 
-    alert("ID: " + this.ID + "\n" +
-          "Nombre: " + this.fName + "\n" +
-          "Apellido: " + this.lName + "\n" +
-          "Provincia: " + this.province + "\n" +
-          "Canton: " + this.canton + "\n" +
-          "Distrito: " + this.district + "\n" +
-          "Nacimiento: " + this.birthdate + "\n" +
-          "Número Tel: " + this.phoneNum + "\n" +
-          "SINPE: " + this.SINPE + "\n" +
-          "Entrega: " + this.deliveryLoc + "\n" +
-          "Nombre de Usuario " + this.username + "\n" +
-          "Contraseña" + this.password);
-
-    //UserandPass.push([this.ID + "P","hola"]);
-
   }
 
-  sendProducer()//:Observable<JSON>
+  //SE COMUNICA CON EL API Y LE ENVÍA LOS DATOS DEL PRODUCTOR
+  sendProducer()
   {
     this.CS.sendProducerData(this.ID,this.fName,this.lName,this.province,this.canton,this.district,
       this.birthdate,this.phoneNum,this.SINPE,this.deliveryLoc,this.username, this.password).subscribe(res => {

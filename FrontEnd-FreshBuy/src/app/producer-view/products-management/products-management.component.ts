@@ -22,17 +22,17 @@ export class ProductsManagementComponent implements OnInit {
     });
   }
 
+  //VENTANA EMERGENTE (pop-up)
   openModal(content){ this.modal.open(content,{size:'sm', centered:true});}
 
+  //SE COMUNICA CON EL SERVIDOR (Comunication Service) PARA CREAR PRODUCTO
   create_product(product_name, category, category_id, sale_mode, availability, price, photo, producer_id){
     this.CS.createProduct(product_name, category, category_id, sale_mode, availability, price, photo, producer_id);
   }
 
+  //SE COMUNICA CON EL SERVIDOR (Comunication Service) PARA ELIMINAR UN PRODUCTO
   delete_product(product_id){
     this.CS.deleteProduct(product_id).subscribe(res => {
-      alert(res);
-    }, error => {
-      alert("MAMÓ");
     });
   }
 

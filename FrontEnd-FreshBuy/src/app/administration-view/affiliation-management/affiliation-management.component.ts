@@ -19,20 +19,25 @@ export class AffiliationManagementComponent implements OnInit {
     back_disable(this.location);
   }
 
+  //INICIALIZA LA VENTANA EMERGENTE (pop-up)
   openModal(content){ this.modal.open(content,{size:'sm', centered:true});}
 
+  //SE ACTUALIZAN LOS PRODUCTOS A LA HORA DE VIAJAR A DICHO COMPONENTE
   updateProducers(){
     update_producers(this.router, this.CS);
   }
 
+  //SE ACTUALIZAN LAS CATEGORÍAS A LA HORA DE VIAJAR A DICHO COMPONENTE
   updateCategories(){
     update_categories(this.router, this.CS);
   }
 
+  //SE DENIEGA UNA AFILIACIÓN MEDIANTE ID
   deny_affiliation(producer_id){
     this.CS.denyAffiliation(producer_id);
   }
 
+  //SE ACEPTA UNA AFILIACIÓN MEDIANTE ID
   accept_affiliation(producer_id){
     this.CS.acceptAffiliation(producer_id);
   }
