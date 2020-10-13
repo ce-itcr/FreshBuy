@@ -1,0 +1,55 @@
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-heading"><img src="./../../assets/img/freshbuy_logo.png" width="60%" style="padding-left: 5%;padding-top: 7%;"/></div>
+    <div class="list-group list-group-flush">
+      <a class="list-group-item list-group-item-action bg-light" (click) = "updateProducers()">Gestión de Productores</a>
+      <a class="list-group-item list-group-item-action bg-light" (click) = "updateAffiliations()">Administración de Afiliaciones</a>
+      <a class="list-group-item list-group-item-action bg-light" (click) = "updateCategories()">Gestión de Categorías</a>
+      <a class="list-group-item list-group-item-action bg-light">Vista de Reportes</a>
+      <a href="./" class="list-group-item list-group-item-action bg-light">Cerrar Sesión</a>
+    </div>
+    <div class="sidebar-footer" style="padding-bottom: 0%; padding-top: 30%; padding-left: 1%; position: fixed;">
+      <h5>FreshBuy - Vista de Administración <br>github.com/ce-itcr/FreshBuy<br><b>Versión 1.0.0</b></h5>
+    </div>
+
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="btn btn-primary-2" id="menu-toggle">Menú</button>
+    </nav>
+    <div class="container-fluid">
+      <h1 class="mt-4">Vista de Reportes </h1>
+
+      <mat-tab-group>
+        <mat-tab label="Top 10 Productos más vendidos">
+          <ng-template mat-tab-label>
+            <span (click)="refreshData()">Top 10 Productos más vendidos</span>
+            </ng-template>
+            <br><app-categories-data-table></app-categories-data-table>
+        </mat-tab>
+        <mat-tab label="Top 10 Productos que generan más ganancias">
+          <ng-template mat-tab-label>
+          <span (click)="refreshData()">Top 10 Productos que generan más ganancias</span>
+          </ng-template>
+          <br><app-categories-data-table></app-categories-data-table> </mat-tab>
+        <mat-tab label="Top 10 Productos más vendidos por productor">
+          <ng-template mat-tab-label>
+            <span (click)="refreshData()">Top 10 Productos más vendidos por productor</span>
+            </ng-template>
+            <br><app-categories-data-table></app-categories-data-table> </mat-tab>
+        <mat-tab label="Top 10 Clientes con más compras">
+          <ng-template mat-tab-label>
+            <span (click)="refreshData()">Top 10 Clientes con más compras</span>
+            </ng-template>
+             <br><app-categories-data-table></app-categories-data-table> </mat-tab>
+      </mat-tab-group>
+
+
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->

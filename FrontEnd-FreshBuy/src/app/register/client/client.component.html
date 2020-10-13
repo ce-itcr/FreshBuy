@@ -1,0 +1,67 @@
+<img src="./../../assets/img/login_module_bg.jpg" class="img-fluid" style="position:fixed; right: 0; top: 0; z-index: -100; opacity: 0.35;">
+
+  <div class="container-login1001">
+    <div class="wrap-login100">
+      <form class="login1001-form validate-form">
+
+        <span class="login100-form-title p-b-34">
+          Registrese para Comprar en FreshBuy
+        </span>
+
+        <div class="wrap-input100 " >
+          <input id="person-id" class="input100" #personId type="text" required maxlength="9" name="person-id" placeholder="Número de Cédula">
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100 ">
+          <input id="first-name" class="input100" #firstName type="text" required name="first-name" placeholder="Nombre">
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100">
+          <input class="input100" #lastName type="text" required placeholder="Apellido">
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100">
+          <input  class="input100" #province type="text" required  placeholder="Provincia">
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100" >
+          <input  class="input100" #canton type="text" required  placeholder="Cantón">
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100" >
+          <input class="input100" #district type="text" required  placeholder="Distrito">
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100">
+          <input class="input100" #email type="text" required  placeholder="Correo Electrónico">
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100">
+          <input class="input100" #username type="text" placeholder="Nombre de Usuario">
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100">
+          <input class="input100" #password type="password" placeholder="Contraseña">
+          <span class="focus-input100"></span>
+        </div>
+
+        <span class="login100-form-title p-b-34">
+        </span>
+        <div class="container-login100-form-btn">
+          <button class="login100-form-btn" (click)="registerData(personId.value, firstName.value,
+                                                    lastName.value, province.value,
+                                                    canton.value, district.value,
+                                                    email.value, username.value, password.value)" type="button">
+            Registrarse
+          </button>
+        </div>
+
+      </form>
+      <div class="login100-more">
+        <img src="./../../assets/img/freshbuy_logo.png" width="50%" style="padding-left: 7%;padding-top: 10%;"/>
+        <h1 class="txt1_welcome" style="font-size: 40px;padding-top: 15%;padding-left: 12%;">Bienvenido a <b>Fresh Buy</b></h1>
+        <h3 class="txt1_welcome" style="padding-top: 0;padding-left: 12%;">Poductos frescos hasta la puerta de tu casa</h3>
+       <img class="center" src="./../../assets/img/module_login.png" style="padding-top: 55%;padding-left: 0%;width: 578px;"/>
+      </div>
+    </div>
+

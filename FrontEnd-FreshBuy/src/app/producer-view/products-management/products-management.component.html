@@ -1,0 +1,117 @@
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-heading"><img src="./../../assets/img/freshbuy_logo.png" width="60%" style="padding-left: 5%;padding-top: 7%;"/></div>
+    <div class="list-group list-group-flush">
+      <a href="./productsManagement" class="list-group-item list-group-item-action bg-light">Gestión de Productos</a>
+      <a href="./ordersManagement" class="list-group-item list-group-item-action bg-light">Gestión de Pedidos</a>
+      <a class="list-group-item list-group-item-action bg-light" (click)="openModal(close_this)">Cerrar Sesión</a>
+    </div>
+    <div class="sidebar-footer" style="padding-bottom: 0%; padding-top: 30%; padding-left: 1%; position: fixed;">
+      <h5>FreshBuy - Vista de Productor <br>github.com/ce-itcr/FreshBuy<br><b>Versión 1.0.0</b></h5>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="btn btn-primary-2" id="menu-toggle">Menú</button>
+    </nav>
+    <div class="container-fluid">
+      <h1 class="mt-4">Gestión de Productos </h1>
+
+      <button mat-raised-button (click)="openModal(create_product_modal)"> Crear Producto </button>
+      <button mat-raised-button  (click)="openModal(delete_product_modal)"> Eliminar Producto </button>
+      <button mat-raised-button  (click)="openModal(update_product_modal)"> Actualizar Producto </button>
+
+      <br><br>
+      <!--<button type="button" class="btn btn-outline-danger" (click)="openModal(close_this)">lanzar modal SM</button>-->
+
+
+      <app-products-data-table></app-products-data-table>
+
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
+
+<ng-template #close_this let-modal>
+  <div class="modal-header">
+      <h4 class="modal-title">¿Seguro que desea salir?</h4>
+  </div>
+  <div class="modal-body">
+    Somos una Feria Virtual que conecta los agricultores con consumidores, llevando productos frescos del campo hasta tu casa.
+</div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="modal.close()" [routerLink]='["/"]'>Si</button>
+      <button type="button" class="btn btn-outline-danger" (click)="modal.close()">No</button>
+  </div>
+</ng-template>
+
+
+<ng-template #create_product_modal let-modal>
+  <div class="modal-header">
+      <h4 class="modal-title">Añadir un nuevo producto a su bodega digital.</h4>
+  </div>
+  <div class="modal-body" style="justify-content: center;align-items: center;display: inline-block;vertical-align: middle;padding-left: 25%;">
+    <form>
+      <input #product_name type="text" placeholder="Nombre de Producto">
+      <input #category type="text" placeholder="Nombre de Categoria">
+      <input #category_id type="number" placeholder="Id de Categoria">
+      <input #sale_mode type="text" placeholder="Modo de Venta">
+      <input #availability type="number" placeholder="Disponibilidad">
+      <input #price type="number" placeholder="Precio">
+      <input #photo type="text" placeholder="Foto">
+      <input #producer_id type="number" placeholder="Id de Productor">
+
+    </form>
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="create_product(product_name.value, category.value, category_id.value, sale_mode.value, availability.value, price.value, photo.value, producer_id.value)" (click)="modal.close()">Añadir</button>
+      <button type="button" class="btn btn-outline-danger" (click)="modal.close()">Cancelar</button>
+  </div>
+</ng-template>
+
+
+
+<ng-template #delete_product_modal let-modal>
+  <div class="modal-header">
+      <h4 class="modal-title">Eliminar un producto de su bodega digital.</h4>
+  </div>
+  <div class="modal-body" style="justify-content: center;align-items: center;display: inline-block;vertical-align: middle;padding-left: 25%;">
+    <form>
+      <input #product_id type="number" placeholder="Id de Producto">
+    </form>
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="delete_product(product_id.value)" (click)="modal.close()">Eliminar</button>
+      <button type="button" class="btn btn-outline-danger" (click)="modal.close()">Cancelar</button>
+  </div>
+</ng-template>
+
+
+<ng-template #update_product_modal let-modal>
+  <div class="modal-header">
+      <h4 class="modal-title">Actualizar un producto de su bodega digital.</h4>
+  </div>
+  <div class="modal-body" style="justify-content: center;align-items: center;display: inline-block;vertical-align: middle;padding-left: 25%;">
+    <form>
+      <input #product_name type="text" placeholder="Nombre de Producto">
+      <input #category type="text" placeholder="Nombre de Categoria">
+      <input #category_id type="number" placeholder="Id de Categoria">
+      <input #sale_mode type="text" placeholder="Modo de Venta">
+      <input #availability type="number" placeholder="Disponibilidad">
+      <input #price type="number" placeholder="Precio">
+      <input #photo type="text" placeholder="Foto">
+      <input #producer_id type="number" placeholder="Id de Productor">
+
+    </form>
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="update_product(product_name.value, category.value, category_id.value, sale_mode.value, availability.value, price.value, photo.value, producer_id.value)" (click)="modal.close()">Actualizar</button>
+      <button type="button" class="btn btn-outline-danger" (click)="modal.close()">Cancelar</button>
+  </div>
+</ng-template>
+
+

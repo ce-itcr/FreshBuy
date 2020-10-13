@@ -1,0 +1,55 @@
+<img src="./../../assets/img/login_module_bg.jpg" class="img-fluid" style="position:fixed; right: 0; top: 0; z-index: -100; opacity: 0.35;">
+
+  <div class="container-login1001">
+    <div class="wrap-login100">
+      <form class="login100-form validate-form">
+        <span class="login100-form-title p-b-34">
+          Inicia Sesión en tu cuenta para continuar
+        </span>
+
+        <div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type user name">
+          <input class="input100" #username_html type="text"  placeholder="Nombre de Usuario">
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20" data-validate="Type password">
+          <input class="input100" #password_html type="password" placeholder="Contraseña">
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100 " data-validate="Type user name">
+          <input class="input100" #user_type type="text" placeholder="Usuario (Admin, Consumidor, Productor)">
+          <span class="focus-input100"></span>
+        </div>
+        <div class="input100">
+        </div>
+
+        <div class="container-login100-form-btn">
+          <!--<button class="login100-form-btn" (click)="loginAction(username_html.value, password_html.value)" type="button">-->
+          <button class="login100-form-btn" (click)="verify_user_type(username_html.value, password_html.value, user_type.value)" type="button">
+            Iniciar Sesión
+          </button>
+        </div>
+
+        <div class="input1001" style="color: #fff;">
+          .<br>.
+        </div>
+
+
+
+        <div class="w-full text-center">
+          <span class="txt1">
+            ¿Aún no tiene cuenta?
+          </span>
+          <a href="#" class="txt3" [routerLink]='["/register"]'>
+            Registrese.
+          </a>
+        </div>
+      </form>
+
+      <div class="login100-more">
+        <img src="./../../assets/img/freshbuy_logo.png" width="50%" style="padding-left: 7%;padding-top: 10%;"/>
+        <h1 class="txt1_welcome" style="font-size: 40px;padding-top: 15%;padding-left: 12%;">Bienvenido a <b>Fresh Buy</b></h1>
+        <h3 class="txt1_welcome" style="padding-top: 0;padding-left: 12%;">Poductos frescos hasta la puerta de tu casa</h3>
+       <img class="center" src="./../../assets/img/module_login.png" style="padding-top: 55%;padding-left: 0%;width: 578px;"/>
+      </div>
+    </div>
+
