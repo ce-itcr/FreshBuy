@@ -53,5 +53,3 @@ export function isEmail(hEmail){
   }
   return "Error"
 }
-
-export const UserandPass = [["1234C","abc"],["1234P","abc"],["1234A","abc"]];

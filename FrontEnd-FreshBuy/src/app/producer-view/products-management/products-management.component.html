@@ -56,7 +56,6 @@
   </div>
   <div class="modal-body" style="justify-content: center;align-items: center;display: inline-block;vertical-align: middle;padding-left: 25%;">
     <form>
-      <input #product_id type="number" placeholder="Id de Producto">
       <input #product_name type="text" placeholder="Nombre de Producto">
       <input #category type="text" placeholder="Nombre de Categoria">
       <input #category_id type="number" placeholder="Id de Categoria">
@@ -69,7 +68,7 @@
     </form>
   </div>
   <div class="modal-footer">
-      <button type="button" class="btn btn-success" (click)="create_product(product_id.value, product_name.value, category.value, category_id.value, sale_mode.value, availability.value, price.value, photo.value, producer_id.value)" (click)="modal.close()">Añadir</button>
+      <button type="button" class="btn btn-success" (click)="create_product(product_name.value, category.value, category_id.value, sale_mode.value, availability.value, price.value, photo.value, producer_id.value)" (click)="modal.close()">Añadir</button>
       <button type="button" class="btn btn-outline-danger" (click)="modal.close()">Cancelar</button>
   </div>
 </ng-template>

@@ -16,7 +16,7 @@ export class ProductsDataTableComponent implements AfterViewInit, OnInit {
   dataSource: ProductsDataTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'category', 'picture', 'price', 'sellingMode', 'availability'];
+  displayedColumns = ['product_id', 'product_name', 'category', 'category_id', 'sale_mode', 'availability', 'price', 'photo', 'producer_id'];
 
   ngOnInit() {
     this.dataSource = new ProductsDataTableDataSource();

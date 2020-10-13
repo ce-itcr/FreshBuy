@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserandPass, isNumber} from '../../register/register.component';
+import { isNumber } from '../../register/register.component';
 import { HttpClient } from '@angular/common/http'
 import { ComunicationService } from 'src/app/comunication.service';
 import { Router } from '@angular/router';
