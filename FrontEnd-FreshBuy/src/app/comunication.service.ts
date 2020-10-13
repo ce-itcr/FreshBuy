@@ -30,10 +30,6 @@ export class ComunicationService {
     return this.http.get<string[]>("api/Consumer/getProducts");
   }
 
-  public getProductsForProducer(name:string){
-    return this.http.post<string[]>("api/Producer/getProducts", {"username":name});
-  }
-
   //SEND REGISTER PRODUCER DATA TO API
   public sendProducerData(person_id, name, last_name, province, canton, district,
     birth_date, phone_number, sinpe_number, delivery_locations, username, password){
@@ -67,6 +63,10 @@ export class ComunicationService {
     "username": username,
     "password": password}
     );
+  }
+
+  public getProductsForProducer(name:string){
+    return this.http.post<string[]>("api/Producer/getProducts", {"username":name});
   }
 
   public sendItemsToBuy(itemsToBuy:any[]){
@@ -146,10 +146,14 @@ export class ComunicationService {
 
 
 
-  createProduct(product_id, product_name, category, category_id, sale_mode, availability, price, photo, producer_id){
-    return this.http.post<JSON>("api/producer/product/add",{"product_id":product_id,"product_name":product_name,"category":category,"category_id": category_id,
+  createProduct(product_name, category, category_id, sale_mode, availability, price, photo, producer_id){
+    return this.http.post<JSON>("api/producer/product/add",{"product_name":product_name,"category":category,"category_id": category_id,
                                 "sale_mode":sale_mode,"availability":availability,"price":price,"photo":photo,"producer_id":producer_id}).subscribe(res => {
                                   console.log("RES", res);
                                 })
+  }
+
+  deleteProduct(product_id){
+    return this.http.post<JSON>("api/producer/product/delete",{"product_id":parseInt(product_id)});
   }
 }

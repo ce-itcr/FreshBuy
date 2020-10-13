@@ -16,6 +16,17 @@ export function update_producers(router: Router,CS: ComunicationService){
     });
   }
 
+  export function update_products_for_producer(CS: ComunicationService, router: Router){
+    CS.getProductsForProducer(localStorage.getItem("user")).subscribe(res => {
+      var productsList: any[] = [];
+        for (let i=0;i<res.length;i++){
+          productsList.push(JSON.parse(res[i]))
+        }
+        globalThis.products = productsList;
+        router.navigateByUrl('/productsManagement');
+    })
+  }
+
 export function update_affiliations(router: Router,CS: ComunicationService){
   CS.getAffiliations().subscribe(res => {
     alert(res);

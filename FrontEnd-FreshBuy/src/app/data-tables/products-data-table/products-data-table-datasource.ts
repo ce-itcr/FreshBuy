@@ -9,7 +9,7 @@ export interface ProductsDataTableItem {
   product_id: number;
   product_name: string;
   category: string;
-  category_id: string;
+  category_id: number;
   sale_mode: string;
   availability: number;
   price: number;
@@ -18,8 +18,8 @@ export interface ProductsDataTableItem {
 }
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: ProductsDataTableItem[] = [
-  ];
+const EXAMPLE_DATA: ProductsDataTableItem[] = []
+
 
 /**
  * Data source for the ProductsDataTable view. This class should
@@ -27,7 +27,7 @@ const EXAMPLE_DATA: ProductsDataTableItem[] = [
  * (including sorting, pagination, and filtering).
  */
 export class ProductsDataTableDataSource extends DataSource<ProductsDataTableItem> {
-  data: ProductsDataTableItem[] = EXAMPLE_DATA;
+  data: ProductsDataTableItem[] = globalThis.products;
   paginator: MatPaginator;
   sort: MatSort;
 

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ProducerManagementComponent } from '../administration-view/producer-management/producer-management.component';
 import { ComunicationService } from '../comunication.service';
 import { update_producers } from '../logic';
+import { update_products_for_producer } from '../logic';
 import { ProductsManagementComponent } from '../producer-view/products-management/products-management.component';
 
 declare global {
@@ -72,11 +73,9 @@ export class LogInComponent implements OnInit {
   verify_producer_login(){
     return this.http.post<JSON>("api/Login/Producer/consult",
     {"username": this.user.toString(), "password": this.password.toString()}).subscribe(res => {
-      globalThis.storedUsername = this.user;
-      this.update_products_for_producer();
-      console.log(globalThis.storedUsername)
-      console.log("RES", res);
-      this.router.navigateByUrl('/productsManagement');
+      localStorage.clear();
+      localStorage.setItem("user",this.user);
+      update_products_for_producer(this.CS, this.router);
      }, error => {
       alert("Nombre de usuario o contraseña incorrectos.");
     });
@@ -126,3 +125,4 @@ export class LogInComponent implements OnInit {
      });
   }
 }
+

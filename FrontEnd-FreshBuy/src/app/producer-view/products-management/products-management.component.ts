@@ -24,17 +24,20 @@ export class ProductsManagementComponent implements OnInit {
 
   openModal(content){ this.modal.open(content,{size:'sm', centered:true});}
 
-  create_product(product_id, product_name, category, category_id, sale_mode, availability, price, photo, producer_id){
-    this.CS.createProduct(product_id, product_name, category, category_id, sale_mode, availability, price, photo, producer_id);
+  create_product(product_name, category, category_id, sale_mode, availability, price, photo, producer_id){
+    this.CS.createProduct(product_name, category, category_id, sale_mode, availability, price, photo, producer_id);
   }
 
-  delete_product(product_id){}
+  delete_product(product_id){
+    this.CS.deleteProduct(product_id).subscribe(res => {
+      alert(res);
+    }, error => {
+      alert("MAMÓ");
+    });
+  }
 
   update_product(product_id, product_name, category, category_id, sale_mode, availability, price, photo, producer_id){}
 
 
 
 }
-
-
-

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { back_disable, update_products_for_producer, } from '../../logic';
 import * as $ from 'jquery';
+import { ComunicationService } from 'src/app/comunication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-orders-management',
@@ -9,7 +12,11 @@ import * as $ from 'jquery';
 })
 export class OrdersManagementComponent implements OnInit {
 
-  constructor(private modal:NgbModal) {  }
+  constructor(private modal:NgbModal, private CS: ComunicationService, private router: Router) {  }
+
+ updateProducts(){
+  update_products_for_producer(this.CS, this.router);
+ }
 
   ngOnInit(): void {
     $("#menu-toggle").click(function(e) {

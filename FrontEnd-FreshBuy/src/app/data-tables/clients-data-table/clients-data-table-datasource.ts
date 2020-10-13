@@ -21,6 +21,7 @@ export interface ClientsDataTableItem {
 
 declare global {
   var producers: any[];
+  var products: any[];
 }
 
 // TODO: replace this with real data from your application
