@@ -24,8 +24,8 @@ export class LogInComponent implements OnInit {
   categoryList: any[] = [];
 
   update_products_for_producer(){
-    alert(globalThis.storedUsername)
-    this.CS.getProductsForProducer(globalThis.storedUsername.toString()).subscribe(res => {
+    alert(JSON.stringify(globalThis.storedUsername))
+    this.CS.getProductsForProducer(globalThis.storedUsername).subscribe(res => {
       alert(res)
     })
   }
