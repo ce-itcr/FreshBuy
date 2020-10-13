@@ -6,13 +6,11 @@ export function update_producers(router: Router,CS: ComunicationService){
   
     CS.getProducers().subscribe(res => {
       var producerList: any[] = [];
-      alert(res);
       for (let i=0;i<res.length;i++){
         producerList.push(JSON.parse(res[i]))
         delete producerList[i]["username"]
         delete producerList[i]["password"]
       }
-      alert(producerList);
       globalThis.producers = producerList;
       router.navigateByUrl('/producerManagement');
     });

@@ -30,31 +30,15 @@ export class CategoryManagementComponent implements OnInit {
   openModal(content){ this.modal.open(content,{size:'sm', centered:true});}
 
   create_category(category_id, category_name){
-    return this.http.post<JSON>("api/admin/categories/add",{"category_id": category_id,"category_name": category_name}).subscribe(res => {
-                                  console.log("RES", res);
-                                  alert("Categoria creada exitosamente. Actualice la página para poder observar los cambios.");
-                                }, error => {
-                                  alert("Se produjo un error al crear la categoria en la base de datos. Intente más tarde.");
-                                })
-
+    this.CS.createCategory(category_id,category_name)
   }
 
   delete_category(category_id){
-    return this.http.post<JSON>("api/admin/categories/delete",{"category_id": category_id}).subscribe(res => {
-      console.log("RES", res);
-      alert("Categoria eliminada exitosamente. Actualice la página para poder observar los cambios.");
-    }, error => {
-      alert("Se produjo un error al eliminar la categoria en la base de datos. Intente más tarde.");
-    })
+    this.CS.deleteCategory(category_id);
   }
 
   update_category(category_id, category_name){
-    return this.http.post<JSON>("api/admin/categories/update",{"category_id": category_id,"category_name": category_name}).subscribe(res => {
-      console.log("RES", res);
-      alert("Categoria actualizada exitosamente. Actualice la página para poder observar los cambios.");
-    }, error => {
-      alert("Se produjo un error al actualizar la categoria en la base de datos. Intente más tarde.");
-    })
+    this.CS.updateCategory(category_id,category_name);
   }
 
 

@@ -30,15 +30,11 @@ export class AffiliationManagementComponent implements OnInit {
   }
 
   deny_affiliation(producer_id){
-    return this.http.post<JSON>("api/Admin/affiliation/delete",{"producer_id": producer_id}).subscribe(res => {
-      alert(res);
-    })
+    this.CS.denyAffiliation(producer_id);
   }
 
   accept_affiliation(producer_id){
-    return this.http.post<JSON>("api/Admin/affiliation/accept",{"producer_id": producer_id}).subscribe(res => {
-      alert(res);
-    })
+    this.CS.acceptAffiliation(producer_id);
   }
 
   ngOnInit(): void {
