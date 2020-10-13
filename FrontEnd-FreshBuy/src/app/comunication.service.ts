@@ -35,13 +35,13 @@ export class ComunicationService {
     birth_date, phone_number, sinpe_number, delivery_locations, username, password){
     
     return this.http.post<JSON>("api/Login/affiliation/add",
-    {"person_id": person_id ,
+    {"person_id": person_id,
     "name" : name,
     "last_name": last_name,
     "province": province,
     "canton": canton,
     "district": district,
-    "birth_date":"30/09/2000",
+    "birth_date": birth_date,
     "phone_number": phone_number,
     "sinpe_number": sinpe_number,
     "delivery_locations": delivery_locations,
@@ -131,7 +131,7 @@ export class ComunicationService {
   }
   
   updateProducer(person_id, name, last_name, province, canton, district, birth_date, phone_number, sinpe_number,delivery_locations, username, password){
-    return this.http.post<JSON>("api/login/producer/update",{"person_id":person_id,"name":name,"last_name":last_name,"province":province,"canton":canton,"district":district,"bith_date":birth_date,
+    return this.http.post<JSON>("api/admin/producer/update",{"person_id":person_id,"name":name,"last_name":last_name,"province":province,"canton":canton,"district":district,"bith_date":birth_date,
                                                             "phone_number":phone_number,"sinpe_number":sinpe_number,"delivery_locations": ["Cartago","Dulce Nombre"], "username": username, "password": password}).subscribe(res => {
                                   console.log("RES", res);                                                              alert("Productor creado exitosamente. Actualice la página para poder observar los cambios.");
                                   alert("Productor actualizado exitosamente. Actualice la página para poder observar los cambios.");

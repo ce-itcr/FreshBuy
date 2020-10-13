@@ -32,7 +32,7 @@
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100">
-          <input class="input100" #birthdate type="date" placeholder="Fecha de Nacimiento">
+          <input class="input100" #birthdate type="text" placeholder="Fecha de Nacimiento">
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100">
@@ -41,6 +41,10 @@
         </div>
         <div class="wrap-input100">
           <input class="input100" #sinpeNumber type="text" required maxlength="8" placeholder="SINPE">
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100">
+          <input class="input100" #deliveryLoc type="text" placeholder="Lugar de Entrega">
           <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100">
@@ -58,7 +62,7 @@
           lastName.value, province.value,
           canton.value, district.value,
           birthdate.value, phoneNumber.value,
-          sinpeNumber.value,
+          sinpeNumber.value, deliveryLoc.value,
           username.value, password.value)" type="button">
             Solicitar Afiliación
           </button>

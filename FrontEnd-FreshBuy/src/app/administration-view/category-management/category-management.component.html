@@ -77,11 +77,11 @@
   </div>
   <div class="modal-body" style="justify-content: center;align-items: center;display: inline-block;vertical-align: middle;padding-left: 25%;">
     <form>
-      <input #product_id type="number" placeholder="Id de Categoria">
+      <input #category_id type="number" placeholder="Id de Categoria">
     </form>
   </div>
   <div class="modal-footer">
-      <button type="button" class="btn btn-success" (click)="delete_category(product_id.value)" (click)="modal.close()">Eliminar</button>
+      <button type="button" class="btn btn-success" (click)="delete_category(category_id.value)" (click)="modal.close()">Eliminar</button>
       <button type="button" class="btn btn-outline-danger" (click)="modal.close()">Cancelar</button>
   </div>
 </ng-template>

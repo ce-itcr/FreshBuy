@@ -18,6 +18,7 @@ export function update_producers(router: Router,CS: ComunicationService){
 
 export function update_affiliations(router: Router,CS: ComunicationService){
   CS.getAffiliations().subscribe(res => {
+    alert(res);
     var affiliationsList: any[] = [];
     for (let i=0;i<res.length;i++){
       affiliationsList.push(JSON.parse(res[i]))

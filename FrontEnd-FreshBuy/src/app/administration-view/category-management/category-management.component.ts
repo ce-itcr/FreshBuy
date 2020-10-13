@@ -38,7 +38,7 @@ export class CategoryManagementComponent implements OnInit {
   }
 
   update_category(category_id, category_name){
-    this.CS.updateCategory(category_id,category_name);
+    this.CS.updateCategory(category_id, category_name);
   }
 
 

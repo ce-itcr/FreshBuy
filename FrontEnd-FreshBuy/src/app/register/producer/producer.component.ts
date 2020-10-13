@@ -32,7 +32,7 @@ export class ProducerComponent implements OnInit {
   }
 
   public registerData(person_id, name, last_name, province, canton, district,
-     birth_date, phone_number, sinpe_number,username, password){
+     birth_date, phone_number, sinpe_number, deliveryLoc,username, password){
 
     this.ID = isNumber(person_id,9);
     this.fName = name;
@@ -43,12 +43,12 @@ export class ProducerComponent implements OnInit {
     this.birthdate = birth_date;
     this.phoneNum = isNumber(phone_number,8);
     this.SINPE = isNumber(sinpe_number,8);
-    this.deliveryLoc = ["Correos Esparza","Juanilama"];
+    this.deliveryLoc = deliveryLoc;
     this.username = username;
     this.password = password;
 
     if(this.ID !== "Error" && this.phoneNum !== "Error" && this.SINPE !== "Error"){
-      this.postTest();
+      this.sendProducer();
     }
 
     alert("ID: " + this.ID + "\n" +
@@ -68,7 +68,7 @@ export class ProducerComponent implements OnInit {
 
   }
 
-  postTest()//:Observable<JSON>
+  sendProducer()//:Observable<JSON>
   {
     this.CS.sendProducerData(this.ID,this.fName,this.lName,this.province,this.canton,this.district,
       this.birthdate,this.phoneNum,this.SINPE,this.deliveryLoc,this.username, this.password).subscribe(res => {
