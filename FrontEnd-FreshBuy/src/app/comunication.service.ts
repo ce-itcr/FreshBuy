@@ -30,8 +30,8 @@ export class ComunicationService {
     return this.http.get<string[]>("api/Consumer/getProducts");
   }
 
-  public getProductsForProducer(name){
-    return this.http.post<string[]>("api/Producer/getProducts", name);
+  public getProductsForProducer(name:string){
+    return this.http.post<string[]>("api/Producer/getProducts", {"username":name});
   }
 
   //SEND REGISTER PRODUCER DATA TO API
