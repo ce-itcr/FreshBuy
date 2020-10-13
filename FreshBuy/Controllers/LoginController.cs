@@ -66,7 +66,34 @@ namespace FreshBuy.Controllers
         }
 
         [HttpPost]
-        [Route("api/Login/Producer/add")]
+        [Route("api/Login/affiliation/add")]
+        public IHttpActionResult CreateAffiliation([FromBody] JObject new_producer)
+        {
+            {
+                bool result = admin_model.create_affiliation(
+                    (int)new_producer["person_id"],
+                    (string)new_producer["name"],
+                    (string)new_producer["last_name"],
+                    (string)new_producer["province"],
+                    (string)new_producer["canton"],
+                    (string)new_producer["district"],
+                    (string)new_producer["birt_date"],
+                    (double)new_producer["phone_number"],
+                    (double)new_producer["sinpe_number"],
+                    new_producer.SelectToken("delivery_locations")?.ToObject<string[]>(),
+                    (string)new_producer["username"],
+                    (string)new_producer["password"]);
+
+                if (result)
+                {
+                    return Ok(new_producer);
+                }
+                return NotFound();
+            }
+        }
+
+        [HttpPost]
+        [Route("api/Login/producer/add")]
         public IHttpActionResult CreateProducer([FromBody] JObject new_producer)
         {
             {
@@ -91,7 +118,6 @@ namespace FreshBuy.Controllers
                 return NotFound();
             }
         }
-
 
         [HttpPost]
         [Route("api/Login/Consumer/add")]
