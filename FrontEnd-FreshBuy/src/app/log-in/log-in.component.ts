@@ -57,7 +57,9 @@ export class LogInComponent implements OnInit {
     {"username": this.user.toString(), "password": this.password.toString()}).subscribe(res => {
       console.log("RES", res);
       update_producers(this.router,this.CS);
-     });
+     }, error => {
+      alert("Nombre de usuario o contraseña incorrectos.");
+    });
   }
 
   verify_producer_login(){
@@ -65,7 +67,9 @@ export class LogInComponent implements OnInit {
     {"username": this.user.toString(), "password": this.password.toString()}).subscribe(res => {
       console.log("RES", res);
       this.router.navigateByUrl('/productsManagement');
-     });
+     }, error => {
+      alert("Nombre de usuario o contraseña incorrectos.");
+    });
   }
 
   verify_consumer_login(){
@@ -73,7 +77,9 @@ export class LogInComponent implements OnInit {
     {"username": this.user.toString(), "password": this.password.toString()}).subscribe(res => {
       console.log("RES", res);
       this.router.navigateByUrl('/clientView');
-     });
+     }, error => {
+      alert("Nombre de usuario o contraseña incorrectos.");
+    });
   }
 
   //SEND DATA

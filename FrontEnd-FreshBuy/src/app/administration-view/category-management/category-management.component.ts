@@ -32,6 +32,9 @@ export class CategoryManagementComponent implements OnInit {
   create_category(category_id, category_name){
     return this.http.post<JSON>("api/admin/categories/add",{"category_id": category_id,"category_name": category_name}).subscribe(res => {
                                   console.log("RES", res);
+                                  alert("Categoria creada exitosamente. Actualice la página para poder observar los cambios.");
+                                }, error => {
+                                  alert("Se produjo un error al crear la categoria en la base de datos. Intente más tarde.");
                                 })
 
   }
@@ -39,12 +42,18 @@ export class CategoryManagementComponent implements OnInit {
   delete_category(category_id){
     return this.http.post<JSON>("api/admin/categories/delete",{"category_id": category_id}).subscribe(res => {
       console.log("RES", res);
+      alert("Categoria eliminada exitosamente. Actualice la página para poder observar los cambios.");
+    }, error => {
+      alert("Se produjo un error al eliminar la categoria en la base de datos. Intente más tarde.");
     })
   }
 
   update_category(category_id, category_name){
     return this.http.post<JSON>("api/admin/categories/update",{"category_id": category_id,"category_name": category_name}).subscribe(res => {
       console.log("RES", res);
+      alert("Categoria actualizada exitosamente. Actualice la página para poder observar los cambios.");
+    }, error => {
+      alert("Se produjo un error al actualizar la categoria en la base de datos. Intente más tarde.");
     })
   }
 

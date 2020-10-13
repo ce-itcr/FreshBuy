@@ -305,6 +305,18 @@ iframe {
   padding: 0 25px;
 }
 
+
+.input1001 {
+  display: block;
+  width: 100%;
+  background: transparent;
+  font-family: Poppins-Regular;
+  font-size: 58px;
+  color: #666666;
+  line-height: 1.2;
+  padding: 13 25px;
+}
+
 input.input100 {
   height: 55px;
 }
