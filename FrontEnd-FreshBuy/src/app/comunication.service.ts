@@ -18,6 +18,10 @@ export class ComunicationService {
     return this.http.get<string[]>("api/Admin/Producers/getProducers");
   }
   
+  public getAffiliations(){
+    return this.http.get<string[]>("api/Admin/affiliations/getAffiliations");
+  }
+
   public getCategories(){
     return this.http.get<string[]>("api/Admin/Categories/getCategories");
   }
@@ -29,14 +33,15 @@ export class ComunicationService {
   //SEND REGISTER PRODUCER DATA TO API
   public sendProducerData(person_id, name, last_name, province, canton, district,
     birth_date, phone_number, sinpe_number, delivery_locations, username, password){
-    return this.http.post<JSON>("api/Login/Producer/add",
+    
+    return this.http.post<JSON>("api/Login/affiliation/add",
     {"person_id": person_id ,
     "name" : name,
     "last_name": last_name,
     "province": province,
     "canton": canton,
     "district": district,
-    "birth_date":birth_date,
+    "birth_date":"30/09/2000",
     "phone_number": phone_number,
     "sinpe_number": sinpe_number,
     "delivery_locations": delivery_locations,

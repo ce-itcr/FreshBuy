@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { back_disable, update_producers } from '../../logic';
+import { back_disable, update_producers, update_affiliations } from '../../logic';
 import * as $ from 'jquery';
 import { ComunicationService } from 'src/app/comunication.service';
 import { Router } from '@angular/router';
@@ -21,6 +21,10 @@ export class CategoryManagementComponent implements OnInit {
 
   updateProducers(){
     update_producers(this.router,this.CS);
+  }
+
+  updateAffiliations(){
+    update_affiliations(this.router, this.CS);
   }
 
   openModal(content){ this.modal.open(content,{size:'sm', centered:true});}

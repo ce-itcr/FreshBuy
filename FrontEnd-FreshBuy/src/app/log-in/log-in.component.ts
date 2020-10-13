@@ -13,8 +13,6 @@ import { update_producers } from '../logic';
 export class LogInComponent implements OnInit {
 
   constructor(private router: Router, private http: HttpClient, private CS: ComunicationService) { }
-  producerList: any[] = [];
-  categoryList: any[] = [];
   
   ngOnInit(): void {
   }
@@ -76,18 +74,6 @@ export class LogInComponent implements OnInit {
       console.log("RES", res);
       this.router.navigateByUrl('/clientView');
      });
-  }
-
-  update_producers(){
-    this.CS.getProducers().subscribe(res => {
-      for (let i=0;i<res.length;i++){
-        this.producerList.push(JSON.parse(res[i]))
-        delete this.producerList[i]["username"]
-        delete this.producerList[i]["password"]
-      }
-      globalThis.producers = this.producerList;
-      this.router.navigateByUrl('/producerManagement');
-    });
   }
 
   //SEND DATA
