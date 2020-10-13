@@ -77,10 +77,10 @@ namespace FreshBuy.Controllers
                     (string)new_producer["province"],
                     (string)new_producer["canton"],
                     (string)new_producer["district"],
-                    (string)new_producer["birt_date"],
+                    (string)new_producer["birth_date"],
                     (double)new_producer["phone_number"],
                     (double)new_producer["sinpe_number"],
-                    new_producer.SelectToken("delivery_locations")?.ToObject<string[]>(),
+                    (string)new_producer["delivery_locations"],
                     (string)new_producer["username"],
                     (string)new_producer["password"]);
 
@@ -104,10 +104,10 @@ namespace FreshBuy.Controllers
                     (string)new_producer["province"],
                     (string)new_producer["canton"],
                     (string)new_producer["district"],
-                    (string)new_producer["birt_date"],
+                    (string)new_producer["birth_date"],
                     (double)new_producer["phone_number"],
                     (double)new_producer["sinpe_number"],
-                    new_producer.SelectToken("delivery_locations")?.ToObject<string[]>(),
+                    (string)new_producer["delivery_locations"],
                     (string)new_producer["username"],
                     (string)new_producer["password"]);
 

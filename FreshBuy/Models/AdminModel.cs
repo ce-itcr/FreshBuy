@@ -41,7 +41,7 @@ namespace FreshBuy.Models
         /// <param name="sinpe_number"></param>
         /// <param name="delivery_locations"></param>
         /// <returns></returns>
-        public bool create_affiliation(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String[] delivery_locations, String username, String password)
+        public bool create_affiliation(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String delivery_locations, String username, String password)
         {
             if (SELECT(affiliations_path, person_id) == null)
             {
@@ -67,7 +67,7 @@ namespace FreshBuy.Models
             return false;
         }
 
-        public bool create_producer(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String[] delivery_locations, String username, String password)
+        public bool create_producer(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String delivery_locations, String username, String password)
         {
             if (SELECT(producer_path, person_id) == null)
             {
@@ -115,7 +115,7 @@ namespace FreshBuy.Models
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public bool update_producer(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String[] delivery_locations, String username, String password)
+        public bool update_producer(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String delivery_locations, String username, String password)
         {
             if (DELETE(producer_path, person_id))
             {
@@ -211,14 +211,6 @@ namespace FreshBuy.Models
             if (SELECT(categories_path, category_id) != null)
             {
                 DELETE(categories_path, category_id);
-                String[] products_to_modify = FILTER(products_path, "category_id", null, category_id);
-                JObject product_to_analyze;
-
-                foreach (String product in products_to_modify)
-                {
-                    product_to_analyze = JObject.Parse(product);
-                    UPDATE(products_path, (int)product_to_analyze["product_id"], "category_id", null, 0);
-                }
                 return true;
             }
             return false;

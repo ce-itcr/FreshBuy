@@ -7,8 +7,3 @@
 {"product_id": 2,"product_name": "bananos","category": "frutas","category_id":1,"sale_mode":"mano","availability":240,"price":1000,"photo":"direcci�n foto","producer_id":117550010}
 {"product_id":4,"product_name":"melon","category":"frutas","category_id":1,"sale_mode":"unidad","availability":50000,"price":960,"photo":"direccion","producer_id":117550010}
 {"product_id":10,"product_name":"pesuña","category":"carne","category_id":6,"sale_mode":"por kilo","availability":50000,"price":15000,"photo":"direccion","producer_id":117550010}
-
-
-
-
-

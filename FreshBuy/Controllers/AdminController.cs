@@ -132,7 +132,7 @@ namespace FreshBuy.Controllers
                                     (string)producer["birt_date"],
                                     (double)producer["phone_number"],
                                     (double)producer["sinpe_number"],
-                                    producer.SelectToken("delivery_locations")?.ToObject<string[]>(),
+                                    (string)producer["delivery_locations"],
                                     (string)producer["username"],
                                     (string)producer["password"]);
 
