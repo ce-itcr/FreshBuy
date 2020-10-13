@@ -16,13 +16,15 @@ namespace FreshBuy.Controllers
     public class ProducerController : ApiController
     {
         ProducerModel producer_model = new ProducerModel();
+        AdminModel admin_model = new AdminModel();
 
         [HttpPost]
         [Route("api/producer/product/add")]
         public IHttpActionResult CreateProduct([FromBody] JObject new_product)
         {
+            
             bool result = producer_model.create_product(
-                (int)new_product["product_id"],
+                0,
                 (string)new_product["product_name"],
                 (string)new_product["category"],
                 (int)new_product["category_id"],
@@ -37,6 +39,13 @@ namespace FreshBuy.Controllers
                 return Ok(new_product);
             }
             return NotFound();
+        }
+
+        [HttpPost]
+        [Route("api/Producer/getProducts")]
+        public string[] getProductsForProducers([FromBody] JObject producer_name)
+        {
+            return (producer_model.filterProducts((string)producer_name["username"]));
         }
 
         [HttpPost]
@@ -67,6 +76,7 @@ namespace FreshBuy.Controllers
         public IHttpActionResult DeleteProducer([FromBody] JObject product)
         {
             {
+                System.Diagnostics.Debug.Print(product.ToString());
                 bool result = producer_model.delete_product(
                     (int)product["product_id"]);
 

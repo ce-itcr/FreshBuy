@@ -216,6 +216,16 @@ namespace FreshBuy.Models
             return false;
         }
 
+        public bool delete_product(int product_id)
+        {
+            if (SELECT(products_path, product_id) != null)
+            {
+                DELETE(products_path, product_id);
+                return true;
+            }
+            return false;
+        }
+
         /// <summary>
         /// Method that creates a new type of product
         /// </summary>
