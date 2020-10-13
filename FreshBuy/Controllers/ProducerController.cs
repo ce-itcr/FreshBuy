@@ -40,6 +40,13 @@ namespace FreshBuy.Controllers
         }
 
         [HttpPost]
+        [Route("api/Producer/getProducts")]
+        public IHttpActionResult getProductsForProducers([FromBody] string producer_name)
+        {
+            return Ok(producer_model.filterProducts(producer_name));
+        }
+
+        [HttpPost]
         [Route("api/producer/product/update")]
         public IHttpActionResult UpdateProduct([FromBody] JObject product)
         {

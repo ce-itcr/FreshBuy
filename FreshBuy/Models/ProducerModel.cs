@@ -32,8 +32,7 @@ namespace FreshBuy.Models
             if (SELECT(products_path, product_id) == null)
             {
                 Product product = new Product();
-
-                product.product_id = product_id;
+                product.product_id = READALL(products_path).Length + 1;
                 product.product_name = product_name;
                 product.category = category;
                 product.category_id = category_id;
@@ -49,6 +48,12 @@ namespace FreshBuy.Models
                 return true;
             }
             return false;
+        }
+
+        public string[] filterProducts(string user)
+        {
+            int id = (int)JObject.Parse(FILTER(producer_path, "username", user, 0)[0])["producer_id"];
+            return FILTER(products_path, "producer_id", "", id);
         }
 
 
@@ -82,6 +87,8 @@ namespace FreshBuy.Models
         public bool delete_product(int product_id) {
             return DELETE(products_path, product_id);
         }
+
+
 
         //Orders Management
         public String[] find_order(int id) { return null; }
