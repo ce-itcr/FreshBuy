@@ -24,12 +24,8 @@ export class ProductsManagementComponent implements OnInit {
 
   openModal(content){ this.modal.open(content,{size:'sm', centered:true});}
 
-  create_product(product_name, category, category_id, sale_mode, availability, price, photo, producer_id){
-    return this.http.post<JSON>("api/producer/product/add",{"product_id":0,"product_name":product_name,"category":category,"category_id": category_id,
-                                "sale_mode":sale_mode,"availability":availability,"price":price,"photo":photo,"producer_id":producer_id}).subscribe(res => {
-                                  console.log("RES", res);
-                                })
-
+  create_product(product_id, product_name, category, category_id, sale_mode, availability, price, photo, producer_id){
+    this.CS.createProduct(product_id, product_name, category, category_id, sale_mode, availability, price, photo, producer_id);
   }
 
   delete_product(product_id){}

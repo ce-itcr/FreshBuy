@@ -23,8 +23,8 @@
     <div class="container-fluid">
       <h1 class="mt-4">Administración de Afiliaciones </h1>
 
-      <button mat-raised-button> Aceptar Solicitud </button>
-      <button mat-raised-button> Denegar Solicitud </button>
+      <button mat-raised-button (click) = "openModal(accept_affiliation_modal)"> Aceptar Solicitud </button>
+      <button mat-raised-button (click) = "openModal(deny_affiliation_modal)"> Denegar Solicitud </button>
       <br><br>
 
       <app-clients-data-table></app-clients-data-table>
@@ -32,6 +32,38 @@
     </div>
   </div>
   <!-- /#page-content-wrapper -->
+
+
+  <ng-template #deny_affiliation_modal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Denegar una afiliación de su bodega digital.</h4>
+    </div>
+    <div class="modal-body" style="justify-content: center;align-items: center;display: inline-block;vertical-align: middle;padding-left: 25%;">
+      <form>
+        <input #producer_id type="number" placeholder="Id de Productor">
+      </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="deny_affiliation(producer_id.value)" (click)="modal.close()">Denegar</button>
+        <button type="button" class="btn btn-outline-danger" (click)="modal.close()">Cancelar</button>
+    </div>
+  </ng-template>
+
+  <ng-template #accept_affiliation_modal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Aceptar una afiliación de su bodega digital.</h4>
+    </div>
+    <div class="modal-body" style="justify-content: center;align-items: center;display: inline-block;vertical-align: middle;padding-left: 25%;">
+      <form>
+        <input #producer_id type="number" placeholder="Id de Productor">
+      </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="accept_affiliation(producer_id.value)" (click)="modal.close()">Aceptar</button>
+        <button type="button" class="btn btn-outline-danger" (click)="modal.close()">Cancelar</button>
+    </div>
+  </ng-template>
+
 </div>
 <!-- /#wrapper -->
 

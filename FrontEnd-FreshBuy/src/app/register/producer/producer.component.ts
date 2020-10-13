@@ -77,21 +77,6 @@ export class ProducerComponent implements OnInit {
       }, error => {
         alert("ERROR");
       });
-
-    //return this.http.post<JSON>("api/Login/Producer/add",
-    //{
-    //  "person_id": 100000000,
-    //  "name": "1322",
-    //  "last_name": "132213",
-    //  "province": "Cartago",
-    //  "canton": "Central",
-    //  "district": "Dulce Nombre",
-    //  "birt_date": "00/00/00",
-    //  "phone_number": 8888888,
-    //  "sinpe_number": 8888888,
-    //  "delivery_cations": "Dulce Nombre, Agua Caliente, TEC",
-    //  "password": "lospalotes123123"
-  //}).subscribe(res => console.log("RES", res));
   }
 
 }

@@ -37,15 +37,6 @@ export class LogInComponent implements OnInit {
   password: string;
   userType: string;
 
-  loginAction(username, password){
-    this.user = username;
-    this.password = password;
-    this.sendData();
-
-    //this.router.navigateByUrl('/producerManagement');
-
-  }
-
   verify_user_type(username, password, user_type){
     this.user = username;
     this.password = password;

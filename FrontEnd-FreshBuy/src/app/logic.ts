@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ComunicationService } from './comunication.service';
 
 export function update_producers(router: Router,CS: ComunicationService){
+  
     CS.getProducers().subscribe(res => {
       var producerList: any[] = [];
       for (let i=0;i<res.length;i++){
@@ -14,6 +15,19 @@ export function update_producers(router: Router,CS: ComunicationService){
       router.navigateByUrl('/producerManagement');
     });
   }
+
+export function update_affiliations(router: Router,CS: ComunicationService){
+  CS.getAffiliations().subscribe(res => {
+    var affiliationsList: any[] = [];
+    for (let i=0;i<res.length;i++){
+      affiliationsList.push(JSON.parse(res[i]))
+      delete affiliationsList[i]["username"]
+      delete affiliationsList[i]["password"]
+    }
+    globalThis.producers = affiliationsList;
+    router.navigateByUrl('/affiliationManagement');
+  });
+}
 
 export function update_categories(router: Router, CS: ComunicationService){
     CS.getCategories().subscribe(res => {
