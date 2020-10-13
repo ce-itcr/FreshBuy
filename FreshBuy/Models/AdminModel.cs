@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace FreshBuy.Models
@@ -21,6 +22,11 @@ namespace FreshBuy.Models
             return READALL(producer_path);
         }
 
+
+        public string[] find_affiliations()
+        {
+            return READALL(affiliations_path);
+        }
         /// <summary>
         /// Method that creates a producer entity
         /// </summary>
@@ -35,6 +41,32 @@ namespace FreshBuy.Models
         /// <param name="sinpe_number"></param>
         /// <param name="delivery_locations"></param>
         /// <returns></returns>
+        public bool create_affiliation(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String[] delivery_locations, String username, String password)
+        {
+            if (SELECT(affiliations_path, person_id) == null)
+            {
+                Producer producer = new Producer();
+
+                producer.person_id = person_id;
+                producer.name = name;
+                producer.last_name = last_name;
+                producer.province = province;
+                producer.canton = canton;
+                producer.district = district;
+                producer.birth_date = birth_date;
+                producer.phone_number = phone_number;
+                producer.sinpe_number = sinpe_number;
+                producer.delivery_locations = delivery_locations;
+                producer.username = username;
+                producer.password = password;
+
+                INSERT(affiliations_path, JsonConvert.SerializeObject(producer));
+
+                return true;
+            }
+            return false;
+        }
+
         public bool create_producer(int person_id, String name, String last_name, String province, String canton, String district, String birth_date, double phone_number, double sinpe_number, String[] delivery_locations, String username, String password)
         {
             if (SELECT(producer_path, person_id) == null)
@@ -59,6 +91,12 @@ namespace FreshBuy.Models
                 return true;
             }
             return false;
+        }
+
+        public void find_affiliation(int person_id)
+        {
+            Debug.Print(SELECT(affiliations_path, person_id)); 
+            INSERT(producer_path, SELECT(affiliations_path, person_id));
         }
 
         /// <summary>
@@ -107,6 +145,11 @@ namespace FreshBuy.Models
                 return true;
             }
             return false;
+        }
+
+        public bool delete_affiliation(int person_id)
+        {
+            return DELETE(affiliations_path, person_id);
         }
 
         //Category Management

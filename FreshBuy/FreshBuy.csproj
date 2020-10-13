@@ -187,6 +187,7 @@
     <Compile Include="src\Entities\Purchase.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App_Data\affiliations.json" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -298,6 +299,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
+      <UserProperties app_3data_4consumer_1json__JsonSchema="https://json.schemastore.org/appsscript" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

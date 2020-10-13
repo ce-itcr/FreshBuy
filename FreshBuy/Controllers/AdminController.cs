@@ -24,8 +24,16 @@ namespace FreshBuy.Controllers
         [Route("api/admin/producers/getProducers")]
         public string[] getProducers()
         {
-            AdminModel adminModel = new AdminModel();
-            string[] result = adminModel.find_producers();
+            string[] result = admin_model.find_producers();
+
+            return result;
+        }
+
+        [HttpGet]
+        [Route("api/admin/affiliations/getAffiliations")]
+        public string[] getAffiliations()
+        {
+            string[] result = admin_model.find_affiliations();
 
             return result;
         }
@@ -34,8 +42,7 @@ namespace FreshBuy.Controllers
         [Route("api/admin/categories/getCategories")]
         public string[] getCategories()
         {
-            AdminModel adminModel = new AdminModel();
-            string[] result = adminModel.find_categories();
+            string[] result = admin_model.find_categories();
 
             return result;
         }
@@ -153,6 +160,32 @@ namespace FreshBuy.Controllers
             }
         }
 
+        [HttpPost]
+        [Route("api/admin/affiliation/accept")]
+        public IHttpActionResult AcceptAffiliation([FromBody] JObject affiliation)
+        {
+            {
+                
+                admin_model.find_affiliation((int)affiliation["producer_id"]);
+                DeleteAffiliation(affiliation);
+                return Ok(affiliation);
+            }
+        }
 
+        [HttpPost]
+        [Route("api/admin/affiliation/delete")]
+        public IHttpActionResult DeleteAffiliation([FromBody] JObject affiliation)
+        {
+            {
+                bool result = admin_model.delete_affiliation(
+                    (int)affiliation["producer_id"]);
+
+                if (result)
+                {
+                    return Ok(affiliation);
+                }
+                return NotFound();
+            }
+        }
     }
 }
