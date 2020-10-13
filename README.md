@@ -7,6 +7,11 @@
 <h5 align="center">Somos una Feria Virtual que conecta los agricultores con consumidores, llevando productos frescos del campo hasta tu casa.</h4>
 <h6 align="center">Tarea Corta I para el curso de Bases de Datos (CE3101).</h5>
 
+<h1 align="center">
+  <br>
+  <a href="https://github.com/ce-itcr/FreshBuy"><img width="100%" src="https://res.cloudinary.com/dek4evg4t/image/upload/v1602633189/CE3101/Tarea%20Corta/freshbuy_header.png" 
+  alt="MotorTherapy - Header"></a>
+</h1>
 ```
 ```
 
@@ -37,20 +42,6 @@ Allí encontrará los siguientes archivos:
     Discripción del Documento de Instalación.
  - `TC#1 - Administración  de Proyecto`
     Descripción General de la Bitácora y Grantt Chart.
-
-
-## Instalación y Dependencias
-
-### Dependencias
-
-```
-
-```
-
-### Instalación
-
-```
-```
 
 ## Créditos
 
