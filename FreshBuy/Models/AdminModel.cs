@@ -224,6 +224,30 @@ namespace FreshBuy.Models
             return false;
         }
 
+        /// <summary>
+        /// Method that creates a new type of product
+        /// </summary>
+        /// <param name="product_id"></param>
+        /// <param name="product_name"></param>
+        /// <returns></returns>
+        public bool add_products_to_stock(int product_id, String product_name, int category_id, String category_name)
+        {
+            if (SELECT(products_list_path, product_id) == null)
+            {
+                JObject new_product_to_stock = new JObject();
+
+                new_product_to_stock["product_id"] = product_id;
+                new_product_to_stock["product_name"] = product_name;
+                new_product_to_stock["category_id"] = category_id;
+                new_product_to_stock["category_name"] = category_name;
+
+                INSERT(products_list_path, JsonConvert.SerializeObject(new_product_to_stock));
+
+                return true;
+            }
+            return false;
+        }
+
         //Report View
         public String[] bestselling_products(String[] products) { return null; }
         public String[] bestprofitable_products(String[] products) { return null; }

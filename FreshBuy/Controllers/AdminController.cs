@@ -48,6 +48,26 @@ namespace FreshBuy.Controllers
         }
 
         [HttpPost]
+        [Route("api/admin/products/add")]
+        public IHttpActionResult CreateProduct([FromBody] JObject new_product)
+        {
+            {
+                bool result = admin_model.add_products_to_stock(
+                    (int)new_product["product_id"],
+                    (string)new_product["product_name"],
+                    (int)new_product["category_id"],
+                    (string)new_product["category_name"]);
+
+                if (result)
+                {
+                    return Ok(new_product);
+                }
+                return NotFound();
+            }
+        }
+
+
+        [HttpPost]
         [Route("api/admin/categories/add")]
         public IHttpActionResult CreateCategory([FromBody] JObject new_category)
         {
