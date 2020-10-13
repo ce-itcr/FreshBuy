@@ -52,8 +52,11 @@ namespace FreshBuy.Models
 
         public string[] filterProducts(string user)
         {
-            int id = (int)JObject.Parse(FILTER(producer_path, "username", user, 0)[0])["producer_id"];
-            return FILTER(products_path, "producer_id", "", id);
+            System.Diagnostics.Debug.Print(user);
+            System.Diagnostics.Debug.Print(FILTER(producer_path, "username", user, 0)[0]);
+            int id = (int)JObject.Parse(FILTER(producer_path, "username", user, 0)[0])["person_id"];
+            System.Diagnostics.Debug.Print(id.ToString());
+            return FILTER(products_path, "producer_id", null, id);
         }
 
 

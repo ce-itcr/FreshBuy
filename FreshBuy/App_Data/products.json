@@ -1,14 +1,9 @@
-{"product_id":1,"product_name":"fresas","category":"frutas","category_id":1,"sale_mode":"por kilo","availability":50,"price":2500, "photo":"direcci�n foto","producer_id": 305120373}
-{"product_id":3,"product_name":"papaya","category":"frutas","category_id":1,"sale_mode":"por kilo","availability":10000,"price":2500,"photo":"direccion","producer_id":305120373}
-{"product_id":4,"product_name":"melon","category":"frutas","category_id":1,"sale_mode":"unidad","availability":50000,"price":960,"photo":"direccion","producer_id":305120373}
+{"product_id":1,"product_name":"fresas","category":"frutas","category_id":1,"sale_mode":"por kilo","availability":50,"price":2500, "photo":"direcci�n foto","producer_id": 109844579}
+{"product_id":3,"product_name":"papaya","category":"frutas","category_id":1,"sale_mode":"por kilo","availability":10000,"price":2500,"photo":"direccion","producer_id":109844579}
+{"product_id":4,"product_name":"melon","category":"frutas","category_id":1,"sale_mode":"unidad","availability":50000,"price":960,"photo":"direccion","producer_id":109844579}
 {"product_id":7,"product_name":"lechuga","category":"verduras","category_id":1,"sale_mode":"unidad","availability":1500,"price":570,"photo":"foto","producer_id":305120373}
 {"product_id":8,"product_name":"chayote","category":"verduras","category_id":2,"sale_mode":"unidad","availability":660,"price":4000,"photo":"dirección foto","producer_id":305120373}
 {"product_id":2,"product_name":"bananos","category":"frutas","category_id":1,"sale_mode":"mano","availability":46,"price":1000,"photo":"direcci�n foto","producer_id":305120373}
-{"product_id": 2,"product_name": "bananos","category": "frutas","category_id":1,"sale_mode":"mano","availability":240,"price":1000,"photo":"direcci�n foto","producer_id":117550010}
+{"product_id": 2,"product_name": "bananos","category": "frutas","category_id":1,"sale_mode":"mano","availability":240,"price":1000,"photo":"direcci�n foto","producer_id":109844579}
 {"product_id":4,"product_name":"melon","category":"frutas","category_id":1,"sale_mode":"unidad","availability":50000,"price":960,"photo":"direccion","producer_id":117550010}
-{"product_id":10,"product_name":"pesuña","category":"carne","category_id":6,"sale_mode":"por kilo","availability":50000,"price":15000,"photo":"direccion","producer_id":117550010}
-
-
-
-
-
+{"product_id":10,"product_name":"pezuña","category":"carne","category_id":6,"sale_mode":"por kilo","availability":50000,"price":15000,"photo":"direccion","producer_id":117550010}

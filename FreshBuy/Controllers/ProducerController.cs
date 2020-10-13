@@ -41,9 +41,11 @@ namespace FreshBuy.Controllers
 
         [HttpPost]
         [Route("api/Producer/getProducts")]
-        public IHttpActionResult getProductsForProducers([FromBody] string producer_name)
+        public string[] getProductsForProducers([FromBody] JObject producer_name)
         {
-            return Ok(producer_model.filterProducts(producer_name));
+            System.Diagnostics.Debug.Write("yonito");
+            //System.Diagnostics.Debug.Print(producer_model.filterProducts((string)producer_name["username"]));
+            return (producer_model.filterProducts((string)producer_name["username"]));
         }
 
         [HttpPost]
