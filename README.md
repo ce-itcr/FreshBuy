@@ -7,13 +7,9 @@
 <h5 align="center">Somos una Feria Virtual que conecta los agricultores con consumidores, llevando productos frescos del campo hasta tu casa.</h4>
 <h6 align="center">Tarea Corta I para el curso de Bases de Datos (CE3101).</h5>
 
-<h1 align="center">
-  <br>
-  <a href="https://github.com/ce-itcr/FreshBuy"><img width="100%" src="https://res.cloudinary.com/dek4evg4t/image/upload/v1602633189/CE3101/Tarea%20Corta/freshbuy_header.png" 
-  alt="MotorTherapy - Header"></a>
-</h1>
-```
-```
+[![Read the Docs](https://readthedocs.org/projects/yt2mp3/badge/?version=latest)](https://github.com/ce-itcr/FreshBuy/Docs)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/ce-itcr/FreshBuy/blob/master/LICENSEs)
+[![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://github.com/ce-itcr/FreshBuy)
 
 ## Descripción
 
@@ -28,6 +24,11 @@ muy expuestos al contagio en las ferias cantonales. Como parte de la labor y res
 en especial el Área Académica de Ingeniería en Computadores, se ha tomado la iniciativa de desarrollar una feria virtual para que todos los agricultores
 coloquen sus productos.
 
+<h1 align="center">
+  <br>
+  <a href="https://github.com/ce-itcr/FreshBuy"><img width="100%" src="https://res.cloudinary.com/dek4evg4t/image/upload/v1602633189/CE3101/Tarea%20Corta/freshbuy_header.png" 
+  alt="MotorTherapy - Header"></a>
+</h1>
 
 ## Documentación
 
