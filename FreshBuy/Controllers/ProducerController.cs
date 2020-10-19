@@ -73,7 +73,7 @@ namespace FreshBuy.Controllers
 
         [HttpPost]
         [Route("api/producer/product/delete")]
-        public IHttpActionResult DeleteProducer([FromBody] JObject product)
+        public IHttpActionResult DeleteProduct([FromBody] JObject product)
         {
             {
                 System.Diagnostics.Debug.Print(product.ToString());

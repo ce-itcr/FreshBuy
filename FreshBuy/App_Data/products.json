@@ -2,3 +2,4 @@
 {"product_id":3,"product_name":"papaya","category":"frutas","category_id":1,"sale_mode":"por kilo","availability":10000,"price":2500,"photo":"direccion","producer_id":305120373}
 {"product_id":7,"product_name":"lechuga","category":"verduras","category_id":1,"sale_mode":"unidad","availability":1500,"price":570,"photo":"foto","producer_id":305120373}
 {"product_id":8,"product_name":"chayote","category":"verduras","category_id":2,"sale_mode":"unidad","availability":660,"price":4000,"photo":"dirección foto","producer_id":305120373}
+{"product_id":5,"product_name":"guanabana","category":"frutas","category_id":1,"sale_mode":"por unidad","availability":1000,"price":350,"photo":"photo","producer_id":305120373}

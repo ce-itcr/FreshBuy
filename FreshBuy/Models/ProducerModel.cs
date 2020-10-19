@@ -51,9 +51,14 @@ namespace FreshBuy.Models
             return false;
         }
 
-        public string[] filterProducts(string user)
+        /// <summary>
+        /// Method that filter products by producer
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public string[] filterProducts(string username)
         {
-            int id = (int)JObject.Parse(FILTER(producer_path, "username", user, 0)[0])["person_id"];
+            int id = (int)JObject.Parse(FILTER(producer_path, "username", username, 0)[0])["person_id"];
             return FILTER(products_path, "producer_id", null, id);
         }
 

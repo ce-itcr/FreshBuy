@@ -16,17 +16,21 @@ namespace FreshBuy.Models
         /// <summary>
         /// Find all producers in file
         /// </summary>
-        /// <returns></returns>
+        /// <returns>JSON with all producers</returns>
         public string[] find_producers()
         {
             return READALL(producer_path);
         }
 
-
+        /// <summary>
+        /// Find all affiliations in file
+        /// </summary>
+        /// <returns>JSON with all affiliations</returns>
         public string[] find_affiliations()
         {
             return READALL(affiliations_path);
         }
+
         /// <summary>
         /// Method that creates a producer entity
         /// </summary>
@@ -147,6 +151,11 @@ namespace FreshBuy.Models
             return false;
         }
 
+        /// <summary>
+        /// Method that deletes an affiliation
+        /// </summary>
+        /// <param name="person_id"></param>
+        /// <returns></returns>
         public bool delete_affiliation(int person_id)
         {
             return DELETE(affiliations_path, person_id);

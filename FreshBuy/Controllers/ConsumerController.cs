@@ -19,7 +19,7 @@ namespace FreshBuy.Controllers
 
         [HttpPost]
         [Route("api/Consumer/Buy")]
-        public IHttpActionResult ConsultProducerLogin([FromBody] JObject[] cart_client_data)
+        public IHttpActionResult ConsultConsumerCart([FromBody] JObject[] cart_client_data)
         {
             Debug.Print(cart_client_data[0].ToString());
 
@@ -42,7 +42,7 @@ namespace FreshBuy.Controllers
 
         [HttpPost]
         [Route("api/consumer/consumer/update")]
-        public IHttpActionResult UpdateProducer([FromBody] JObject consumer)
+        public IHttpActionResult UpdateConsumer([FromBody] JObject consumer)
         {
             {
                 bool result = consumer_model.update_consumer(
@@ -66,7 +66,7 @@ namespace FreshBuy.Controllers
 
         [HttpPost]
         [Route("api/consumer/consumer/delete")]
-        public IHttpActionResult DeleteProducer([FromBody] JObject consumer)
+        public IHttpActionResult DeleteConsumer([FromBody] JObject consumer)
         {
             {
                 bool result = consumer_model.delete_consumer(

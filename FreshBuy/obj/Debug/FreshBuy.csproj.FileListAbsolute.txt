@@ -1,392 +1,98 @@
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\FreshBuy.dll.config
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\FreshBuy.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\FreshBuy.pdb
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\csc.exe
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\csc.exe.config
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\csc.rsp
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\csi.exe
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\csi.exe.config
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\csi.rsp
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.AppContext.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Console.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.IO.Compression.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Net.Http.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Net.Sockets.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.ValueTuple.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Xml.XPath.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\vbc.exe
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\vbc.exe.config
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\vbc.rsp
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\VBCSCompiler.exe
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\Antlr3.Runtime.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\Newtonsoft.Json.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Net.Http.Formatting.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.Helpers.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.Http.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.Http.WebHost.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.Mvc.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.Optimization.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.Razor.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.WebPages.Deployment.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.WebPages.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.WebPages.Razor.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\WebGrease.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\Newtonsoft.Json.xml
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Net.Http.Formatting.xml
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.Helpers.xml
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.Http.xml
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.Http.WebHost.xml
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.Mvc.xml
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.Optimization.xml
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.Razor.xml
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.WebPages.xml
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.WebPages.Deployment.xml
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.WebPages.Razor.xml
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\Antlr3.Runtime.pdb
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\es\System.Net.Http.Formatting.resources.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\es\System.Web.Helpers.resources.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\es\System.Web.Http.resources.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\es\System.Web.Http.WebHost.resources.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\es\System.Web.Mvc.resources.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\es\System.Web.Optimization.resources.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\es\System.Web.Razor.resources.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\es\System.Web.WebPages.resources.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\es\System.Web.WebPages.Deployment.resources.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\obj\Debug\FreshBuy.csprojAssemblyReference.cache
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\obj\Debug\FreshBuy.csproj.CoreCompileInputs.cache
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\obj\Debug\FreshBuy.csproj.CopyComplete
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\obj\Debug\FreshBuy.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\obj\Debug\FreshBuy.pdb
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.Cors.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.Http.Cors.dll
-C:\Users\AdminCR\Documents\Projects\FreshBuy\FreshBuy\bin\System.Web.Http.Cors.xml
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\FreshBuy.dll.config
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\FreshBuy.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\FreshBuy.pdb
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\csc.exe
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\csc.exe.config
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\csc.rsp
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\csi.exe
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\csi.exe.config
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\csi.rsp
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.AppContext.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Console.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.IO.Compression.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Net.Http.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Net.Sockets.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.ValueTuple.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Xml.XPath.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\vbc.exe
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\vbc.exe.config
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\vbc.rsp
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\VBCSCompiler.exe
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\Antlr3.Runtime.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\Newtonsoft.Json.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Net.Http.Formatting.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.Cors.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.Helpers.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.Http.Cors.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.Http.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.Http.WebHost.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.Mvc.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.Optimization.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.Razor.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.WebPages.Deployment.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.WebPages.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.WebPages.Razor.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\WebGrease.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.Http.Cors.xml
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\Newtonsoft.Json.xml
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Net.Http.Formatting.xml
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.Helpers.xml
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.Http.xml
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.Http.WebHost.xml
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.Mvc.xml
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.Optimization.xml
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.Razor.xml
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.WebPages.xml
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.WebPages.Deployment.xml
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\System.Web.WebPages.Razor.xml
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\Antlr3.Runtime.pdb
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\es\System.Net.Http.Formatting.resources.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\es\System.Web.Helpers.resources.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\es\System.Web.Http.resources.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\es\System.Web.Http.WebHost.resources.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\es\System.Web.Mvc.resources.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\es\System.Web.Optimization.resources.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\es\System.Web.Razor.resources.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\es\System.Web.WebPages.resources.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\es\System.Web.WebPages.Deployment.resources.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\obj\Debug\FreshBuy.csprojAssemblyReference.cache
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\obj\Debug\FreshBuy.csproj.CoreCompileInputs.cache
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\obj\Debug\FreshBuy.csproj.CopyComplete
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\obj\Debug\FreshBuy.dll
-C:\Users\isoli\Documents\Bases de Datos\FreshBuy-Backend\FreshBuy\FreshBuy\obj\Debug\FreshBuy.pdb
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\obj\Debug\FreshBuy.csprojAssemblyReference.cache
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\obj\Debug\FreshBuy.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\obj\Debug\FreshBuy.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\obj\Debug\FreshBuy.pdb
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\FreshBuy.dll.config
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\FreshBuy.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\FreshBuy.pdb
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\csc.exe
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\csc.exe.config
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\csc.rsp
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\csi.exe
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\csi.exe.config
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\csi.rsp
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.AppContext.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Console.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.IO.Compression.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Net.Http.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Net.Sockets.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.ValueTuple.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Xml.XPath.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\vbc.exe
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\vbc.exe.config
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\vbc.rsp
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\VBCSCompiler.exe
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\Antlr3.Runtime.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\Newtonsoft.Json.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Net.Http.Formatting.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.Cors.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.Helpers.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.Http.Cors.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.Http.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.Http.WebHost.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.Mvc.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.Optimization.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.Razor.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.WebPages.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.WebPages.Razor.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\WebGrease.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.Http.Cors.xml
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\Newtonsoft.Json.xml
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Net.Http.Formatting.xml
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.Helpers.xml
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.Http.xml
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.Http.WebHost.xml
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.Mvc.xml
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.Optimization.xml
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.Razor.xml
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.WebPages.xml
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\System.Web.WebPages.Razor.xml
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\Antlr3.Runtime.pdb
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\es\System.Net.Http.Formatting.resources.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\es\System.Web.Helpers.resources.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\es\System.Web.Http.resources.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\es\System.Web.Http.WebHost.resources.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\es\System.Web.Mvc.resources.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\es\System.Web.Optimization.resources.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\es\System.Web.Razor.resources.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\es\System.Web.WebPages.resources.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\es\System.Web.WebPages.Deployment.resources.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\Usuario\Documents\Github\FreshBuyBackEnd\FreshBuy\obj\Debug\FreshBuy.csproj.CopyComplete
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\FreshBuy.dll.config
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\FreshBuy.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\FreshBuy.pdb
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\csc.exe
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\csc.exe.config
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\csc.rsp
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\csi.exe
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\csi.exe.config
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\csi.rsp
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.AppContext.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Console.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.IO.Compression.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Net.Http.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Net.Sockets.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.ValueTuple.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Xml.XPath.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\vbc.exe
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\vbc.exe.config
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\vbc.rsp
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\VBCSCompiler.exe
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\Antlr3.Runtime.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\Newtonsoft.Json.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Net.Http.Formatting.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.Cors.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.Helpers.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.Http.Cors.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.Http.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.Http.WebHost.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.Mvc.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.Optimization.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.Razor.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.WebPages.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.WebPages.Razor.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\WebGrease.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.Http.Cors.xml
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\Newtonsoft.Json.xml
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Net.Http.Formatting.xml
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.Helpers.xml
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.Http.xml
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.Http.WebHost.xml
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.Mvc.xml
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.Optimization.xml
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.Razor.xml
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.WebPages.xml
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\System.Web.WebPages.Razor.xml
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\Antlr3.Runtime.pdb
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\es\System.Net.Http.Formatting.resources.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\es\System.Web.Helpers.resources.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\es\System.Web.Http.resources.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\es\System.Web.Http.WebHost.resources.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\es\System.Web.Mvc.resources.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\es\System.Web.Optimization.resources.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\es\System.Web.Razor.resources.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\es\System.Web.WebPages.resources.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\es\System.Web.WebPages.Deployment.resources.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\obj\Debug\FreshBuy.csprojAssemblyReference.cache
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\obj\Debug\FreshBuy.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\obj\Debug\FreshBuy.csproj.CopyComplete
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\obj\Debug\FreshBuy.dll
-C:\Users\Usuario\Desktop\newBackEnd\FreshBuy\FreshBuy\obj\Debug\FreshBuy.pdb
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\FreshBuy.dll.config
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\FreshBuy.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\FreshBuy.pdb
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\csc.exe
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\csc.exe.config
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\csc.rsp
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\csi.exe
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\csi.exe.config
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\csi.rsp
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.AppContext.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Console.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.IO.Compression.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Net.Http.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Net.Sockets.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.ValueTuple.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Xml.XPath.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\vbc.exe
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\vbc.exe.config
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\vbc.rsp
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\VBCSCompiler.exe
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\Antlr3.Runtime.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\Newtonsoft.Json.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Net.Http.Formatting.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.Cors.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.Helpers.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.Http.Cors.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.Http.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.Http.WebHost.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.Mvc.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.Optimization.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.Razor.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.WebPages.Deployment.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.WebPages.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.WebPages.Razor.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\WebGrease.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.Http.Cors.xml
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\Newtonsoft.Json.xml
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Net.Http.Formatting.xml
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.Helpers.xml
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.Http.xml
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.Http.WebHost.xml
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.Mvc.xml
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.Optimization.xml
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.Razor.xml
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.WebPages.xml
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.WebPages.Deployment.xml
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\System.Web.WebPages.Razor.xml
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\Antlr3.Runtime.pdb
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\es\System.Net.Http.Formatting.resources.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\es\System.Web.Helpers.resources.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\es\System.Web.Http.resources.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\es\System.Web.Mvc.resources.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\es\System.Web.Optimization.resources.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\es\System.Web.Razor.resources.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\es\System.Web.WebPages.resources.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\obj\Debug\FreshBuy.csprojAssemblyReference.cache
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\obj\Debug\FreshBuy.csproj.CoreCompileInputs.cache
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\obj\Debug\FreshBuy.csproj.CopyComplete
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\obj\Debug\FreshBuy.dll
+C:\Users\AdminCR\Documents\Projects\FreshBuy\freshbuy\obj\Debug\FreshBuy.pdb

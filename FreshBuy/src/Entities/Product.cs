@@ -5,7 +5,7 @@ using System.Web;
 
 namespace FreshBuy.src.Entities
 {
-    public class Product
+    public class Product : Category
     {
         public int product_id;
         public String product_name;
