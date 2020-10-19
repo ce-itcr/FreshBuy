@@ -67,13 +67,14 @@
       <input #phone_number type="number" placeholder="Número de Telefono">
       <input #sinpe_number type="number" placeholder="Número Sinpe">
       <input #delivery_locations type="text" placeholder="Lugares de Entrega">
+      <input #username type="text" placeholder="Nombre de Usuario">
       <input #password type="text" placeholder="Contraseña">
 
     </form>
   </div>
   <div class="modal-footer">
-      <button type="button" class="btn btn-success" (click)="create_producer(person_id.value, name.value, last_name.value, province.value, canton.value, district.value, birth_date, phone_number.value, sinpe_number.value,
-                                                                             delivery_locations.value, password.value)" (click)="modal.close()">Añadir</button>
+      <button type="button" class="btn btn-success" (click)="create_producer(person_id.value, name.value, last_name.value, province.value, canton.value, district.value, birth_date.value, phone_number.value, sinpe_number.value,
+                                                                             delivery_locations.value, username.value, password.value)" (click)="modal.close()">Añadir</button>
       <button type="button" class="btn btn-outline-danger" (click)="modal.close()">Cancelar</button>
   </div>
 </ng-template>

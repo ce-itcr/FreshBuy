@@ -18,7 +18,7 @@ export class ComunicationService {
   public getProducers(){
     return this.http.get<string[]>("api/Admin/Producers/getProducers");
   }
-  
+
   //GET AFFILIATIONS DATA FROM API
   public getAffiliations(){
     return this.http.get<string[]>("api/Admin/affiliations/getAffiliations");
@@ -37,7 +37,7 @@ export class ComunicationService {
   //SEND PRODUCER REGISTER DATA TO API
   public sendProducerData(person_id, name, last_name, province, canton, district,
     birth_date, phone_number, sinpe_number, delivery_locations, username, password){
-    
+
     return this.http.post<JSON>("api/Login/affiliation/add",
     {"person_id": person_id,
     "name" : name,
@@ -83,7 +83,7 @@ export class ComunicationService {
   //DENY AFFILIATION TO PRODUCER
   denyAffiliation(producer_id){
     return this.http.post<JSON>("api/Admin/affiliation/delete",{"producer_id": producer_id}).subscribe(res => {
-     
+
     })
   }
 
@@ -136,17 +136,27 @@ export class ComunicationService {
 
   //SEND ALL DATA OF PRODUCER REGISTER TO API TO CREATE NEW PRODUCER (Admin-View)
   createProducer(person_id, name, last_name, province, canton, district, birth_date, phone_number, sinpe_number,delivery_locations,username, password){
-    return this.http.post<JSON>("api/login/producer/add",{"person_id":person_id,"name":name,"last_name":last_name,"province":province,"canton":canton,"district":district,"bith_date":birth_date,
-                                                            "phone_number":phone_number,"sinpe_number":sinpe_number,"delivery_locations": delivery_locations, "username": username, "password": password}).subscribe(res => {
+    return this.http.post<JSON>("api/login/producer/add",{"person_id": person_id,
+                                                          "name" : name,
+                                                          "last_name": last_name,
+                                                          "province": province,
+                                                          "canton": canton,
+                                                          "district": district,
+                                                          "birth_date": birth_date,
+                                                          "phone_number": phone_number,
+                                                          "sinpe_number": sinpe_number,
+                                                          "delivery_locations": delivery_locations,
+                                                          "username": username,
+                                                          "password": password}).subscribe(res => {
                                                               alert("Productor creado exitosamente. Actualice la página para poder observar los cambios.");
                                                             }, error => {
                                                               alert("Se produjo un error al crear el productor de la base de datos. Intente más tarde.");
                                                             })
   }
-  
+
   //SEND ALL DATA OF PRODUCERS, TO UPDATE SEVERAL VALUES
   updateProducer(person_id, name, last_name, province, canton, district, birth_date, phone_number, sinpe_number,delivery_locations, username, password){
-    return this.http.post<JSON>("api/admin/producer/update",{"person_id":person_id,"name":name,"last_name":last_name,"province":province,"canton":canton,"district":district,"bith_date":birth_date,
+    return this.http.post<JSON>("api/admin/producer/update",{"person_id":person_id,"name":name,"last_name":last_name,"province":province,"canton":canton,"district":district,"birth_date":birth_date,
                                                             "phone_number":phone_number,"sinpe_number":sinpe_number,"delivery_locations": delivery_locations, "username": username, "password": password}).subscribe(res => {
                                   console.log("RES", res);                                                              alert("Productor creado exitosamente. Actualice la página para poder observar los cambios.");
                                   alert("Productor actualizado exitosamente. Actualice la página para poder observar los cambios.");
