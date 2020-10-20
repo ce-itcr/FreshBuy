@@ -86,5 +86,24 @@ namespace FreshBuy.Controllers
                 return NotFound();
             }
         }
+
+        [HttpPost]
+        [Route("api/consumer/comment/add")]
+        public IHttpActionResult AddComment([FromBody] JObject comment)
+        {
+            {
+                bool result = consumer_model.add_comment(
+                    (int)comment["producer_qf"],
+                    (int)comment["app_qf"],
+                    (int)comment["producer_id"],
+                    (string)comment["comment"]);
+
+                if (result)
+                {
+                    return Ok(comment);
+                }
+                return NotFound();
+            }
+        }
     }
 }

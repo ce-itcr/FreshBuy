@@ -17,6 +17,7 @@ namespace FreshBuy.src
 
         public static String admins_path = data_path + "\\admin.json";
         public static String affiliations_path = data_path + "\\affiliations.json";
+        public static String comments_path = data_path + "\\comments.json";
         public static String categories_path = data_path + "\\categories.json";
         public static String consumer_path = data_path + "\\consumer.json";
         public static String producer_path = data_path + "\\producer.json";

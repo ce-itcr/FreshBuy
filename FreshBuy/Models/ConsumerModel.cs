@@ -108,5 +108,21 @@ namespace FreshBuy.Models
         {
             return READALL(products_path);
         }
+
+        public bool add_comment(int producer_qf, int app_qf, int consumer_id, String comment)
+        {
+            JObject new_comment = new JObject();
+
+            new_comment["producer_qf"] = producer_qf;
+            new_comment["app_qf"] = app_qf;
+            new_comment["consumer_id"] = consumer_id;
+            new_comment["comment"] = comment;
+
+            INSERT(comments_path, JsonConvert.SerializeObject(new_comment));
+
+            return true;
+        }
+
+
     }
 }
