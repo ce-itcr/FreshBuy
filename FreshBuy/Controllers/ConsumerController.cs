@@ -38,7 +38,14 @@ namespace FreshBuy.Controllers
             return result;
         }
 
+        [HttpPost]
+        [Route("api/Consumer/getProduct")]
+        public IHttpActionResult getProduct([FromBody] JObject product_id)
+        {
 
+            return Ok(consumer_model.findProduct((int)product_id["product_id"]));
+
+        }
 
         [HttpPost]
         [Route("api/consumer/consumer/update")]

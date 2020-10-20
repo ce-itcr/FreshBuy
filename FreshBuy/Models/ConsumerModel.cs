@@ -49,6 +49,13 @@ namespace FreshBuy.Models
             return false;
         }
 
+       public String findProduct(int product_id)
+        {
+            String product = SELECT(products_path, product_id);
+            return product;
+
+        }
+
         /// <summary>
         /// Method that updates a consumer entity
         /// </summary>
