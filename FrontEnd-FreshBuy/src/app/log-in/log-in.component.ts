@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProducerManagementComponent } from '../administration-view/producer-management/producer-management.component';
 import { ComunicationService } from '../comunication.service';
-import { update_producers } from '../logic';
+import { update_producers, update_products } from '../logic';
 import { update_products_for_producer } from '../logic';
 import { ProductsManagementComponent } from '../producer-view/products-management/products-management.component';
 
@@ -82,7 +82,7 @@ export class LogInComponent implements OnInit {
     return this.http.post<JSON>("api/Login/Consumer/consult",
     {"username": this.user.toString(), "password": this.password.toString()}).subscribe(res => {
       console.log("RES", res);
-      this.router.navigateByUrl('/clientView');
+      update_products(this.CS,this.router);
      }, error => {
       alert("Nombre de usuario o contraseña incorrectos.");
     });

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ComunicationService } from 'src/app/comunication.service';
+import { updateCart } from '../../logic'
 
 declare global {
   var products: any[];
@@ -13,21 +15,27 @@ declare global {
 export class ProductsDisplayComponent implements OnInit {
 
   productsList:any[] = [];
+  productsCart:any[] = [];
 
-  constructor(private CS:ComunicationService) { }
+  constructor(private CS:ComunicationService, private router: Router) { }
 
   ngOnInit(): void {
-    this.updateProducts();
+    
   }
 
-  //SE ACTUALIZAN LOS PRODUCTOS A MOSTRAR
-  updateProducts(){
-    this.CS.getProducts().subscribe(res => {
-      for (let i=0;i<res.length;i++){
-        this.productsList.push(JSON.parse(res[i]));
+  add(id){
+    alert(this.productsCart);
+    this.CS.sendId(id).subscribe(res => {
+      if(!this.productsList.includes(id)){
+        this.productsCart.push(res);
+        this.productsList.push(id);
       }
-      globalThis.products = this.productsList;
-  });
+    });
+  }
+
+  updateCart(){
+    alert(this.productsCart);
+    updateCart(this.productsCart, this.router);
   }
 
 }

@@ -14,6 +14,11 @@ export class ComunicationService {
      {"username": user, "password": password});
   }
 
+  public sendId(id: string){
+    return this.http.post<JSON>("api/Consumer/getProduct",
+     {"product_id":parseInt(id)});
+  }
+
   //GET PRODUCERS DATA FROM API
   public getProducers(){
     return this.http.get<string[]>("api/Admin/Producers/getProducers");

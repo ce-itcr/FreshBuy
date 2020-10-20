@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ComunicationService } from 'src/app/comunication.service';
+import { update_products } from '../../logic'
 
 declare global {
   var cartItems: any[];
@@ -21,7 +23,7 @@ export class CartComponent implements OnInit {
   
   itemsToBuy:any[] = [];
 
-  constructor(private CS:ComunicationService) { }
+  constructor(private CS:ComunicationService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -30,9 +32,11 @@ export class CartComponent implements OnInit {
   addToJson(product_id:number, amount:number){
     this.itemsToBuy.push({"product_id": product_id, "amount": amount})
     this.CS.sendItemsToBuy(this.itemsToBuy).subscribe(res => { alert(res)
-    },error =>{
-      alert(error);
     });
+  }
+
+  updateProducts(){
+    update_products(this.CS, this.router);
   }
 
 }

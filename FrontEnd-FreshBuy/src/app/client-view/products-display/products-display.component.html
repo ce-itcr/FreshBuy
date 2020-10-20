@@ -14,15 +14,13 @@
 <br><br>
 <br>-->
 
-
-
 <div class="d-flex" id="wrapper">
   <!-- Sidebar -->
   <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading"><img src="./../../assets/img/freshbuy_logo.png" width="60%" style="padding-left: 5%;padding-top: 7%;"/></div>
     <div class="list-group list-group-flush">
       <a class="list-group-item list-group-item-action bg-light" [routerLink]='["/products_display"]'>Tienda de Productos</a>
-      <a class="list-group-item list-group-item-action bg-light" [routerLink]='["/cart"]'>Carrito</a>
+      <a class="list-group-item list-group-item-action bg-light" (click) = "updateCart()">Carrito</a>
       <a class="list-group-item list-group-item-action bg-light" >Cerrar Sesión</a>
     </div>
     <div class="sidebar-footer" style="padding-bottom: 0%; padding-top: 30%; padding-left: 1%; position: fixed;">
@@ -37,77 +35,33 @@
       <button class="btn btn-primary-2" id="menu-toggle">Menú</button>
     </nav>
     <div class="container-fluid">
-      <h1 class="mt-4">Vista de Productos + Nombre e Id del Productor</h1>
 
-
-
-      <div class="card-group">
-        <div class="card">
-          <img class="card-img-top" src="./../../assets/img/products/aguacate_freshbuy.jpg" alt="Card image cap" width="15%">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
+      <app-products-data-table></app-products-data-table>
+      <div class="wrap-input100">
+        <input class="input100" #id type="number" placeholder="id">
+        <span class="focus-input100"></span>
         </div>
-        <div class="card">
-          <img class="card-img-top" src="./../../assets/img/products/manzana_freshbuy.jpg" alt="Card image cap" width="15%">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="./../../assets/img/products/mandarina_freshbuy.jpg" alt="Card image cap" width="15%">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="./../../assets/img/products/chile_dulce_freshbuy.jpg" alt="Card image cap" width="15%">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="./../../assets/img/products/aguacate_freshbuy.jpg" alt="Card image cap" width="15%">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="./../../assets/img/products/coco_freshbuy.jpg" alt="Card image cap" width="15%">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="./../../assets/img/products/kiwi_freshbuy.jpg" alt="Card image cap" width="15%">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-      </div>
-
-
-
+      <button class="login100-form-btn" (click) = "add(id.value)" type="button">
+        Añadir al Carrito
+      </button>
     </div>
   </div>
   <!-- /#page-content-wrapper -->
 </div>
 <!-- /#wrapper -->
 
+<div class="container-login1001">
+  <div class="wrap-login100">
+    <div class="wrap-input100">
+      <input class="input100" #product_id type="number"  placeholder="product_id">
+      <span class="focus-input100"></span>
+  <div class="wrap-input100">
+      <input class="input100" #amount type="number" placeholder="amount ">
+      <span class="focus-input100"></span>
+      </div>
+</div>
+</div>
+</div>
 
 <ng-template #close_this let-modal>
   <div class="modal-header">
