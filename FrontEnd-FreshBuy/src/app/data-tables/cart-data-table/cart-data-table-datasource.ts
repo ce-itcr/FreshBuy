@@ -23,9 +23,7 @@ const EXAMPLE_DATA: CartDataTableItem[] = [];
  * (including sorting, pagination, and filtering).
  */
 export class CartDataTableDataSource extends DataSource<CartDataTableItem> {
-  data: CartDataTableItem[] = [{product_id:2, product_name:"tomate", saleMode:"box", availability:10, price:24, photo:"tomato"},
-  {product_id:3, product_name:"banano", saleMode:"box", availability:10, price:13, photo:"banano"},
-  {product_id:4, product_name:"zanahoria",saleMode:"box", availability:10, price:34, photo:"carrot"}];
+  data: CartDataTableItem[] = globalThis.products;
   paginator: MatPaginator;
   sort: MatSort;
 

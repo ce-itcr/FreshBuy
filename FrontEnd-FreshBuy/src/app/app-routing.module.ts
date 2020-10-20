@@ -13,6 +13,7 @@ import { OrdersManagementComponent } from './producer-view/orders-management/ord
 import { ProductsManagementComponent } from './producer-view/products-management/products-management.component';
 import { CartComponent } from './client-view/cart/cart.component';
 import { ProductsDisplayComponent } from './client-view/products-display/products-display.component';
+import { SendFeedbackComponent } from './client-view/send-feedback/send-feedback.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [ { path: 'register', component: RegisterComponent},
@@ -27,7 +28,8 @@ const routes: Routes = [ { path: 'register', component: RegisterComponent},
                          { path: "productsManagement", component: ProductsManagementComponent},
                          { path: "ordersManagement", component: OrdersManagementComponent},
                          { path: "cart", component: CartComponent},
-                         { path: "products_display", component: ProductsDisplayComponent}];
+                         { path: "products_display", component: ProductsDisplayComponent},
+                         { path: "sendFeedback", component: SendFeedbackComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

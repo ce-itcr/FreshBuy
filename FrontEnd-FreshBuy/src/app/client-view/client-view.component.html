@@ -1,4 +1,4 @@
-<div class="toolbar" role="banner">
+<!--<div class="toolbar" role="banner">
   <h3 class="center">Vista Consumidor</h3>
     <li class="nav-item" [routerLinkActive]="['link-active']">
       <a class="nav-link text-dark" [routerLink]='["/"]'
@@ -8,7 +8,26 @@
     >Carrito</a>
 
     <a class="nav-link text-dark" [routerLink]='["/products_display"]'
-    >Tienda de Productos</a>   
-
+    >Tienda de Productos</a>
 
   </div>
+<br><br>
+<br>-->
+
+
+
+  
+
+
+  <ng-template #close_this let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">¿Seguro que desea salir?</h4>
+    </div>
+    <div class="modal-body">
+      Somos una Feria Virtual que conecta los agricultores con consumidores, llevando productos frescos del campo hasta tu casa.
+  </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="modal.close()" [routerLink]='["/"]'>Si</button>
+        <button type="button" class="btn btn-outline-danger" (click)="modal.close()">No</button>
+    </div>
+  </ng-template>

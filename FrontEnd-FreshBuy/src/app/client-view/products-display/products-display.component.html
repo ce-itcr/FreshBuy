@@ -1,1 +1,83 @@
-<p>products-display works!</p>
+<!--<div class="toolbar" role="banner">
+  <h3 class="center">Vista Consumidor</h3>
+    <li class="nav-item" [routerLinkActive]="['link-active']">
+      <a class="nav-link text-dark" [routerLink]='["/"]'
+        >Cerrar Sesión</a>
+    </li>
+    <a class="nav-link text-dark" [routerLink]='["/cart"]'
+    >Carrito</a>
+
+    <a class="nav-link text-dark" [routerLink]='["/products_display"]'
+    >Tienda de Productos</a>
+
+  </div>
+<br><br>
+<br>-->
+
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-heading"><img src="./../../assets/img/freshbuy_logo.png" width="60%" style="padding-left: 5%;padding-top: 7%;"/></div>
+    <div class="list-group list-group-flush">
+      <a class="list-group-item list-group-item-action bg-light" (click)="update_products_local();">Tienda de Productos</a>
+      <a class="list-group-item list-group-item-action bg-light" (click) = "updateCart()">Carrito</a>
+      <a class="list-group-item list-group-item-action bg-light" [routerLink]='["/sendFeedback"]'>Feedback</a>
+      <a class="list-group-item list-group-item-action bg-light" (click)="openModal(close_this)">Cerrar Sesión</a>
+    </div>
+    <div class="sidebar-footer" style="padding-bottom: 0%; padding-top: 30%; padding-left: 1%; position: fixed;">
+      <h5>FreshBuy - Vista de Consumidor <br>github.com/ce-itcr/FreshBuy<br><b>Versión 1.0.0</b></h5>
+    </div>
+
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="btn btn-primary-2" id="menu-toggle">Menú</button>
+    </nav>
+    <div class="container-fluid">
+
+      <app-products-data-table></app-products-data-table>
+      <div class="wrap-input100">
+        <input class="input100" #id type="number" placeholder="id">
+        <span class="focus-input100"></span>
+        </div>
+      <button class="login100-form-btn" (click) = "add(id.value)" type="button">
+        Añadir al Carrito
+      </button>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
+
+<div class="input1001" style="color: #fff;">
+  .<br>.
+</div>
+
+
+<!--<div class="container-login1001">
+  <div class="wrap-login100">
+    <div class="wrap-input100">
+      <input class="input100" #product_id type="number"  placeholder="product_id">
+      <span class="focus-input100"></span>
+  <div class="wrap-input100">
+      <input class="input100" #amount type="number" placeholder="amount ">
+      <span class="focus-input100"></span>
+      </div>
+</div>
+</div>
+</div>-->
+
+<ng-template #close_this let-modal>
+  <div class="modal-header">
+      <h4 class="modal-title">¿Seguro que desea salir?</h4>
+  </div>
+  <div class="modal-body">
+    Somos una Feria Virtual que conecta los agricultores con consumidores, llevando productos frescos del campo hasta tu casa.
+</div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="modal.close()" [routerLink]='["/"]'>Si</button>
+      <button type="button" class="btn btn-outline-danger" (click)="modal.close()">No</button>
+  </div>
+</ng-template>

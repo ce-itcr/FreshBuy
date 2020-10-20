@@ -31,6 +31,19 @@ export function update_producers(router: Router,CS: ComunicationService){
     })
   }
 
+  export function update_products(CS: ComunicationService, router: Router){
+    CS.getProducts().subscribe(res => {
+      var productsList: any[] = [];
+        for (let i=0;i<res.length;i++){
+          if(!(JSON.parse(res[i])["availability"] <= 0)){
+            productsList.push(JSON.parse(res[i]))
+          }
+        }
+        globalThis.products = productsList;
+        router.navigateByUrl('/products_display');
+    })
+  }
+
 //OBTIENE UN JSON DE LAS AFILIACIONES PENDIENTES ALMACENADAS EN EL API
 //Y ACTUALIZA LA TABLA DE LOS MISMOS EN PRODUCTS MANAGEMENT (PRODUCER-VIEW)
 export function update_affiliations(router: Router,CS: ComunicationService){
@@ -58,8 +71,6 @@ export function update_categories(router: Router, CS: ComunicationService){
         }
         globalThis.categories = categoryList;
         router.navigateByUrl('/categoryManagement');
-    },error => {
-        alert("NEL");
     });
 }
 
@@ -70,4 +81,20 @@ export function back_disable(location: LocationStrategy){
     location.onPopState(() => {
     history.pushState(null, null, window.location.href);
   });  
+}
+
+export function updateCart(list: any[], router: Router){
+  var productsList: any[] = [];
+        for (let i=0;i<list.length;i++){
+          if(!(JSON.parse(list[i])["availability"] <= 0)){
+
+            productsList.push(JSON.parse(list[i]))
+
+            delete productsList[i]["category"]
+            delete productsList[i]["category_id"]
+            delete productsList[i]["producer_id"]
+          }
+        }
+        globalThis.products = productsList;
+        router.navigateByUrl('/cart');
 }

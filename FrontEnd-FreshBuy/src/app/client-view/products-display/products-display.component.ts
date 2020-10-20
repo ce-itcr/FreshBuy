@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ComunicationService } from 'src/app/comunication.service';
+import { updateCart } from '../../logic';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { update_products } from '../../logic';
 
 declare global {
   var products: any[];
@@ -13,21 +17,34 @@ declare global {
 export class ProductsDisplayComponent implements OnInit {
 
   productsList:any[] = [];
+  productsCart:any[] = [];
 
-  constructor(private CS:ComunicationService) { }
+  constructor(private CS:ComunicationService, private router: Router, private modal:NgbModal) { }
 
-  ngOnInit(): void {
-    this.updateProducts();
+  //SE INICIALIZA LA VENTANA EMERGENTE (pop-up)
+  openModal(content){ this.modal.open(content,{size:'sm', centered:true});}
+
+  update_products_local(){
+    update_products(this.CS, this.router);
   }
 
-  //SE ACTUALIZAN LOS PRODUCTOS A MOSTRAR
-  updateProducts(){
-    this.CS.getProducts().subscribe(res => {
-      for (let i=0;i<res.length;i++){
-        this.productsList.push(JSON.parse(res[i]));
+  ngOnInit(): void {
+
+  }
+
+  add(id){
+    alert(this.productsCart);
+    this.CS.sendId(id).subscribe(res => {
+      if(!this.productsList.includes(id)){
+        this.productsCart.push(res);
+        this.productsList.push(id);
       }
-      globalThis.products = this.productsList;
-  });
+    });
+  }
+
+  updateCart(){
+    alert(this.productsCart);
+    updateCart(this.productsCart, this.router);
   }
 
 }
