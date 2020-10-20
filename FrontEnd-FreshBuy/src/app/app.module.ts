@@ -31,6 +31,7 @@ import { ComunicationService } from './comunication.service';
 import { CartComponent } from './client-view/cart/cart.component';
 import { CartDataTableComponent } from './data-tables/cart-data-table/cart-data-table.component';
 import { ProductsDisplayComponent } from './client-view/products-display/products-display.component';
+import { SendFeedbackComponent } from './client-view/send-feedback/send-feedback.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { ProductsDisplayComponent } from './client-view/products-display/product
     CartComponent,
     CartDataTableComponent,
     ProductsDisplayComponent,
+    SendFeedbackComponent,
   ],
   imports: [
     BrowserModule,

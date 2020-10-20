@@ -183,4 +183,13 @@ export class ComunicationService {
   deleteProduct(product_id){
     return this.http.post<JSON>("api/producer/product/delete",{"product_id":parseInt(product_id)});
   }
+
+  //SEND FEEDBACK
+  sendFeedback(producer_qf, app_qf, producer_id, comments){
+      return this.http.post<JSON>("api/consumer/comment/add",{"producer_qf":producer_qf, "app_qf":app_qf, "producer_id": producer_id,"comments":comments}).subscribe(res => {
+        alert("Comentarios Enviados Exitosamente");
+      }, error => {
+        alert("Ocurrió algún error al enviar los comentarios.");
+      });
+    }
 }

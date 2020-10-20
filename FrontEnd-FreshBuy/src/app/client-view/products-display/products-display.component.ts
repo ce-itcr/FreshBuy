@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ComunicationService } from 'src/app/comunication.service';
-import { updateCart } from '../../logic'
+import { updateCart } from '../../logic';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { update_products } from '../../logic';
 
 declare global {
   var products: any[];
@@ -17,10 +19,17 @@ export class ProductsDisplayComponent implements OnInit {
   productsList:any[] = [];
   productsCart:any[] = [];
 
-  constructor(private CS:ComunicationService, private router: Router) { }
+  constructor(private CS:ComunicationService, private router: Router, private modal:NgbModal) { }
+
+  //SE INICIALIZA LA VENTANA EMERGENTE (pop-up)
+  openModal(content){ this.modal.open(content,{size:'sm', centered:true});}
+
+  update_products_local(){
+    update_products(this.CS, this.router);
+  }
 
   ngOnInit(): void {
-    
+
   }
 
   add(id){

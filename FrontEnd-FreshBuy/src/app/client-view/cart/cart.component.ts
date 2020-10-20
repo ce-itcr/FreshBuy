@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ComunicationService } from 'src/app/comunication.service';
-import { update_products } from '../../logic'
+import { update_products } from '../../logic';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 declare global {
   var cartItems: any[];
@@ -20,10 +21,13 @@ declare global {
   ];*/
 
 export class CartComponent implements OnInit {
-  
+
   itemsToBuy:any[] = [];
 
-  constructor(private CS:ComunicationService, private router: Router) { }
+  constructor(private CS:ComunicationService, private router: Router, private modal:NgbModal) { }
+
+  //SE INICIALIZA LA VENTANA EMERGENTE (pop-up)
+  openModal(content){ this.modal.open(content,{size:'sm', centered:true});}
 
   ngOnInit(): void {
   }
